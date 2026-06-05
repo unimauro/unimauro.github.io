@@ -181,6 +181,44 @@
         .social-btn.youtube:hover { border-color: #ff0000; }
         .social-btn.platzi:hover { border-color: #98ca3f; }
 
+        /* Menú de secciones (sticky) */
+        .topnav {
+            position: sticky;
+            top: 0.6rem;
+            z-index: 30;
+            margin-bottom: 1.5rem;
+            padding: 0.5rem;
+            background: rgba(26,35,50,0.92);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+        .topnav .inner {
+            display: flex;
+            gap: 0.45rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .topnav .inner::-webkit-scrollbar { display: none; }
+        .topnav a {
+            flex-shrink: 0;
+            white-space: nowrap;
+            text-decoration: none;
+            color: #b0bec5;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.45rem 0.85rem;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .topnav a:hover { background: rgba(255,255,255,0.12); color: #fff; transform: translateY(-1px); }
+        .topnav a.activo { background: linear-gradient(90deg,#3498db,#9b59b6); color: #fff; }
+
         h2 {
             font-size: 1.3rem;
             font-weight: 700;
@@ -191,6 +229,8 @@
             color: #ecf0f1;
         }
         h2 i { color: #3498db; font-size: 1.1rem; }
+        h2[id] { scroll-margin-top: 70px; }
+        .sec-sub { color: #7f8c8d; font-size: 0.85rem; margin: -0.6rem 0 1rem; }
 
         .projects {
             display: grid;
@@ -349,7 +389,22 @@
             </div>
         </header>
 
-        <h2><i class="fas fa-rocket"></i> Proyectos destacados</h2>
+        <!-- Menú de secciones -->
+        <nav class="topnav" aria-label="Secciones">
+            <div class="inner">
+                <a href="#peru">🇵🇪 Perú · Datos</a>
+                <a href="#ia">🤖 IA & Agentes</a>
+                <a href="#mundo">🌍 Mundo</a>
+                <a href="#ninos">🧒 Niños & Familia</a>
+                <a href="#oss">🧪 Open Source</a>
+                <a href="#stack">💻 Stack</a>
+                <a href="#libros">📚 Libros</a>
+                <a href="#videos">🎬 Videos</a>
+            </div>
+        </nav>
+
+                <h2 id="peru"><i class="fas fa-landmark"></i> Perú · Datos & Transparencia</h2>
+        <p class="sec-sub">Dashboards ciudadanos con datos públicos oficiales.</p>
         <div class="projects">
             <a href="https://unimauro.github.io/petroperu-analytics/" class="project" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-oil-well"></i> Petroperú Analytics 🛢️</div>
@@ -370,47 +425,6 @@
                     <span class="project-badge">Python</span>
                     <span class="project-badge">Playwright</span>
                     <span class="project-badge">Chart.js</span>
-                </div>
-            </a>
-            <a href="https://unimauro.github.io/agentflow-ai/" class="project" target="_blank" rel="noopener">
-                <div class="project-title"><i class="fas fa-robot"></i> AgentFlow AI · Demo 🤖</div>
-                <div class="project-desc">Plataforma demo de orquestación multi-agente para ventas: dashboard, inbox omnicanal, pipeline, agentes IA, automatizaciones y analítica. SPA estática con datos de ejemplo (sin backend).</div>
-                <div class="project-meta">
-                    <span class="project-badge new">✨ nuevo</span>
-                    <span class="project-badge">React</span>
-                    <span class="project-badge">TanStack</span>
-                    <span class="project-badge">Tailwind</span>
-                </div>
-            </a>
-            <a href="https://unimauro.github.io/agente-uni-demo/" class="project" target="_blank" rel="noopener">
-                <div class="project-title"><i class="fas fa-robot"></i> Suyay · Coach Académico UNI-FIIS 🌱</div>
-                <div class="project-desc">Demo interactiva de un agente coach por WhatsApp para estudiantes de ingeniería de la UNI: consulta de notas, cálculo de la nota necesaria para aprobar, recordatorio de evaluaciones y acompañamiento empático (incluido el caso TRICA). Respuestas simuladas en el navegador, sin datos reales.</div>
-                <div class="project-meta">
-                    <span class="project-badge new">✨ nuevo</span>
-                    <span class="project-badge">AI Agent</span>
-                    <span class="project-badge">LLM</span>
-                    <span class="project-badge">Vanilla JS</span>
-                </div>
-            </a>
-            <a href="https://unimauro.github.io/modelo-predictivo-uni/" class="project" target="_blank" rel="noopener">
-                <div class="project-title"><i class="fas fa-chart-line"></i> Modelo Predictivo IA · UNI-FIIS 🎓</div>
-                <div class="project-desc">Exposición pública del proyecto de investigación: modelo de IA (ensemble SVM + RF + GB) para predecir el rendimiento académico y la deserción de estudiantes de ingeniería. Justificación, variables, pipeline, captura ética de datos sensibles, validación psicométrica y alerta temprana.</div>
-                <div class="project-meta">
-                    <span class="project-badge new">✨ nuevo</span>
-                    <span class="project-badge">Machine Learning</span>
-                    <span class="project-badge">Reveal.js</span>
-                    <span class="project-badge">Chart.js</span>
-                </div>
-            </a>
-            <a href="https://unimauro.github.io/unimaurox-vuelos-internacionales/" class="project" target="_blank" rel="noopener">
-                <div class="project-title"><i class="fas fa-plane"></i> Vuelos internacionales en vivo 🌍</div>
-                <div class="project-desc">Dashboard ATC global en tiempo real: ~10-15k aviones activos en un mapa mundial, top 10 países, distribución de altitudes y tabla de los vuelos más rápidos. Auto-refresh cada 30s. Datos OpenSky Network, sin backend ni API key.</div>
-                <div class="project-meta">
-                    <span class="project-badge new">✨ nuevo</span>
-                    <span class="project-badge">Vanilla JS</span>
-                    <span class="project-badge">Leaflet</span>
-                    <span class="project-badge">Chart.js</span>
-                    <span class="project-badge">OpenSky</span>
                 </div>
             </a>
             <a href="https://unimauro.github.io/unimaurox-peru-riesgos/" class="project" target="_blank" rel="noopener">
@@ -466,6 +480,77 @@
                     <span class="project-badge">HTML</span>
                 </div>
             </a>
+        </div>
+
+        <h2 id="ia"><i class="fas fa-robot"></i> IA & Agentes</h2>
+        <p class="sec-sub">Agentes, LLMs y machine learning aplicado.</p>
+        <div class="projects">
+            <a href="https://unimauro.github.io/agentflow-ai/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-robot"></i> AgentFlow AI · Demo 🤖</div>
+                <div class="project-desc">Plataforma demo de orquestación multi-agente para ventas: dashboard, inbox omnicanal, pipeline, agentes IA, automatizaciones y analítica. SPA estática con datos de ejemplo (sin backend).</div>
+                <div class="project-meta">
+                    <span class="project-badge new">✨ nuevo</span>
+                    <span class="project-badge">React</span>
+                    <span class="project-badge">TanStack</span>
+                    <span class="project-badge">Tailwind</span>
+                </div>
+            </a>
+            <a href="https://unimauro.github.io/agente-uni-demo/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-robot"></i> Suyay · Coach Académico UNI-FIIS 🌱</div>
+                <div class="project-desc">Demo interactiva de un agente coach por WhatsApp para estudiantes de ingeniería de la UNI: consulta de notas, cálculo de la nota necesaria para aprobar, recordatorio de evaluaciones y acompañamiento empático (incluido el caso TRICA). Respuestas simuladas en el navegador, sin datos reales.</div>
+                <div class="project-meta">
+                    <span class="project-badge new">✨ nuevo</span>
+                    <span class="project-badge">AI Agent</span>
+                    <span class="project-badge">LLM</span>
+                    <span class="project-badge">Vanilla JS</span>
+                </div>
+            </a>
+            <a href="https://unimauro.github.io/modelo-predictivo-uni/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-chart-line"></i> Modelo Predictivo IA · UNI-FIIS 🎓</div>
+                <div class="project-desc">Exposición pública del proyecto de investigación: modelo de IA (ensemble SVM + RF + GB) para predecir el rendimiento académico y la deserción de estudiantes de ingeniería. Justificación, variables, pipeline, captura ética de datos sensibles, validación psicométrica y alerta temprana.</div>
+                <div class="project-meta">
+                    <span class="project-badge new">✨ nuevo</span>
+                    <span class="project-badge">Machine Learning</span>
+                    <span class="project-badge">Reveal.js</span>
+                    <span class="project-badge">Chart.js</span>
+                </div>
+            </a>
+        </div>
+
+        <h2 id="mundo"><i class="fas fa-globe"></i> Mundo & Tiempo real</h2>
+        <p class="sec-sub">Datos globales en vivo.</p>
+        <div class="projects">
+            <a href="https://unimauro.github.io/unimaurox-vuelos-internacionales/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-plane"></i> Vuelos internacionales en vivo 🌍</div>
+                <div class="project-desc">Dashboard ATC global en tiempo real: ~10-15k aviones activos en un mapa mundial, top 10 países, distribución de altitudes y tabla de los vuelos más rápidos. Auto-refresh cada 30s. Datos OpenSky Network, sin backend ni API key.</div>
+                <div class="project-meta">
+                    <span class="project-badge new">✨ nuevo</span>
+                    <span class="project-badge">Vanilla JS</span>
+                    <span class="project-badge">Leaflet</span>
+                    <span class="project-badge">Chart.js</span>
+                    <span class="project-badge">OpenSky</span>
+                </div>
+            </a>
+        </div>
+
+        <h2 id="ninos"><i class="fas fa-child"></i> Para niños & Familia</h2>
+        <p class="sec-sub">Proyectos hechos con amor para los más pequeños. 💞</p>
+        <div class="projects">
+            <a href="https://unimauro.github.io/libelula/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-bug"></i> La Libélula de Gael 🪰</div>
+                <div class="project-desc">Exposición infantil kawaii sobre la libélula: 6 datos curiosos, fotos, video de origami, mini-juego, QR para el tríptico y una galería comunitaria donde subir fotos (Supabase). Hecha para la expo de mi hijo Gael (3 años).</div>
+                <div class="project-meta">
+                    <span class="project-badge new">✨ nuevo</span>
+                    <span class="project-badge">HTML/CSS/JS</span>
+                    <span class="project-badge">Supabase</span>
+                    <span class="project-badge">GitHub Pages</span>
+                </div>
+            </a>
+        </div>
+
+        <h2 id="oss"><i class="fas fa-code-branch"></i> Open Source & Conocimiento</h2>
+        <p class="sec-sub">Repos y recursos abiertos.</p>
+        <div class="projects">
             <a href="https://github.com/unimauro/QuantumResources" class="project" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-atom"></i> QuantumResources</div>
                 <div class="project-desc">Recursos curados de quantum computing: libros, papers y videos.</div>
@@ -492,7 +577,7 @@
             </a>
         </div>
 
-        <h2><i class="fas fa-laptop-code"></i> Stack</h2>
+        <h2 id="stack"><i class="fas fa-laptop-code"></i> Stack</h2>
         <div class="stack">
             <span>Python</span><span>Go</span><span>TypeScript</span><span>Ruby</span>
             <span>Rust</span><span>C++</span><span>Java</span><span>React</span>
@@ -500,7 +585,7 @@
             <span>GenAI</span><span>LLMs</span><span>ML/AI</span><span>DevOps</span><span>Cloud</span>
         </div>
 
-        <h2><i class="fas fa-book-open"></i> Libros publicados</h2>
+        <h2 id="libros"><i class="fas fa-book-open"></i> Libros publicados</h2>
         <div class="books">
             <a href="https://leanpub.com/de_libertad_esperanza_y_amor" class="book" target="_blank" rel="noopener">
                 <i class="fas fa-heart"></i> De Libertad, Esperanza y Amor
@@ -510,7 +595,7 @@
             </a>
         </div>
 
-        <h2><i class="fas fa-video"></i> Videos y redes sociales</h2>
+        <h2 id="videos"><i class="fas fa-video"></i> Videos y redes sociales</h2>
         <div style="position:relative;max-width:720px;margin:0.5rem auto 1.3rem;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.1)">
             <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0"
                 src="https://www.youtube.com/embed/mHX1f-W-5as"
@@ -531,5 +616,14 @@
             <p>Built with HTML &amp; CSS · No frameworks · Source on <a href="https://github.com/unimauro/unimauro.github.io">GitHub</a></p>
         </footer>
     </div>
+    <script>
+      const navLinks = Array.from(document.querySelectorAll('.topnav a'));
+      const secs = navLinks.map(a=>document.getElementById(a.getAttribute('href').slice(1))).filter(Boolean);
+      const io = new IntersectionObserver((es)=>{
+        es.forEach(e=>{ if(e.isIntersecting){ const id=e.target.id;
+          navLinks.forEach(a=>a.classList.toggle('activo', a.getAttribute('href')==='#'+id)); } });
+      },{rootMargin:'-40% 0px -55% 0px'});
+      secs.forEach(s=>io.observe(s));
+    </script>
 </body>
 </html>
