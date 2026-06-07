@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="https://github.com/unimauro.png">
     <meta name="description" content="Carlos Mauro Cárdenas Fernandez — Engineer working on GenAI, AI Agents, Blockchain, Quantum Computing, Machine Learning, DevOps, Cloud & Data Science. Based in Lima, Perú. Creator of SalariosPerú & Finanzas Públicas del Perú dashboards.">
     <meta name="author" content="Carlos Mauro Cárdenas Fernandez">
-    <meta name="keywords" content="Carlos Cardenas, Carlos Mauro Cardenas, unimauro, Carlos Cardenas Peru, ingeniero AI, GenAI engineer Peru, data scientist Peru, Lima developer, SalariosPeru, quantum computing Peru, AI agents Peru">
+    <meta name="keywords" content="Carlos Cardenas, Carlos Mauro Cardenas, Carlos Cardenas Fernandez, unimauro, Carlos Cardenas Peru, ingeniero AI, GenAI engineer Peru, data scientist Peru, Lima developer, SalariosPeru, quantum computing Peru, AI agents Peru, docente UNI FIIS, profesor universitario Peru, tesis UNI FIIS, blog Carlos Cardenas, unimauro blogspot">
     <link rel="canonical" href="https://unimauro.github.io/">
 
     <!-- Robots: indexar y permitir IA. Open Web. -->
@@ -45,8 +45,15 @@
       "url": "https://unimauro.github.io/",
       "image": "https://github.com/unimauro.png",
       "jobTitle": "Engineer · AI · Data",
-      "description": "Engineer working on GenAI, AI Agents, Blockchain, Quantum Computing, Machine Learning, DevOps, Cloud & Data Science.",
-      "knowsAbout": ["GenAI", "AI Agents", "Machine Learning", "Quantum Computing", "Data Science", "Blockchain", "DevOps", "Cloud Computing", "Python", "TypeScript", "Rust", "Go"],
+      "description": "Engineer working on GenAI, AI Agents, Blockchain, Quantum Computing, Machine Learning, DevOps, Cloud & Data Science. University lecturer (UNI-FIIS) and author. \"Creo en el amor de los seres humanos.\"",
+      "slogan": "Creo en el amor de los seres humanos",
+      "knowsAbout": ["GenAI", "AI Agents", "Machine Learning", "Quantum Computing", "Data Science", "Blockchain", "DevOps", "Cloud Computing", "Python", "TypeScript", "Rust", "Go", "Higher education", "Operating Systems"],
+      "knowsLanguage": ["es", "en"],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad Nacional de Ingeniería (UNI) — Facultad de Ingeniería Industrial y de Sistemas",
+        "sameAs": "https://www.uni.edu.pe/"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Lima",
@@ -55,9 +62,11 @@
       "sameAs": [
         "https://github.com/unimauro",
         "https://www.linkedin.com/in/carloscardenasf/",
-        "https://twitter.com/unimauro",
+        "https://x.com/unimauro",
         "https://www.youtube.com/channel/UCUDcs3s8Src2jP3-xa-aV1w",
         "https://platzi.com/p/unimauro",
+        "https://unimauro.blogspot.com/",
+        "https://scholar.google.com/citations?hl=es&user=-bBexuUAAAAJ",
         "https://cardenas.pe/"
       ],
       "email": "mailto:carlos@cardenas.pe",
@@ -119,10 +128,55 @@
         }
         .gh-stats img {
             width: 100%;
-            border-radius: 8px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            min-height: 80px;
         }
+        /* Si la imagen remota falla, se oculta sin dejar el ícono roto */
+        .gh-stats img.broken { display: none; }
         @media (max-width: 600px) {
-            .gh-stats { grid-template-columns: 1fr; }
+            .gh-stats { grid-template-columns: 1fr; max-width: 360px; }
+        }
+
+        /* Frase / credo */
+        .creed {
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: #ecf0f1;
+            margin: 0.2rem auto 1.4rem;
+            max-width: 560px;
+            line-height: 1.5;
+        }
+        .creed .accent {
+            background: linear-gradient(90deg,#3498db,#9b59b6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .social-btn.blog:hover { border-color: #ff8000; }
+        .social-btn.scholar:hover { border-color: #4285f4; }
+
+        /* Grilla de videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0.9rem;
+            margin: 0.5rem 0 1.3rem;
+        }
+        .video-grid .vid {
+            position: relative;
+            aspect-ratio: 16/9;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .video-grid .vid iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
         h1 {
             font-size: 2.4rem;
@@ -355,6 +409,7 @@
             <img src="https://github.com/unimauro.png" alt="Carlos Mauro Cárdenas" class="avatar" loading="eager" />
             <h1>Carlos Mauro Cárdenas</h1>
             <p class="tagline">Engineer · AI · Data · Hacker old style</p>
+            <p class="creed">«Creo en el <span class="accent">amor</span> de los seres humanos.»</p>
             <div class="location">
                 <i class="fas fa-map-marker-alt"></i> Lima, Perú
             </div>
@@ -365,7 +420,7 @@
                 <a href="https://www.linkedin.com/in/carloscardenasf/" class="social-btn linkedin" target="_blank" rel="noopener">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://twitter.com/unimauro" class="social-btn twitter" target="_blank" rel="noopener">
+                <a href="https://x.com/unimauro" class="social-btn twitter" target="_blank" rel="noopener">
                     <i class="fab fa-x-twitter"></i> Twitter / X
                 </a>
                 <a href="https://www.youtube.com/channel/UCUDcs3s8Src2jP3-xa-aV1w" class="social-btn youtube" target="_blank" rel="noopener">
@@ -377,6 +432,12 @@
                 <a href="https://platzi.com/p/unimauro" class="social-btn platzi" target="_blank" rel="noopener">
                     <i class="fas fa-graduation-cap"></i> Platzi
                 </a>
+                <a href="https://unimauro.blogspot.com/" class="social-btn blog" target="_blank" rel="noopener">
+                    <i class="fas fa-feather-pointed"></i> Blog
+                </a>
+                <a href="https://scholar.google.com/citations?hl=es&user=-bBexuUAAAAJ" class="social-btn scholar" target="_blank" rel="noopener">
+                    <i class="fas fa-graduation-cap"></i> Scholar
+                </a>
                 <a href="https://cardenas.pe/" class="social-btn web" target="_blank" rel="noopener">
                     <i class="fas fa-globe"></i> cardenas.pe
                 </a>
@@ -384,26 +445,63 @@
 
             <!-- GitHub stats embebidas -->
             <div class="gh-stats">
-                <img src="https://github-readme-stats.vercel.app/api?username=unimauro&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=00000080" alt="GitHub Stats" loading="lazy" />
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=unimauro&layout=compact&theme=tokyonight&hide_border=true&count_private=true&bg_color=00000080" alt="Top Languages" loading="lazy" />
+                <img src="https://github-readme-stats.vercel.app/api?username=unimauro&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=00000080" alt="Estadísticas de GitHub de unimauro" loading="lazy" onerror="this.classList.add('broken')" />
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=unimauro&layout=compact&theme=tokyonight&hide_border=true&count_private=true&bg_color=00000080" alt="Lenguajes más usados por unimauro" loading="lazy" onerror="this.classList.add('broken')" />
             </div>
         </header>
 
         <!-- Menú de secciones -->
         <nav class="topnav" aria-label="Secciones">
             <div class="inner">
-                <a href="#peru">🇵🇪 Perú · Datos</a>
                 <a href="#ia">🤖 IA & Agentes</a>
+                <a href="#peru">🇵🇪 Perú · Datos</a>
                 <a href="#mundo">🌍 Mundo</a>
                 <a href="#ninos">🧒 Niños & Familia</a>
+                <a href="#docencia">🎓 Docencia</a>
                 <a href="#oss">🧪 Open Source</a>
                 <a href="#stack">💻 Stack</a>
                 <a href="#libros">📚 Libros</a>
+                <a href="#blog">✍️ Blog</a>
                 <a href="#videos">🎬 Videos</a>
             </div>
         </nav>
 
-                <h2 id="peru"><i class="fas fa-landmark"></i> Perú · Datos & Transparencia</h2>
+        <h2 id="ia"><i class="fas fa-robot"></i> IA & Agentes</h2>
+        <p class="sec-sub">Agentes, LLMs y machine learning aplicado.</p>
+        <div class="projects">
+            <a href="https://unimauro.github.io/agentflow-ai/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-robot"></i> AgentFlow AI · Demo 🤖</div>
+                <div class="project-desc">Plataforma demo de orquestación multi-agente para ventas: dashboard, inbox omnicanal, pipeline, agentes IA, automatizaciones y analítica. SPA estática con datos de ejemplo (sin backend).</div>
+                <div class="project-meta">
+                    <span class="project-badge new">✨ nuevo</span>
+                    <span class="project-badge">React</span>
+                    <span class="project-badge">TanStack</span>
+                    <span class="project-badge">Tailwind</span>
+                </div>
+            </a>
+            <a href="https://unimauro.github.io/agente-uni-demo/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-robot"></i> Suyay · Coach Académico UNI-FIIS 🌱</div>
+                <div class="project-desc">Demo interactiva de un agente coach por WhatsApp para estudiantes de ingeniería de la UNI: consulta de notas, cálculo de la nota necesaria para aprobar, recordatorio de evaluaciones y acompañamiento empático (incluido el caso TRICA). Respuestas simuladas en el navegador, sin datos reales.</div>
+                <div class="project-meta">
+                    <span class="project-badge new">✨ nuevo</span>
+                    <span class="project-badge">AI Agent</span>
+                    <span class="project-badge">LLM</span>
+                    <span class="project-badge">Vanilla JS</span>
+                </div>
+            </a>
+            <a href="https://unimauro.github.io/modelo-predictivo-uni/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-chart-line"></i> Modelo Predictivo IA · UNI-FIIS 🎓</div>
+                <div class="project-desc">Exposición pública del proyecto de investigación: modelo de IA (ensemble SVM + RF + GB) para predecir el rendimiento académico y la deserción de estudiantes de ingeniería. Justificación, variables, pipeline, captura ética de datos sensibles, validación psicométrica y alerta temprana.</div>
+                <div class="project-meta">
+                    <span class="project-badge new">✨ nuevo</span>
+                    <span class="project-badge">Machine Learning</span>
+                    <span class="project-badge">Reveal.js</span>
+                    <span class="project-badge">Chart.js</span>
+                </div>
+            </a>
+        </div>
+
+        <h2 id="peru"><i class="fas fa-landmark"></i> Perú · Datos & Transparencia</h2>
         <p class="sec-sub">Dashboards ciudadanos con datos públicos oficiales.</p>
         <div class="projects">
             <a href="https://unimauro.github.io/proyecto-inti/" class="project" target="_blank" rel="noopener">
@@ -492,41 +590,6 @@
             </a>
         </div>
 
-        <h2 id="ia"><i class="fas fa-robot"></i> IA & Agentes</h2>
-        <p class="sec-sub">Agentes, LLMs y machine learning aplicado.</p>
-        <div class="projects">
-            <a href="https://unimauro.github.io/agentflow-ai/" class="project" target="_blank" rel="noopener">
-                <div class="project-title"><i class="fas fa-robot"></i> AgentFlow AI · Demo 🤖</div>
-                <div class="project-desc">Plataforma demo de orquestación multi-agente para ventas: dashboard, inbox omnicanal, pipeline, agentes IA, automatizaciones y analítica. SPA estática con datos de ejemplo (sin backend).</div>
-                <div class="project-meta">
-                    <span class="project-badge new">✨ nuevo</span>
-                    <span class="project-badge">React</span>
-                    <span class="project-badge">TanStack</span>
-                    <span class="project-badge">Tailwind</span>
-                </div>
-            </a>
-            <a href="https://unimauro.github.io/agente-uni-demo/" class="project" target="_blank" rel="noopener">
-                <div class="project-title"><i class="fas fa-robot"></i> Suyay · Coach Académico UNI-FIIS 🌱</div>
-                <div class="project-desc">Demo interactiva de un agente coach por WhatsApp para estudiantes de ingeniería de la UNI: consulta de notas, cálculo de la nota necesaria para aprobar, recordatorio de evaluaciones y acompañamiento empático (incluido el caso TRICA). Respuestas simuladas en el navegador, sin datos reales.</div>
-                <div class="project-meta">
-                    <span class="project-badge new">✨ nuevo</span>
-                    <span class="project-badge">AI Agent</span>
-                    <span class="project-badge">LLM</span>
-                    <span class="project-badge">Vanilla JS</span>
-                </div>
-            </a>
-            <a href="https://unimauro.github.io/modelo-predictivo-uni/" class="project" target="_blank" rel="noopener">
-                <div class="project-title"><i class="fas fa-chart-line"></i> Modelo Predictivo IA · UNI-FIIS 🎓</div>
-                <div class="project-desc">Exposición pública del proyecto de investigación: modelo de IA (ensemble SVM + RF + GB) para predecir el rendimiento académico y la deserción de estudiantes de ingeniería. Justificación, variables, pipeline, captura ética de datos sensibles, validación psicométrica y alerta temprana.</div>
-                <div class="project-meta">
-                    <span class="project-badge new">✨ nuevo</span>
-                    <span class="project-badge">Machine Learning</span>
-                    <span class="project-badge">Reveal.js</span>
-                    <span class="project-badge">Chart.js</span>
-                </div>
-            </a>
-        </div>
-
         <h2 id="mundo"><i class="fas fa-globe"></i> Mundo & Tiempo real</h2>
         <p class="sec-sub">Datos globales en vivo.</p>
         <div class="projects">
@@ -547,13 +610,63 @@
         <p class="sec-sub">Proyectos hechos con amor para los más pequeños. 💞</p>
         <div class="projects">
             <a href="https://unimauro.github.io/libelula/" class="project" target="_blank" rel="noopener">
-                <div class="project-title"><i class="fas fa-bug"></i> La Libélula de Gael 🪰</div>
-                <div class="project-desc">Exposición infantil kawaii sobre la libélula: 6 datos curiosos, fotos, video de origami, mini-juego, QR para el tríptico y una galería comunitaria donde subir fotos (Supabase). Hecha para la expo de mi hijo Gael (3 años).</div>
+                <div class="project-title"><i class="fas fa-bug"></i> La Libélula de Gael 🐉</div>
+                <div class="project-desc">Exposición escolar kawaii sobre la libélula: 6 datos curiosos, fotos, video de origami, mini-juego, QR para el tríptico y una galería comunitaria donde subir fotos (Supabase). Hecha para la expo de mi hijo Gael (3 años).</div>
                 <div class="project-meta">
                     <span class="project-badge new">✨ nuevo</span>
                     <span class="project-badge">HTML/CSS/JS</span>
                     <span class="project-badge">Supabase</span>
                     <span class="project-badge">GitHub Pages</span>
+                </div>
+            </a>
+            <a href="https://unimauro.github.io/panchita/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-cat"></i> La Gata Panchita 🐾</div>
+                <div class="project-desc">Trabajo escolar sobre Panchita, la gatita del barrio en Pueblo Libre (Lima): galería de fotos, datos curiosos, mapa de ubicación y cómo ayudarla. PWA instalable hecha con cariño para las patitas del barrio.</div>
+                <div class="project-meta">
+                    <span class="project-badge new">✨ nuevo</span>
+                    <span class="project-badge">HTML/CSS/JS</span>
+                    <span class="project-badge">PWA</span>
+                    <span class="project-badge">GitHub Pages</span>
+                </div>
+            </a>
+        </div>
+
+        <h2 id="docencia"><i class="fas fa-chalkboard-user"></i> Docencia & Academia</h2>
+        <p class="sec-sub">Material de clase, cursos universitarios y mi tesis. 🎓</p>
+        <div class="projects">
+            <a href="https://github.com/unimauro/ThesisUNIFIISTemplate" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-graduation-cap"></i> Tesis UNI-FIIS · Plantilla LaTeX 📄</div>
+                <div class="project-desc">Plantilla LaTeX para la tesis de la Facultad de Ingeniería Industrial y de Sistemas (UNI), creada para mi sustentación en 2009. Estructura completa: carátula, índices, capítulos, bibliografía. Reutilizable por otros tesistas.</div>
+                <div class="project-meta">
+                    <span class="project-badge">LaTeX</span>
+                    <span class="project-badge">UNI-FIIS</span>
+                    <span class="project-badge">2009</span>
+                </div>
+            </a>
+            <a href="https://github.com/unimauro/analisis-datos-biotecnologia-python" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-dna"></i> Análisis de Datos en Biotecnología con Python 🧬</div>
+                <div class="project-desc">Material de clase (Escuela Global): ADN, ARN y proteínas. Diapositivas + notebook de Google Colab para análisis de datos biológicos con Python.</div>
+                <div class="project-meta">
+                    <span class="project-badge">Python</span>
+                    <span class="project-badge">Colab</span>
+                    <span class="project-badge">Bioinformática</span>
+                </div>
+            </a>
+            <a href="https://github.com/unimauro/SistemasOperativos" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-microchip"></i> Curso de Sistemas Operativos 💻</div>
+                <div class="project-desc">Diapositivas del curso de Sistemas Operativos (UNI-FIIS): gestión de procesos, concurrencia, interbloqueo, memoria virtual, dispositivos de E/S, virtualización y seguridad.</div>
+                <div class="project-meta">
+                    <span class="project-badge">Java</span>
+                    <span class="project-badge">UNI-FIIS</span>
+                    <span class="project-badge">Slides</span>
+                </div>
+            </a>
+            <a href="https://github.com/unimauro/Curso-PostGrado-Mecatronica-2021" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-robot"></i> Posgrado en Mecatrónica 🤖</div>
+                <div class="project-desc">Material del curso de posgrado en Mecatrónica (2021): notebooks y código en Python para enseñanza aplicada.</div>
+                <div class="project-meta">
+                    <span class="project-badge">Python</span>
+                    <span class="project-badge">Posgrado</span>
                 </div>
             </a>
         </div>
@@ -605,21 +718,41 @@
             </a>
         </div>
 
+        <h2 id="blog"><i class="fas fa-feather-pointed"></i> Blog & Escritos</h2>
+        <p class="sec-sub">Ideas, apuntes y reflexiones. ✍️</p>
+        <div class="projects">
+            <a href="https://unimauro.blogspot.com/" class="project" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-blog"></i> unimauro.blogspot.com</div>
+                <div class="project-desc">Mi blog personal: tecnología, IA, datos, sociedad y notas de un hacker con corazón. Escritos largos que no caben en un tweet.</div>
+                <div class="project-meta">
+                    <span class="project-badge">Blog</span>
+                    <span class="project-badge">Ensayos</span>
+                </div>
+            </a>
+        </div>
+
         <h2 id="videos"><i class="fas fa-video"></i> Videos y redes sociales</h2>
-        <div style="position:relative;max-width:720px;margin:0.5rem auto 1.3rem;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.1)">
-            <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0"
-                src="https://www.youtube.com/embed/mHX1f-W-5as"
-                title="Video — Carlos Mauro Cárdenas"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
+        <div class="video-grid">
+            <div class="vid">
+                <iframe src="https://www.youtube.com/embed/mHX1f-W-5as" title="Video — Carlos Mauro Cárdenas" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="vid">
+                <iframe src="https://www.youtube.com/embed/8Kf0i_j_yeo" title="Video — Carlos Mauro Cárdenas" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="vid">
+                <iframe src="https://www.youtube.com/embed/lcteoKvYcCY" title="Video — Carlos Mauro Cárdenas" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="vid">
+                <iframe src="https://www.youtube.com/embed/jBjjqzg6uJM" title="Video — Carlos Mauro Cárdenas" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
         <div class="socials">
             <a href="https://www.youtube.com/channel/UCUDcs3s8Src2jP3-xa-aV1w" class="social-btn youtube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> Canal de YouTube</a>
             <a href="https://www.linkedin.com/in/carloscardenasf/" class="social-btn linkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://twitter.com/unimauro" class="social-btn twitter" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i> Twitter / X</a>
+            <a href="https://x.com/unimauro" class="social-btn twitter" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i> Twitter / X</a>
             <a href="https://platzi.com/p/unimauro" class="social-btn platzi" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Platzi</a>
+            <a href="https://unimauro.blogspot.com/" class="social-btn blog" target="_blank" rel="noopener"><i class="fas fa-feather-pointed"></i> Blog</a>
+            <a href="https://scholar.google.com/citations?hl=es&user=-bBexuUAAAAJ" class="social-btn scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>
         </div>
 
         <footer>
