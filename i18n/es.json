@@ -3,18 +3,15 @@
   "meta_desc": "Carlos Mauro Cárdenas Fernández — Ingeniero en GenAI, agentes de IA, blockchain, computación cuántica, machine learning, DevOps, cloud y ciencia de datos. Lima, Perú. Docente UNI-FIIS y creador de SalariosPerú.",
   "og_title": "Carlos Mauro Cárdenas — Ingeniería · IA · Datos",
   "og_desc": "Ingeniero en GenAI, agentes de IA, ML, cloud y ciencia de datos. Lima, Perú. Creador de SalariosPerú.",
-
   "tagline": "Ingeniero · IA · Datos · Hacker a la vieja escuela",
   "creed": "«Creo en el *amor* de los seres humanos.»",
   "location": "Lima, Perú",
-
   "ui_email": "Email",
   "ui_yt_channel": "Canal de YouTube",
   "ui_theme_toggle": "Cambiar tema claro/oscuro",
   "ui_lang": "Cambiar idioma",
   "gh_stats_alt": "Estadísticas de GitHub de unimauro",
   "gh_langs_alt": "Lenguajes más usados por unimauro",
-
   "nav_ia": "🤖 IA & Agentes",
   "nav_peru": "🇵🇪 Perú · Datos",
   "nav_mundo": "🌍 Mundo",
@@ -25,7 +22,6 @@
   "nav_libros": "📚 Libros",
   "nav_blog": "✍️ Blog",
   "nav_videos": "🎬 Videos",
-
   "sec_ia_t": "IA & Agentes",
   "sec_ia_s": "Agentes, LLMs y machine learning aplicado.",
   "sec_peru_t": "Perú · Datos & Transparencia",
@@ -43,19 +39,15 @@
   "sec_blog_t": "Blog & Escritos",
   "sec_blog_s": "Ideas, apuntes y reflexiones. ✍️",
   "sec_videos_t": "Videos y redes sociales",
-
   "badge_new": "nuevo",
   "badge_live": "live",
-
   "footer_built": "Hecho con HTML y CSS · Sin frameworks · Código en",
-
   "t_agentflow": "AgentFlow AI · Demo 🤖",
   "d_agentflow": "Plataforma demo de orquestación multi-agente para ventas: dashboard, inbox omnicanal, pipeline, agentes IA, automatizaciones y analítica. SPA estática con datos de ejemplo (sin backend).",
   "t_suyay": "Suyay · Coach Académico UNI-FIIS 🌱",
   "d_suyay": "Demo interactiva de un agente coach por WhatsApp para estudiantes de ingeniería de la UNI: consulta de notas, cálculo de la nota necesaria para aprobar, recordatorio de evaluaciones y acompañamiento empático (incluido el caso TRICA). Respuestas simuladas en el navegador, sin datos reales.",
   "t_modelo": "Modelo Predictivo IA · UNI-FIIS 🎓",
   "d_modelo": "Exposición pública del proyecto de investigación: modelo de IA (ensemble SVM + RF + GB) para predecir el rendimiento académico y la deserción de estudiantes de ingeniería. Justificación, variables, pipeline, captura ética de datos sensibles, validación psicométrica y alerta temprana.",
-
   "t_inti": "Proyecto INTI — Gemelo Digital del Perú 2075 🌞",
   "d_inti": "Sistema de inteligencia territorial para los 1,891 distritos del Perú con datos reales (IDH 2019, pobreza y población Censo 2017 INEI): 12 índices, diagnóstico, prospectiva 2075, mapa nacional Leaflet, ranking por distrito, Top 50 proyectos, motor de IA (OpenRouter) y planes municipales en PDF.",
   "t_petroperu": "Petroperú Analytics 🛢️",
@@ -74,15 +66,12 @@
   "d_salarios": "Dashboard público analizando salarios peruanos: sector privado (2,068 registros) + público CAS (scraped diario) + calculadora NSE (APEIM) + contexto INEI ENAHO.",
   "t_transparencia": "Guía: Transparencia salarial",
   "d_transparencia": "Por qué importa la transparencia salarial: comparativa nórdicos vs Perú, casos de uso del dashboard, FAQ. Companion del proyecto SalariosPerú.",
-
   "t_vuelos": "Vuelos internacionales en vivo 🌍",
   "d_vuelos": "Dashboard ATC global en tiempo real: ~10-15k aviones activos en un mapa mundial, top 10 países, distribución de altitudes y tabla de los vuelos más rápidos. Auto-refresh cada 30s. Datos OpenSky Network, sin backend ni API key.",
-
   "t_libelula": "La Libélula de Gael 🐉",
   "d_libelula": "Exposición escolar kawaii sobre la libélula: 6 datos curiosos, fotos, video de origami, mini-juego, QR para el tríptico y una galería comunitaria donde subir fotos (Supabase). Hecha para la expo de mi hijo Gael (3 años).",
   "t_panchita": "La Gata Panchita 🐾",
   "d_panchita": "Trabajo escolar sobre Panchita, la gatita del barrio en Pueblo Libre (Lima): galería de fotos, datos curiosos, mapa de ubicación y cómo ayudarla. PWA instalable hecha con cariño para las patitas del barrio.",
-
   "t_tesis": "Tesis UNI-FIIS · Plantilla LaTeX 📄",
   "d_tesis": "Plantilla LaTeX para la tesis de la Facultad de Ingeniería Industrial y de Sistemas (UNI), creada para mi sustentación en 2009. Estructura completa: carátula, índices, capítulos, bibliografía. Reutilizable por otros tesistas.",
   "t_biotec": "Análisis de Datos en Biotecnología con Python 🧬",
@@ -91,14 +80,14 @@
   "d_sisop": "Diapositivas del curso de Sistemas Operativos (UNI-FIIS): gestión de procesos, concurrencia, interbloqueo, memoria virtual, dispositivos de E/S, virtualización y seguridad.",
   "t_mecatronica": "Posgrado en Mecatrónica 🤖",
   "d_mecatronica": "Material del curso de posgrado en Mecatrónica (2021): notebooks y código en Python para enseñanza aplicada.",
-
   "t_quantum": "QuantumResources",
   "d_quantum": "Recursos curados de quantum computing: libros, papers y videos.",
   "t_lifecompass": "Life Compass",
   "d_lifecompass": "Dashboard de prevención del suicidio: estadísticas globales, líneas de ayuda, multilingüe (EN/ES/ZH/KO/RU).",
   "t_springer": "Springer202004Books",
   "d_springer": "Scraper de libros gratuitos de Springer durante el COVID-19.",
-
   "t_blog": "unimauro.blogspot.com",
-  "d_blog": "Mi blog personal: tecnología, IA, datos, sociedad y notas de un hacker con corazón. Escritos largos que no caben en un tweet."
+  "d_blog": "Mi blog personal: tecnología, IA, datos, sociedad y notas de un hacker con corazón. Escritos largos que no caben en un tweet.",
+  "t_observatorio": "Observatorio de Empresas Públicas del Perú 🏛️",
+  "d_observatorio": "Transparencia de las empresas estatales (FONAFE + EPS regionales): KPIs, finanzas, contrataciones reales (OCDS/OECE), rankings, diagnóstico y recomendaciones. Dashboard estático + ETL versionado."
 }

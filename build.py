@@ -42,6 +42,7 @@ PROJECTS = {
         ("modelo", "https://unimauro.github.io/modelo-predictivo-uni/", "fa-chart-line", ["new"], ["Machine Learning", "Reveal.js", "Chart.js"]),
     ],
     "peru": [
+        ("observatorio", "https://unimauro.github.io/observatorio-fonafe/", "fa-building-columns", ["new"], ["React", "ECharts", "Python", "OCDS"]),
         ("inti", "https://unimauro.github.io/proyecto-inti/", "fa-sun", ["new"], ["Vanilla JS", "Chart.js", "Leaflet"]),
         ("petroperu", "https://unimauro.github.io/petroperu-analytics/", "fa-oil-well", ["new"], ["React", "TypeScript", "ECharts", "Python"]),
         ("congreso", "https://unimauro.github.io/congreso-abierto-peru/", "fa-landmark", ["new"], ["Python", "Playwright", "Chart.js"]),

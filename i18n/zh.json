@@ -3,18 +3,15 @@
   "meta_desc": "Carlos Mauro Cárdenas Fernández — 生成式人工智能、AI 智能体、区块链、量子计算、机器学习、DevOps、云计算与数据科学工程师。利马，秘鲁。UNI-FIIS 讲师，SalariosPerú 的创建者。",
   "og_title": "Carlos Mauro Cárdenas — 工程 · 人工智能 · 数据",
   "og_desc": "生成式人工智能、AI 智能体、机器学习、云计算与数据科学工程师。利马，秘鲁。SalariosPerú 的创建者。",
-
   "tagline": "工程师 · 人工智能 · 数据 · 老派黑客",
   "creed": "«我相信人类的*爱*。»",
   "location": "利马，秘鲁",
-
   "ui_email": "邮箱",
   "ui_yt_channel": "YouTube 频道",
   "ui_theme_toggle": "切换明暗主题",
   "ui_lang": "切换语言",
   "gh_stats_alt": "unimauro 的 GitHub 统计数据",
   "gh_langs_alt": "unimauro 最常使用的编程语言",
-
   "nav_ia": "🤖 人工智能与智能体",
   "nav_peru": "🇵🇪 秘鲁 · 数据",
   "nav_mundo": "🌍 世界",
@@ -25,7 +22,6 @@
   "nav_libros": "📚 著作",
   "nav_blog": "✍️ 博客",
   "nav_videos": "🎬 视频",
-
   "sec_ia_t": "人工智能与智能体",
   "sec_ia_s": "智能体、大语言模型与应用型机器学习。",
   "sec_peru_t": "秘鲁 · 数据与透明度",
@@ -43,19 +39,15 @@
   "sec_blog_t": "博客与文章",
   "sec_blog_s": "想法、笔记与思考。✍️",
   "sec_videos_t": "视频与社交媒体",
-
   "badge_new": "新",
   "badge_live": "live",
-
   "footer_built": "用 HTML 和 CSS 制作 · 无框架 · 源代码在",
-
   "t_agentflow": "AgentFlow AI · 演示 🤖",
   "d_agentflow": "面向销售的多智能体编排演示平台：仪表盘、全渠道收件箱、销售管道、AI 智能体、自动化与分析。使用示例数据的静态 SPA（无后端）。",
   "t_suyay": "Suyay · UNI-FIIS 学业教练 🌱",
   "d_suyay": "面向 UNI 工程专业学生的 WhatsApp 教练智能体的交互式演示：查询成绩、计算通过所需分数、考试提醒以及富有同理心的陪伴（包含 TRICA 情形）。在浏览器中模拟回复，不使用真实数据。",
   "t_modelo": "AI 预测模型 · UNI-FIIS 🎓",
   "d_modelo": "研究项目的公开展示：用于预测工程专业学生学业表现与辍学的 AI 模型（SVM + RF + GB 集成）。包含立项依据、变量、数据处理流程、敏感数据的伦理采集、心理测量验证与早期预警。",
-
   "t_inti": "Proyecto INTI — 秘鲁 2075 数字孪生 🌞",
   "d_inti": "覆盖秘鲁 1,891 个区县的领土智能系统，采用真实数据（2019 年 IDH、2017 年 INEI 人口普查的贫困与人口数据）：12 项指数、诊断、2075 年前瞻、Leaflet 全国地图、区县排名、Top 50 项目、AI 引擎（OpenRouter）及 PDF 格式的市政规划。",
   "t_petroperu": "Petroperú Analytics 🛢️",
@@ -74,15 +66,12 @@
   "d_salarios": "分析秘鲁薪资的公开仪表盘：私营部门（2,068 条记录）+ 公共部门 CAS（每日抓取）+ NSE 计算器（APEIM）+ INEI ENAHO 背景数据。",
   "t_transparencia": "指南：薪资透明度",
   "d_transparencia": "为什么薪资透明度很重要：北欧与秘鲁对比、仪表盘使用场景、常见问题。SalariosPerú 项目的配套内容。",
-
   "t_vuelos": "实时国际航班 🌍",
   "d_vuelos": "全球实时 ATC 仪表盘：世界地图上约 1-1.5 万架活跃飞机、前 10 国家、高度分布以及最快航班表格。每 30 秒自动刷新。数据来自 OpenSky Network，无后端、无 API key。",
-
   "t_libelula": "Gael 的蜻蜓 🐉",
   "d_libelula": "关于蜻蜓的可爱（kawaii）学校展示：6 个趣味知识、照片、折纸视频、小游戏、三折页二维码，以及一个可上传照片的社区图库（Supabase）。为我儿子 Gael（3 岁）的展示而制作。",
   "t_panchita": "小猫 Panchita 🐾",
   "d_panchita": "关于 Panchita 的学校作业，它是 Pueblo Libre（利马）街区的小猫咪：照片图库、趣味知识、位置地图以及如何帮助它。用爱为街区的小爪子们制作的可安装 PWA。",
-
   "t_tesis": "UNI-FIIS 毕业论文 · LaTeX 模板 📄",
   "d_tesis": "为工业与系统工程学院（UNI）毕业论文制作的 LaTeX 模板，创建于我 2009 年的论文答辩。结构完整：封面、目录、章节、参考文献。可供其他论文作者复用。",
   "t_biotec": "用 Python 进行生物技术数据分析 🧬",
@@ -91,14 +80,14 @@
   "d_sisop": "操作系统课程（UNI-FIIS）幻灯片：进程管理、并发、死锁、虚拟内存、I/O 设备、虚拟化与安全。",
   "t_mecatronica": "机电一体化研究生课程 🤖",
   "d_mecatronica": "机电一体化研究生课程材料（2021）：用于应用教学的 Python notebook 与代码。",
-
   "t_quantum": "QuantumResources",
   "d_quantum": "精选的量子计算资源：书籍、论文与视频。",
   "t_lifecompass": "Life Compass",
   "d_lifecompass": "自杀预防仪表盘：全球统计数据、求助热线、多语言（EN/ES/ZH/KO/RU）。",
   "t_springer": "Springer202004Books",
   "d_springer": "COVID-19 期间 Springer 免费书籍的抓取工具。",
-
   "t_blog": "unimauro.blogspot.com",
-  "d_blog": "我的个人博客：技术、人工智能、数据、社会，以及一位有心黑客的笔记。容不下一条推文的长文。"
+  "d_blog": "我的个人博客：技术、人工智能、数据、社会，以及一位有心黑客的笔记。容不下一条推文的长文。",
+  "t_observatorio": "秘鲁国有企业观察站 🏛️",
+  "d_observatorio": "秘鲁国有企业（FONAFE + 地区供水公司）的透明度：KPI、财务、真实采购数据（OCDS/OECE）、排名、诊断与建议。静态仪表板 + 版本化 ETL。"
 }

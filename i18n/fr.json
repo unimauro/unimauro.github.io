@@ -3,18 +3,15 @@
   "meta_desc": "Carlos Mauro Cárdenas Fernández — Ingénieur en GenAI, agents IA, blockchain, informatique quantique, machine learning, DevOps, cloud et science des données. Lima, Pérou. Enseignant à l'UNI-FIIS et créateur de SalariosPerú.",
   "og_title": "Carlos Mauro Cárdenas — Ingénierie · IA · Données",
   "og_desc": "Ingénieur en GenAI, agents IA, ML, cloud et science des données. Lima, Pérou. Créateur de SalariosPerú.",
-
   "tagline": "Ingénieur · IA · Données · Hacker à l'ancienne",
   "creed": "«Je crois en l'*amour* des êtres humains.»",
   "location": "Lima, Pérou",
-
   "ui_email": "Email",
   "ui_yt_channel": "Chaîne YouTube",
   "ui_theme_toggle": "Changer de thème clair/sombre",
   "ui_lang": "Changer de langue",
   "gh_stats_alt": "Statistiques GitHub de unimauro",
   "gh_langs_alt": "Langages les plus utilisés par unimauro",
-
   "nav_ia": "🤖 IA & Agents",
   "nav_peru": "🇵🇪 Pérou · Données",
   "nav_mundo": "🌍 Monde",
@@ -25,7 +22,6 @@
   "nav_libros": "📚 Livres",
   "nav_blog": "✍️ Blog",
   "nav_videos": "🎬 Vidéos",
-
   "sec_ia_t": "IA & Agents",
   "sec_ia_s": "Agents, LLM et machine learning appliqué.",
   "sec_peru_t": "Pérou · Données & Transparence",
@@ -43,19 +39,15 @@
   "sec_blog_t": "Blog & Écrits",
   "sec_blog_s": "Idées, notes et réflexions. ✍️",
   "sec_videos_t": "Vidéos et réseaux sociaux",
-
   "badge_new": "nouveau",
   "badge_live": "live",
-
   "footer_built": "Fait avec HTML et CSS · Sans frameworks · Code sur",
-
   "t_agentflow": "AgentFlow AI · Démo 🤖",
   "d_agentflow": "Plateforme de démonstration d'orchestration multi-agents pour les ventes : tableau de bord, boîte de réception omnicanale, pipeline, agents IA, automatisations et analytique. SPA statique avec des données d'exemple (sans backend).",
   "t_suyay": "Suyay · Coach Académique UNI-FIIS 🌱",
   "d_suyay": "Démo interactive d'un agent coach par WhatsApp pour les étudiants en ingénierie de l'UNI : consultation des notes, calcul de la note nécessaire pour réussir, rappel des évaluations et accompagnement empathique (y compris le cas TRICA). Réponses simulées dans le navigateur, sans données réelles.",
   "t_modelo": "Modèle Prédictif IA · UNI-FIIS 🎓",
   "d_modelo": "Présentation publique du projet de recherche : modèle d'IA (ensemble SVM + RF + GB) pour prédire la performance académique et le décrochage des étudiants en ingénierie. Justification, variables, pipeline, collecte éthique de données sensibles, validation psychométrique et alerte précoce.",
-
   "t_inti": "Proyecto INTI — Jumeau Numérique du Pérou 2075 🌞",
   "d_inti": "Système d'intelligence territoriale pour les 1,891 districts du Pérou avec des données réelles (IDH 2019, pauvreté et population Recensement 2017 INEI) : 12 indices, diagnostic, prospective 2075, carte nationale Leaflet, classement par district, Top 50 des projets, moteur d'IA (OpenRouter) et plans municipaux en PDF.",
   "t_petroperu": "Petroperú Analytics 🛢️",
@@ -74,15 +66,12 @@
   "d_salarios": "Tableau de bord public analysant les salaires péruviens : secteur privé (2,068 enregistrements) + public CAS (extrait quotidiennement) + calculateur NSE (APEIM) + contexte INEI ENAHO.",
   "t_transparencia": "Guide : Transparence salariale",
   "d_transparencia": "Pourquoi la transparence salariale est importante : comparatif pays nordiques vs Pérou, cas d'usage du tableau de bord, FAQ. Companion du projet SalariosPerú.",
-
   "t_vuelos": "Vols internationaux en direct 🌍",
   "d_vuelos": "Tableau de bord ATC mondial en temps réel : ~10-15k avions actifs sur une carte du monde, top 10 des pays, distribution des altitudes et tableau des vols les plus rapides. Actualisation automatique toutes les 30s. Données OpenSky Network, sans backend ni clé API.",
-
   "t_libelula": "La libellule de Gael 🐉",
   "d_libelula": "Exposition scolaire kawaii sur la libellule : 6 faits curieux, photos, vidéo d'origami, mini-jeu, QR pour le triptyque et une galerie communautaire où télécharger des photos (Supabase). Réalisée pour l'exposition de mon fils Gael (3 ans).",
   "t_panchita": "Panchita la chatte 🐾",
   "d_panchita": "Travail scolaire sur Panchita, la petite chatte du quartier de Pueblo Libre (Lima) : galerie de photos, faits curieux, carte de localisation et comment l'aider. PWA installable réalisée avec tendresse pour les petites pattes du quartier.",
-
   "t_tesis": "Thèse UNI-FIIS · Modèle LaTeX 📄",
   "d_tesis": "Modèle LaTeX pour la thèse de la Faculté d'Ingénierie Industrielle et des Systèmes (UNI), créé pour ma soutenance en 2009. Structure complète : page de couverture, index, chapitres, bibliographie. Réutilisable par d'autres étudiants en thèse.",
   "t_biotec": "Analyse de Données en Biotechnologie avec Python 🧬",
@@ -91,14 +80,14 @@
   "d_sisop": "Diapositives du cours de systèmes d'exploitation (UNI-FIIS) : gestion des processus, concurrence, interblocage, mémoire virtuelle, périphériques d'E/S, virtualisation et sécurité.",
   "t_mecatronica": "Master en Mécatronique 🤖",
   "d_mecatronica": "Support du cours de master en mécatronique (2021) : notebooks et code en Python pour un enseignement appliqué.",
-
   "t_quantum": "QuantumResources",
   "d_quantum": "Ressources sélectionnées sur le quantum computing : livres, articles et vidéos.",
   "t_lifecompass": "Life Compass",
   "d_lifecompass": "Tableau de bord de prévention du suicide : statistiques mondiales, lignes d'aide, multilingue (EN/ES/ZH/KO/RU).",
   "t_springer": "Springer202004Books",
   "d_springer": "Scraper de livres gratuits de Springer pendant le COVID-19.",
-
   "t_blog": "unimauro.blogspot.com",
-  "d_blog": "Mon blog personnel : technologie, IA, données, société et notes d'un hacker au grand cœur. Des textes longs qui ne tiennent pas dans un tweet."
+  "d_blog": "Mon blog personnel : technologie, IA, données, société et notes d'un hacker au grand cœur. Des textes longs qui ne tiennent pas dans un tweet.",
+  "t_observatorio": "Observatoire des entreprises publiques du Pérou 🏛️",
+  "d_observatorio": "Transparence des entreprises d'État du Pérou (FONAFE + régies des eaux régionales) : indicateurs, finances, marchés publics réels (OCDS/OECE), classements, diagnostic et recommandations. Tableau de bord statique + ETL versionné."
 }
