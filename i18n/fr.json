@@ -89,5 +89,7 @@
   "t_blog": "unimauro.blogspot.com",
   "d_blog": "Mon blog personnel : technologie, IA, données, société et notes d'un hacker au grand cœur. Des textes longs qui ne tiennent pas dans un tweet.",
   "t_observatorio": "Observatoire des entreprises publiques du Pérou 🏛️",
-  "d_observatorio": "Transparence des entreprises d'État du Pérou (FONAFE + régies des eaux régionales) : indicateurs, finances, marchés publics réels (OCDS/OECE), classements, diagnostic et recommandations. Tableau de bord statique + ETL versionné."
+  "d_observatorio": "Transparence des entreprises d'État du Pérou (FONAFE + régies des eaux régionales) : indicateurs, finances, marchés publics réels (OCDS/OECE), classements, diagnostic et recommandations. Tableau de bord statique + ETL versionné.",
+  "t_actas": "Actas Abiertas 2026 🗳️",
+  "d_actas": "Comptage citoyen (PVT) du second tour présidentiel 2026 au Pérou : photo du procès-verbal officiel de l'ONPE, une IA (Gemini) lit les votes manuscrits, avec validation arithmétique, dédoublonnage par table, import par lot, tableau de bord en direct et comparaison ONPE éditable."
 }

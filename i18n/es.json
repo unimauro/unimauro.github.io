@@ -89,5 +89,7 @@
   "t_blog": "unimauro.blogspot.com",
   "d_blog": "Mi blog personal: tecnología, IA, datos, sociedad y notas de un hacker con corazón. Escritos largos que no caben en un tweet.",
   "t_observatorio": "Observatorio de Empresas Públicas del Perú 🏛️",
-  "d_observatorio": "Transparencia de las empresas estatales (FONAFE + EPS regionales): KPIs, finanzas, contrataciones reales (OCDS/OECE), rankings, diagnóstico y recomendaciones. Dashboard estático + ETL versionado."
+  "d_observatorio": "Transparencia de las empresas estatales (FONAFE + EPS regionales): KPIs, finanzas, contrataciones reales (OCDS/OECE), rankings, diagnóstico y recomendaciones. Dashboard estático + ETL versionado.",
+  "t_actas": "Actas Abiertas 2026 🗳️",
+  "d_actas": "Conteo ciudadano (PVT) de la 2da vuelta presidencial 2026: tomas foto del acta oficial de la ONPE, una IA (Gemini) lee los votos manuscritos, con validación aritmética, dedupe por mesa, carga por lote, dashboard en vivo y comparación editable con la ONPE."
 }

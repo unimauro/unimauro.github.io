@@ -89,5 +89,7 @@
   "t_blog": "unimauro.blogspot.com",
   "d_blog": "我的个人博客：技术、人工智能、数据、社会，以及一位有心黑客的笔记。容不下一条推文的长文。",
   "t_observatorio": "秘鲁国有企业观察站 🏛️",
-  "d_observatorio": "秘鲁国有企业（FONAFE + 地区供水公司）的透明度：KPI、财务、真实采购数据（OCDS/OECE）、排名、诊断与建议。静态仪表板 + 版本化 ETL。"
+  "d_observatorio": "秘鲁国有企业（FONAFE + 地区供水公司）的透明度：KPI、财务、真实采购数据（OCDS/OECE）、排名、诊断与建议。静态仪表板 + 版本化 ETL。",
+  "t_actas": "Actas Abiertas 2026 🗳️",
+  "d_actas": "秘鲁2026总统第二轮选举的公民计票（PVT）：拍摄ONPE官方计票表，AI（Gemini）识别手写票数，含算术校验、按投票桌去重、批量上传、实时仪表板和可编辑的ONPE对比。"
 }
