@@ -89,7 +89,9 @@
   "t_blog": "unimauro.blogspot.com",
   "d_blog": "My personal blog: technology, AI, data, society and notes from a hacker with heart. Long-form writing that won't fit in a tweet.",
   "t_observatorio": "Peru State-Owned Enterprises Observatory 🏛️",
+  "t_defensa": "Defense & Interior Sector Observatory 🛡️",
   "d_observatorio": "Transparency for Peru's state companies (FONAFE + regional water utilities): KPIs, finances, real procurement (OCDS/OECE), rankings, diagnosis and recommendations. Static dashboard + versioned ETL.",
+  "d_defensa": "Financial intelligence on Peru's Defense & Interior sector: state companies (SIMA, FAME, SEMAN), budget by agency and investment projects, pensions (CPMP) and pay scales by rank. Real, sourced data; unpublished figures flagged as estimates. Includes an AI assistant.",
   "t_actas": "Actas Abiertas 2026 🗳️",
   "d_actas": "Citizen vote-tally (PVT) for Peru's 2026 presidential runoff: snap the official ONPE tally sheet, an AI (Gemini) reads the handwritten votes, with arithmetic validation, de-duplication by table, batch upload, a live dashboard and an editable ONPE comparison."
 }

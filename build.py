@@ -44,6 +44,7 @@ PROJECTS = {
     ],
     "peru": [
         ("observatorio", "https://unimauro.github.io/observatorio-fonafe/", "fa-building-columns", ["new"], ["React", "ECharts", "Python", "OCDS"]),
+        ("defensa", "https://unimauro.github.io/observatorio-defensa-interior/", "fa-shield-halved", ["new"], ["React", "ECharts", "Python", "Gemini AI"]),
         ("inti", "https://unimauro.github.io/proyecto-inti/", "fa-sun", ["new"], ["Vanilla JS", "Chart.js", "Leaflet"]),
         ("petroperu", "https://unimauro.github.io/petroperu-analytics/", "fa-oil-well", ["new"], ["React", "TypeScript", "ECharts", "Python"]),
         ("congreso", "https://unimauro.github.io/congreso-abierto-peru/", "fa-landmark", ["new"], ["Python", "Playwright", "Chart.js"]),
@@ -539,6 +540,7 @@ def write_sitemap():
     # páginas de proyectos (no traducidas)
     project_pages = [
         "/salariosperu/", "/proyecto-inti/", "/petroperu-analytics/", "/congreso-abierto-peru/",
+        "/observatorio-defensa-interior/",
         "/unimaurox-peru-riesgos/", "/unimaurox-peru-finanzas-publicas/", "/unimaurox-colegios/",
         "/unimaurox-separaciones-denuncias/", "/unimaurox-vuelos-internacionales/",
         "/agentflow-ai/", "/agente-uni-demo/", "/modelo-predictivo-uni/", "/libelula/", "/panchita/",

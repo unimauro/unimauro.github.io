@@ -89,7 +89,9 @@
   "t_blog": "unimauro.blogspot.com",
   "d_blog": "Mein persönlicher Blog: Technologie, KI, Daten, Gesellschaft und Notizen eines Hackers mit Herz. Lange Texte, die nicht in einen Tweet passen.",
   "t_observatorio": "Observatorium der staatlichen Unternehmen Perus 🏛️",
+  "t_defensa": "Observatorium für den Verteidigungs- und Innensektor 🛡️",
   "d_observatorio": "Transparenz der Staatsunternehmen Perus (FONAFE + regionale Wasserbetriebe): KPIs, Finanzen, echte Auftragsvergabe (OCDS/OECE), Rankings, Diagnose und Empfehlungen. Statisches Dashboard + versioniertes ETL.",
+  "d_defensa": "Finanzintelligenz zum Verteidigungs- und Innensektor Perus: Staatsunternehmen (SIMA, FAME, SEMAN), Haushalt nach Behörde und Investitionsprojekte, Renten (CPMP) und Besoldung nach Dienstgrad. Echte, belegte Daten; nicht veröffentlichte Werte als Schätzung markiert. Mit KI-Assistent.",
   "t_actas": "Actas Abiertas 2026 🗳️",
   "d_actas": "Bürgerliche Stimmenauszählung (PVT) für die Stichwahl 2026 in Peru: Foto des offiziellen ONPE-Protokolls, eine KI (Gemini) liest die handschriftlichen Stimmen — mit arithmetischer Prüfung, Dedupe pro Tisch, Stapel-Upload, Live-Dashboard und editierbarem ONPE-Vergleich."
 }
