@@ -93,5 +93,9 @@
   "d_observatorio": "Transparência das empresas estatais do Peru (FONAFE + saneamento regional): KPIs, finanças, contratações reais (OCDS/OECE), rankings, diagnóstico e recomendações. Dashboard estático + ETL versionado.",
   "d_defensa": "Inteligência financeira do setor de Defesa e Interior do Peru: empresas estatais (SIMA, FAME, SEMAN), orçamento por órgão e projetos de investimento, pensões (CPMP) e remunerações por posto. Dados reais com fonte; o não publicado é marcado como estimativa. Inclui assistente de IA.",
   "t_actas": "Actas Abiertas 2026 🗳️",
-  "d_actas": "Contagem cidadã (PVT) do segundo turno presidencial 2026 do Peru: foto da ata oficial da ONPE, uma IA (Gemini) lê os votos manuscritos, com validação aritmética, deduplicação por mesa, upload em lote, painel ao vivo e comparação editável com a ONPE."
+  "d_actas": "Contagem cidadã (PVT) do segundo turno presidencial 2026 do Peru: foto da ata oficial da ONPE, uma IA (Gemini) lê os votos manuscritos, com validação aritmética, deduplicação por mesa, upload em lote, painel ao vivo e comparação editável com a ONPE.",
+  "t_poder": "Observatório do Poder Econômico do Peru 🕸️",
+  "d_poder": "Quem controla o quê? Grupos econômicos, empresas, acionistas e conselhos do Peru reconstruídos como um grafo a partir de dados públicos (SMV · BVL · SBS): PageRank, comunidades de Louvain, um Índice de Poder Econômico (0–100), afinidade de redes e detecção de conflitos de interesse. Dashboard estático + ETL versionado.",
+  "t_transparente": "Peru Transparente 🇵🇪",
+  "d_transparente": "Mapa nacional de funcionários, entidades públicas, empresas estatais e redes de poder: base de dados unificada, grafo nacional de poder e dashboards a partir de dados públicos (PTE, Controladoria, FONAFE, OCDS, SERVIR…). Dados rastreáveis à fonte, com princípio anti-overclaiming."
 }

@@ -93,5 +93,9 @@
   "d_observatorio": "Transparence des entreprises d'État du Pérou (FONAFE + régies des eaux régionales) : indicateurs, finances, marchés publics réels (OCDS/OECE), classements, diagnostic et recommandations. Tableau de bord statique + ETL versionné.",
   "d_defensa": "Intelligence financière du secteur Défense et Intérieur du Pérou : entreprises publiques (SIMA, FAME, SEMAN), budget par entité et projets d'investissement, pensions (CPMP) et rémunérations par grade. Données réelles sourcées ; les chiffres non publiés sont signalés comme estimations. Assistant IA inclus.",
   "t_actas": "Actas Abiertas 2026 🗳️",
-  "d_actas": "Comptage citoyen (PVT) du second tour présidentiel 2026 au Pérou : photo du procès-verbal officiel de l'ONPE, une IA (Gemini) lit les votes manuscrits, avec validation arithmétique, dédoublonnage par table, import par lot, tableau de bord en direct et comparaison ONPE éditable."
+  "d_actas": "Comptage citoyen (PVT) du second tour présidentiel 2026 au Pérou : photo du procès-verbal officiel de l'ONPE, une IA (Gemini) lit les votes manuscrits, avec validation arithmétique, dédoublonnage par table, import par lot, tableau de bord en direct et comparaison ONPE éditable.",
+  "t_poder": "Observatoire du Pouvoir Économique du Pérou 🕸️",
+  "d_poder": "Qui contrôle quoi ? Les groupes économiques, entreprises, actionnaires et conseils d'administration du Pérou reconstruits en graphe à partir de données publiques (SMV · BVL · SBS) : PageRank, communautés de Louvain, un Indice de Pouvoir Économique (0–100), affinité de réseau et détection des conflits d'intérêts. Tableau de bord statique + ETL versionné.",
+  "t_transparente": "Pérou Transparent 🇵🇪",
+  "d_transparente": "Carte nationale des fonctionnaires, entités publiques, entreprises d'État et réseaux de pouvoir : base de données unifiée, graphe national du pouvoir et tableaux de bord à partir de données publiques (PTE, Contrôle général, FONAFE, OCDS, SERVIR…). Données traçables à la source, principe anti-overclaiming."
 }

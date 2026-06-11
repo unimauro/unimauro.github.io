@@ -93,5 +93,9 @@
   "d_observatorio": "Transparency for Peru's state companies (FONAFE + regional water utilities): KPIs, finances, real procurement (OCDS/OECE), rankings, diagnosis and recommendations. Static dashboard + versioned ETL.",
   "d_defensa": "Financial intelligence on Peru's Defense & Interior sector: state companies (SIMA, FAME, SEMAN), budget by agency and investment projects, pensions (CPMP) and pay scales by rank. Real, sourced data; unpublished figures flagged as estimates. Includes an AI assistant.",
   "t_actas": "Actas Abiertas 2026 🗳️",
-  "d_actas": "Citizen vote-tally (PVT) for Peru's 2026 presidential runoff: snap the official ONPE tally sheet, an AI (Gemini) reads the handwritten votes, with arithmetic validation, de-duplication by table, batch upload, a live dashboard and an editable ONPE comparison."
+  "d_actas": "Citizen vote-tally (PVT) for Peru's 2026 presidential runoff: snap the official ONPE tally sheet, an AI (Gemini) reads the handwritten votes, with arithmetic validation, de-duplication by table, batch upload, a live dashboard and an editable ONPE comparison.",
+  "t_poder": "Peru Economic Power Observatory 🕸️",
+  "d_poder": "Who controls what? Peru's economic groups, companies, shareholders and boards rebuilt as a graph from public data (SMV · BVL · SBS): PageRank, Louvain communities, an Economic Power Index (0–100), network affinity and conflict-of-interest detection. Static dashboard + versioned ETL.",
+  "t_transparente": "Peru Transparente 🇵🇪",
+  "d_transparente": "A national map of public officials, government entities, state-owned companies and power networks: a unified database, a national power graph and dashboards built from public data (PTE, Comptroller, FONAFE, OCDS, SERVIR…). Source-traceable data, anti-overclaiming by design."
 }

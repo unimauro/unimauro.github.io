@@ -151,6 +151,18 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://unimauro.github.io/observatorio-poder-economico/</loc>
+        <lastmod>2026-06-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://unimauro.github.io/peru-transparente/</loc>
+        <lastmod>2026-06-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://unimauro.github.io/unimaurox-peru-riesgos/</loc>
         <lastmod>2026-06-07</lastmod>
         <changefreq>monthly</changefreq>

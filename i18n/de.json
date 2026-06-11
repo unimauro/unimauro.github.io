@@ -93,5 +93,9 @@
   "d_observatorio": "Transparenz der Staatsunternehmen Perus (FONAFE + regionale Wasserbetriebe): KPIs, Finanzen, echte Auftragsvergabe (OCDS/OECE), Rankings, Diagnose und Empfehlungen. Statisches Dashboard + versioniertes ETL.",
   "d_defensa": "Finanzintelligenz zum Verteidigungs- und Innensektor Perus: Staatsunternehmen (SIMA, FAME, SEMAN), Haushalt nach Behörde und Investitionsprojekte, Renten (CPMP) und Besoldung nach Dienstgrad. Echte, belegte Daten; nicht veröffentlichte Werte als Schätzung markiert. Mit KI-Assistent.",
   "t_actas": "Actas Abiertas 2026 🗳️",
-  "d_actas": "Bürgerliche Stimmenauszählung (PVT) für die Stichwahl 2026 in Peru: Foto des offiziellen ONPE-Protokolls, eine KI (Gemini) liest die handschriftlichen Stimmen — mit arithmetischer Prüfung, Dedupe pro Tisch, Stapel-Upload, Live-Dashboard und editierbarem ONPE-Vergleich."
+  "d_actas": "Bürgerliche Stimmenauszählung (PVT) für die Stichwahl 2026 in Peru: Foto des offiziellen ONPE-Protokolls, eine KI (Gemini) liest die handschriftlichen Stimmen — mit arithmetischer Prüfung, Dedupe pro Tisch, Stapel-Upload, Live-Dashboard und editierbarem ONPE-Vergleich.",
+  "t_poder": "Observatorium der Wirtschaftsmacht Perus 🕸️",
+  "d_poder": "Wer kontrolliert was? Perus Wirtschaftsgruppen, Unternehmen, Aktionäre und Vorstände als Graph aus öffentlichen Daten (SMV · BVL · SBS) rekonstruiert: PageRank, Louvain-Gemeinschaften, ein Economic Power Index (0–100), Netzwerk-Affinität und Erkennung von Interessenkonflikten. Statisches Dashboard + versioniertes ETL.",
+  "t_transparente": "Peru Transparente 🇵🇪",
+  "d_transparente": "Nationale Karte von Amtsträgern, öffentlichen Einrichtungen, Staatsunternehmen und Machtnetzwerken: eine vereinheitlichte Datenbank, ein nationaler Macht-Graph und Dashboards aus öffentlichen Daten (PTE, Rechnungshof, FONAFE, OCDS, SERVIR…). Quellen-rückverfolgbare Daten, Anti-Overclaiming-Prinzip."
 }
