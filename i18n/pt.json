@@ -99,5 +99,7 @@
   "t_transparente": "Peru Transparente 🇵🇪",
   "d_transparente": "Mapa nacional de funcionários, entidades públicas, empresas estatais e redes de poder: base de dados unificada, grafo nacional de poder e dashboards a partir de dados públicos (PTE, Controladoria, FONAFE, OCDS, SERVIR…). Dados rastreáveis à fonte, com princípio anti-overclaiming.",
   "t_turbonotes": "Turbo Notes",
-  "d_turbonotes": "App de notas por voz: dite com IA (Whisper), ouça-as em voz alta e gere o título sem as mãos. Django + Next.js."
+  "d_turbonotes": "App de notas por voz: dite com IA (Whisper), ouça-as em voz alta e gere o título sem as mãos. Django + Next.js.",
+  "t_careeros": "CareerOS",
+  "d_careeros": "Bússola de carreira para engenheiros de software na era da IA: roadmaps com sinais (importância/demanda/risco de automação), recursos selecionados e aprendizado por projetos. Trilíngue (EN/ES/ZH)."
 }

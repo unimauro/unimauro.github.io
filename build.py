@@ -66,6 +66,7 @@ PROJECTS = {
         ("panchita", "https://unimauro.github.io/panchita/", "fa-cat", ["new"], ["HTML/CSS/JS", "PWA", "GitHub Pages"]),
     ],
     "docencia": [
+        ("careeros", "https://unimauro.github.io/career-os/", "fa-compass", ["live"], ["Astro", "i18n EN/ES/ZH", "AI-first", "Roadmaps"]),
         ("tesis", "https://github.com/unimauro/ThesisUNIFIISTemplate", "fa-graduation-cap", [], ["LaTeX", "UNI-FIIS", "2009"]),
         ("biotec", "https://github.com/unimauro/analisis-datos-biotecnologia-python", "fa-dna", [], ["Python", "Colab", "Bioinformatics"]),
         ("sisop", "https://github.com/unimauro/SistemasOperativos", "fa-microchip", [], ["Java", "UNI-FIIS", "Slides"]),

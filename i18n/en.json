@@ -99,5 +99,7 @@
   "t_transparente": "Peru Transparente 🇵🇪",
   "d_transparente": "A national map of public officials, government entities, state-owned companies and power networks: a unified database, a national power graph and dashboards built from public data (PTE, Comptroller, FONAFE, OCDS, SERVIR…). Source-traceable data, anti-overclaiming by design.",
   "t_turbonotes": "Turbo Notes",
-  "d_turbonotes": "Voice-first notes app: dictate with AI (Whisper), read them aloud, and auto-title hands-free by saying “close my note.” Django + Next.js."
+  "d_turbonotes": "Voice-first notes app: dictate with AI (Whisper), read them aloud, and auto-title hands-free by saying “close my note.” Django + Next.js.",
+  "t_careeros": "CareerOS",
+  "d_careeros": "A career compass for software engineers in the AI era: roadmaps with importance/demand/automation-risk signals, curated resources and project-first learning. Trilingual (EN/ES/ZH)."
 }

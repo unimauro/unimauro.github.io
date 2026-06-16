@@ -99,5 +99,7 @@
   "t_transparente": "Peru Transparente 🇵🇪",
   "d_transparente": "Nationale Karte von Amtsträgern, öffentlichen Einrichtungen, Staatsunternehmen und Machtnetzwerken: eine vereinheitlichte Datenbank, ein nationaler Macht-Graph und Dashboards aus öffentlichen Daten (PTE, Rechnungshof, FONAFE, OCDS, SERVIR…). Quellen-rückverfolgbare Daten, Anti-Overclaiming-Prinzip.",
   "t_turbonotes": "Turbo Notes",
-  "d_turbonotes": "Sprachnotizen-App: per KI (Whisper) diktieren, vorlesen lassen und freihändig betiteln. Django + Next.js."
+  "d_turbonotes": "Sprachnotizen-App: per KI (Whisper) diktieren, vorlesen lassen und freihändig betiteln. Django + Next.js.",
+  "t_careeros": "CareerOS",
+  "d_careeros": "Ein Karriere-Kompass für Software-Ingenieure im KI-Zeitalter: Roadmaps mit Signalen (Wichtigkeit/Nachfrage/Automatisierungsrisiko), kuratierte Ressourcen und projektbasiertes Lernen. Dreisprachig (EN/ES/ZH)."
 }

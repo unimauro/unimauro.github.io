@@ -99,5 +99,7 @@
   "t_transparente": "Pérou Transparent 🇵🇪",
   "d_transparente": "Carte nationale des fonctionnaires, entités publiques, entreprises d'État et réseaux de pouvoir : base de données unifiée, graphe national du pouvoir et tableaux de bord à partir de données publiques (PTE, Contrôle général, FONAFE, OCDS, SERVIR…). Données traçables à la source, principe anti-overclaiming.",
   "t_turbonotes": "Turbo Notes",
-  "d_turbonotes": "Appli de notes vocales : dictez avec l’IA (Whisper), écoutez-les et générez le titre mains libres. Django + Next.js."
+  "d_turbonotes": "Appli de notes vocales : dictez avec l’IA (Whisper), écoutez-les et générez le titre mains libres. Django + Next.js.",
+  "t_careeros": "CareerOS",
+  "d_careeros": "Une boussole de carrière pour ingénieurs logiciel à l'ère de l'IA : roadmaps avec signaux (importance/demande/risque d'automatisation), ressources sélectionnées et apprentissage par projets. Trilingue (EN/ES/ZH)."
 }
