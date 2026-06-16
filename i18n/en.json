@@ -97,5 +97,7 @@
   "t_poder": "Peru Economic Power Observatory 🕸️",
   "d_poder": "Who controls what? Peru's economic groups, companies, shareholders and boards rebuilt as a graph from public data (SMV · BVL · SBS): PageRank, Louvain communities, an Economic Power Index (0–100), network affinity and conflict-of-interest detection. Static dashboard + versioned ETL.",
   "t_transparente": "Peru Transparente 🇵🇪",
-  "d_transparente": "A national map of public officials, government entities, state-owned companies and power networks: a unified database, a national power graph and dashboards built from public data (PTE, Comptroller, FONAFE, OCDS, SERVIR…). Source-traceable data, anti-overclaiming by design."
+  "d_transparente": "A national map of public officials, government entities, state-owned companies and power networks: a unified database, a national power graph and dashboards built from public data (PTE, Comptroller, FONAFE, OCDS, SERVIR…). Source-traceable data, anti-overclaiming by design.",
+  "t_turbonotes": "Turbo Notes",
+  "d_turbonotes": "Voice-first notes app: dictate with AI (Whisper), read them aloud, and auto-title hands-free by saying “close my note.” Django + Next.js."
 }

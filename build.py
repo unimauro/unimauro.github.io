@@ -37,6 +37,7 @@ SEC_ICON = {"ia": "fa-robot", "peru": "fa-landmark", "mundo": "fa-globe",
 # key: (url, fa-icon, [badges], [tags])
 PROJECTS = {
     "ia": [
+        ("turbonotes", "https://notes.cardenas.pe", "fa-microphone-lines", ["live"], ["Django", "Next.js", "OpenAI Whisper", "TanStack"]),
         ("actas", "https://conteojp.netlify.app", "fa-square-poll-vertical", ["new"], ["Next.js", "Supabase", "Gemini AI"]),
         ("agentflow", "https://unimauro.github.io/agentflow-ai/", "fa-robot", ["new"], ["React", "TanStack", "Tailwind"]),
         ("suyay", "https://unimauro.github.io/agente-uni-demo/", "fa-robot", ["new"], ["AI Agent", "LLM", "Vanilla JS"]),

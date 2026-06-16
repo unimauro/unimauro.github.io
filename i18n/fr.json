@@ -97,5 +97,7 @@
   "t_poder": "Observatoire du Pouvoir Économique du Pérou 🕸️",
   "d_poder": "Qui contrôle quoi ? Les groupes économiques, entreprises, actionnaires et conseils d'administration du Pérou reconstruits en graphe à partir de données publiques (SMV · BVL · SBS) : PageRank, communautés de Louvain, un Indice de Pouvoir Économique (0–100), affinité de réseau et détection des conflits d'intérêts. Tableau de bord statique + ETL versionné.",
   "t_transparente": "Pérou Transparent 🇵🇪",
-  "d_transparente": "Carte nationale des fonctionnaires, entités publiques, entreprises d'État et réseaux de pouvoir : base de données unifiée, graphe national du pouvoir et tableaux de bord à partir de données publiques (PTE, Contrôle général, FONAFE, OCDS, SERVIR…). Données traçables à la source, principe anti-overclaiming."
+  "d_transparente": "Carte nationale des fonctionnaires, entités publiques, entreprises d'État et réseaux de pouvoir : base de données unifiée, graphe national du pouvoir et tableaux de bord à partir de données publiques (PTE, Contrôle général, FONAFE, OCDS, SERVIR…). Données traçables à la source, principe anti-overclaiming.",
+  "t_turbonotes": "Turbo Notes",
+  "d_turbonotes": "Appli de notes vocales : dictez avec l’IA (Whisper), écoutez-les et générez le titre mains libres. Django + Next.js."
 }

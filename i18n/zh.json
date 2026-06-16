@@ -97,5 +97,7 @@
   "t_poder": "秘鲁经济权力观测站 🕸️",
   "d_poder": "谁掌控着什么？基于公开数据（SMV · BVL · SBS），将秘鲁的经济集团、公司、股东和董事会重建为图谱：PageRank、Louvain 社区、经济权力指数（0–100）、网络关联度以及利益冲突检测。静态仪表盘 + 版本化 ETL。",
   "t_transparente": "透明秘鲁 🇵🇪",
-  "d_transparente": "公职人员、公共机构、国有企业与权力网络的全国地图：统一数据库、全国权力图谱，以及基于公开数据（PTE、审计署、FONAFE、OCDS、SERVIR…）的仪表盘。数据可溯源，坚持反夸大原则。"
+  "d_transparente": "公职人员、公共机构、国有企业与权力网络的全国地图：统一数据库、全国权力图谱，以及基于公开数据（PTE、审计署、FONAFE、OCDS、SERVIR…）的仪表盘。数据可溯源，坚持反夸大原则。",
+  "t_turbonotes": "Turbo Notes",
+  "d_turbonotes": "语音笔记应用：用 AI（Whisper）口述、朗读并免手动自动生成标题。Django + Next.js。"
 }
