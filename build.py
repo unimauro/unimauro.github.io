@@ -51,6 +51,7 @@ PROJECTS = {
         ("ambiental", "https://unimauro.github.io/observatorio-ambiental-peruano/", "fa-tree", ["new"], ["React", "Vite", "Leaflet", "Python"]),
         ("universidades", "https://unimauro.github.io/universidades-peru/", "fa-graduation-cap", ["new"], ["OpenAlex", "Chart.js", "Leaflet", "Python"]),
         ("plan2050", "https://unimauro.github.io/plan-peru-2050/", "fa-diagram-project", ["new"], ["JavaScript", "GitHub Pages"]),
+        ("qhaway", "https://qhaway.org/", "fa-cube", ["live"], ["React", "FastAPI", "PostgreSQL", "OLAP"]),
         ("inti", "https://unimauro.github.io/proyecto-inti/", "fa-sun", ["new"], ["Vanilla JS", "Chart.js", "Leaflet"]),
         ("petroperu", "https://unimauro.github.io/petroperu-analytics/", "fa-oil-well", ["new"], ["React", "TypeScript", "ECharts", "Python"]),
         ("congreso", "https://unimauro.github.io/congreso-abierto-peru/", "fa-landmark", ["new"], ["Python", "Playwright", "Chart.js"]),
