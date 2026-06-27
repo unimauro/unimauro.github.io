@@ -326,9 +326,21 @@ STYLE = """    <style>
         .book i { color: var(--accent2); }
         .stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
         .stack span { background: var(--chip); padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.78rem; color: var(--soft); }
-        .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0.9rem; margin: 0.5rem 0 1.3rem; }
-        .video-grid .vid { position: relative; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
-        .video-grid .vid iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+        .video-marquee { position: relative; overflow: hidden; margin: 0.5rem 0 1.3rem; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+        .video-track { display: flex; gap: 0.9rem; width: max-content; animation: vmarquee 48s linear infinite; }
+        .video-marquee:hover .video-track, .video-marquee:focus-within .video-track { animation-play-state: paused; }
+        .vthumb { position: relative; flex: 0 0 auto; width: clamp(220px, 72vw, 300px); aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); cursor: pointer; padding: 0; background: #000; }
+        .vthumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
+        .vthumb:hover img { transform: scale(1.05); }
+        .vthumb .play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 2.2rem; background: rgba(0,0,0,0.18); transition: background 0.2s; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+        .vthumb:hover .play { background: rgba(0,0,0,0.38); }
+        @keyframes vmarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @media (prefers-reduced-motion: reduce) { .video-track { animation: none; flex-wrap: wrap; } }
+        .vmodal { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; align-items: center; justify-content: center; z-index: 999; padding: 1.2rem; }
+        .vmodal.open { display: flex; }
+        .vmodal-box { position: relative; width: min(900px, 100%); aspect-ratio: 16/9; }
+        .vmodal-box iframe { width: 100%; height: 100%; border: 0; border-radius: 12px; }
+        .vmodal-close { position: absolute; top: -2.5rem; right: 0; background: none; border: 0; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
         footer { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--faint); font-size: 0.82rem; }
         footer a { color: var(--link); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
@@ -345,8 +357,9 @@ def render(loc, S):
     stack = "".join("<span>%s</span>" % esc(x) for x in STACK)
     books = "".join('''            <a href="%s" class="book" target="_blank" rel="noopener"><i class="fas %s"></i> %s</a>
 ''' % (u, ic, esc(name)) for ic, name, u in BOOKS)
-    videos = "".join('''            <div class="vid"><iframe src="https://www.youtube.com/embed/%s" title="Video — Carlos Mauro Cárdenas" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-''' % v for v in VIDEOS)
+    vthumbs = "".join('''            <button class="vthumb" data-id="%s" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/%s/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
+''' % (v, v) for v in VIDEOS)
+    videos = vthumbs + vthumbs  # duplicado: marquee con loop sin cortes
 
     # script de autodetección sólo en la raíz (es)
     autodetect = ""
@@ -488,8 +501,8 @@ def render(loc, S):
 {books}        </div>
 
         <h2 id="videos"><i class="fas fa-video"></i> {videos_t}</h2>
-        <div class="video-grid">
-{videos}        </div>
+        <div class="video-marquee"><div class="video-track">
+{videos}        </div></div>
         <div class="socials">
             <a href="https://www.youtube.com/channel/UCUDcs3s8Src2jP3-xa-aV1w" class="social-btn youtube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> {ytchannel}</a>
             <a href="https://www.linkedin.com/in/carloscardenasf/" class="social-btn linkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -513,7 +526,15 @@ def render(loc, S):
       var secs = navLinks.map(function(a){{return document.getElementById(a.getAttribute('href').slice(1));}}).filter(Boolean);
       var io = new IntersectionObserver(function(es){{ es.forEach(function(e){{ if(e.isIntersecting){{ var id=e.target.id; navLinks.forEach(function(a){{a.classList.toggle('activo', a.getAttribute('href')==='#'+id);}}); }} }}); }},{{rootMargin:'-40% 0px -55% 0px'}});
       secs.forEach(function(s){{io.observe(s);}});
+      var vm=document.getElementById('vmodal'), vf=document.getElementById('vmodal-iframe');
+      function vmOpen(id){{ vf.src='https://www.youtube.com/embed/'+id+'?autoplay=1'; vm.classList.add('open'); }}
+      function vmClose(){{ vm.classList.remove('open'); vf.src=''; }}
+      document.querySelectorAll('.vthumb').forEach(function(b){{ b.addEventListener('click',function(){{ vmOpen(b.getAttribute('data-id')); }}); }});
+      if(vm) vm.addEventListener('click',function(e){{ if(e.target===vm) vmClose(); }});
+      var vc=document.getElementById('vmodal-close'); if(vc) vc.addEventListener('click',vmClose);
+      document.addEventListener('keydown',function(e){{ if(e.key==='Escape') vmClose(); }});
     </script>
+    <div class="vmodal" id="vmodal"><div class="vmodal-box"><button class="vmodal-close" id="vmodal-close" aria-label="Cerrar">×</button><iframe id="vmodal-iframe" allow="autoplay; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div></div>
 </body>
 </html>
 """.format(
