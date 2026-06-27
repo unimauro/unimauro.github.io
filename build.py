@@ -48,6 +48,9 @@ PROJECTS = {
         ("defensa", "https://unimauro.github.io/observatorio-defensa-interior/", "fa-shield-halved", ["new"], ["React", "ECharts", "Python", "Gemini AI"]),
         ("poder", "https://unimauro.github.io/observatorio-poder-economico/", "fa-diagram-project", ["new"], ["React", "Cytoscape", "ECharts", "Python", "NetworkX"]),
         ("transparente", "https://unimauro.github.io/peru-transparente/", "fa-magnifying-glass-chart", ["new"], ["React", "Python", "FastAPI", "Datos abiertos"]),
+        ("ambiental", "https://unimauro.github.io/observatorio-ambiental-peruano/", "fa-tree", ["new"], ["React", "Vite", "Leaflet", "Python"]),
+        ("universidades", "https://unimauro.github.io/universidades-peru/", "fa-graduation-cap", ["new"], ["OpenAlex", "Chart.js", "Leaflet", "Python"]),
+        ("plan2050", "https://unimauro.github.io/plan-peru-2050/", "fa-diagram-project", ["new"], ["JavaScript", "GitHub Pages"]),
         ("inti", "https://unimauro.github.io/proyecto-inti/", "fa-sun", ["new"], ["Vanilla JS", "Chart.js", "Leaflet"]),
         ("petroperu", "https://unimauro.github.io/petroperu-analytics/", "fa-oil-well", ["new"], ["React", "TypeScript", "ECharts", "Python"]),
         ("congreso", "https://unimauro.github.io/congreso-abierto-peru/", "fa-landmark", ["new"], ["Python", "Playwright", "Chart.js"]),
@@ -60,6 +63,7 @@ PROJECTS = {
     ],
     "mundo": [
         ("vuelos", "https://unimauro.github.io/unimaurox-vuelos-internacionales/", "fa-plane", ["new"], ["Vanilla JS", "Leaflet", "Chart.js", "OpenSky"]),
+        ("smartphones", "https://unimauro.github.io/observatorio-smartphones-adolescentes/", "fa-mobile-screen", ["new"], ["React", "Vite", "ECharts", "Leaflet"]),
     ],
     "ninos": [
         ("libelula", "https://unimauro.github.io/libelula/", "fa-bug", ["new"], ["HTML/CSS/JS", "Supabase", "GitHub Pages"]),
@@ -91,7 +95,7 @@ BOOKS = [
     ("fa-microchip", "Evaluación de la OLPC con Ingeniería de Usabilidad", "https://leanpub.com/evaluacion_de_la_olpc_con_ingeniera_de_usabilidad"),
 ]
 
-VIDEOS = ["mHX1f-W-5as", "8Kf0i_j_yeo", "lcteoKvYcCY", "jBjjqzg6uJM"]
+VIDEOS = ["hNKXu6Q8GE4", "mHX1f-W-5as", "8Kf0i_j_yeo", "lcteoKvYcCY", "jBjjqzg6uJM"]
 
 SAMEAS = [
     "https://github.com/unimauro",
