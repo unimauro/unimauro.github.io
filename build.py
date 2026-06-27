@@ -285,7 +285,7 @@ STYLE = """    <style>
         .social-btn.scholar:hover { border-color: #4285f4; }
 
         .topnav { position: sticky; top: 0.6rem; z-index: 30; margin-bottom: 1.5rem; padding: 0.5rem; background: var(--navbg); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 8px 24px var(--shadow); display: flex; gap: 0.5rem; align-items: center; }
-        .topnav .inner { display: flex; gap: 0.45rem; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; flex: 1; }
+        .topnav .inner { display: flex; gap: 0.45rem; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; flex: 1; scroll-behavior: smooth; -webkit-mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent); mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent); }
         .topnav .inner::-webkit-scrollbar { display: none; }
         .topnav a.navlink { flex-shrink: 0; white-space: nowrap; text-decoration: none; color: var(--soft); font-size: 0.85rem; font-weight: 600; padding: 0.45rem 0.85rem; border-radius: 20px; background: var(--surface); border: 1px solid transparent; transition: all 0.2s ease; }
         .topnav a.navlink:hover { background: var(--surface-h); color: var(--text); transform: translateY(-1px); }
@@ -522,10 +522,15 @@ def render(loc, S):
       document.querySelectorAll('.langmenu a').forEach(function(a){{a.addEventListener('click',function(){{try{{localStorage.setItem('lang', a.getAttribute('data-lang'));}}catch(e){{}}}});}});
       var lp=document.querySelector('.langpick');
       document.addEventListener('click',function(e){{ if(lp && lp.open && !lp.contains(e.target)) lp.open=false; }});
+      var navInner = document.querySelector('.topnav .inner');
       var navLinks = Array.from(document.querySelectorAll('.topnav a.navlink'));
       var secs = navLinks.map(function(a){{return document.getElementById(a.getAttribute('href').slice(1));}}).filter(Boolean);
-      var io = new IntersectionObserver(function(es){{ es.forEach(function(e){{ if(e.isIntersecting){{ var id=e.target.id; navLinks.forEach(function(a){{a.classList.toggle('activo', a.getAttribute('href')==='#'+id);}}); }} }}); }},{{rootMargin:'-40% 0px -55% 0px'}});
+      function centerNav(link){{ if(!navInner||!link) return; var target = link.offsetLeft - (navInner.clientWidth/2) + (link.clientWidth/2); navInner.scrollTo({{left: Math.max(0,target), behavior:'smooth'}}); }}
+      var curId=null;
+      function setActive(id){{ if(id===curId) return; curId=id; var active=null; navLinks.forEach(function(a){{ var on=a.getAttribute('href')==='#'+id; a.classList.toggle('activo', on); if(on) active=a; }}); centerNav(active); }}
+      var io = new IntersectionObserver(function(es){{ es.forEach(function(e){{ if(e.isIntersecting){{ setActive(e.target.id); }} }}); }},{{rootMargin:'-40% 0px -55% 0px'}});
       secs.forEach(function(s){{io.observe(s);}});
+      navLinks.forEach(function(a){{ a.addEventListener('click',function(){{ centerNav(a); }}); }});
       var vm=document.getElementById('vmodal'), vf=document.getElementById('vmodal-iframe');
       function vmOpen(id){{ vf.src='https://www.youtube.com/embed/'+id+'?autoplay=1'; vm.classList.add('open'); }}
       function vmClose(){{ vm.classList.remove('open'); vf.src=''; }}
