@@ -471,10 +471,6 @@ def render(loc, S):
                 <a href="https://scholar.google.com/citations?hl=es&user=-bBexuUAAAAJ" class="social-btn scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>
                 <a href="https://cardenas.pe/" class="social-btn web" target="_blank" rel="noopener"><i class="fas fa-globe"></i> cardenas.pe</a>
             </div>
-            <div class="gh-stats">
-                <img src="https://github-readme-stats.vercel.app/api?username=unimauro&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight&hide_border=true&bg_color=00000080" alt="{ghstats}" loading="lazy" onerror="this.classList.add('broken')" />
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=unimauro&layout=compact&theme=tokyonight&hide_border=true&count_private=true&bg_color=00000080" alt="{ghlangs}" loading="lazy" onerror="this.classList.add('broken')" />
-            </div>
         </header>
 
         <nav class="topnav" aria-label="{navaria}">
@@ -492,6 +488,10 @@ def render(loc, S):
             </div>
         </nav>
 
+        <h2 id="videos"><i class="fas fa-video"></i> {videos_t}</h2>
+        <div class="video-marquee"><div class="video-track">
+{videos}        </div></div>
+
 {sections}
         <h2 id="stack"><i class="fas fa-laptop-code"></i> {stack_t}</h2>
         <div class="stack">{stack}</div>
@@ -500,9 +500,6 @@ def render(loc, S):
         <div class="books">
 {books}        </div>
 
-        <h2 id="videos"><i class="fas fa-video"></i> {videos_t}</h2>
-        <div class="video-marquee"><div class="video-track">
-{videos}        </div></div>
         <div class="socials">
             <a href="https://www.youtube.com/channel/UCUDcs3s8Src2jP3-xa-aV1w" class="social-btn youtube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i> {ytchannel}</a>
             <a href="https://www.linkedin.com/in/carloscardenasf/" class="social-btn linkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
