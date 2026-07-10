@@ -37,6 +37,7 @@ SEC_ICON = {"ia": "fa-robot", "peru": "fa-landmark", "mundo": "fa-globe",
 # key: (url, fa-icon, [badges], [tags])
 PROJECTS = {
     "ia": [
+        ("sdd", "https://unimauro.github.io/sdd-pcm-deck/", "fa-terminal", ["new"], ["Spec-Driven Dev", "Agentes adversariales", "ECharts", "Datos abiertos"]),
         ("turbonotes", "https://notes.cardenas.pe", "fa-microphone-lines", ["live"], ["Django", "Next.js", "OpenAI Whisper", "TanStack"]),
         ("actas", "https://conteojp.netlify.app", "fa-square-poll-vertical", ["new"], ["Next.js", "Supabase", "Gemini AI"]),
         ("agentflow", "https://unimauro.github.io/agentflow-ai/", "fa-robot", ["new"], ["React", "TanStack", "Tailwind"]),
@@ -44,6 +45,10 @@ PROJECTS = {
         ("modelo", "https://unimauro.github.io/modelo-predictivo-uni/", "fa-chart-line", ["new"], ["Machine Learning", "Reveal.js", "Chart.js"]),
     ],
     "peru": [
+        ("visitas", "https://unimauro.github.io/portal-visitas-peru/", "fa-user-check", ["new"], ["Spec-Driven Dev", "Agentes IA", "ECharts", "Datos abiertos"]),
+        ("justicia", "https://unimauro.github.io/observatorio-justicia-peru/", "fa-scale-balanced", ["new"], ["ECharts", "Leaflet", "ML", "PJ/MPFN/TC", "Datos abiertos"]),
+        ("educacion", "https://unimauro.github.io/educacion-peru/", "fa-book-open-reader", ["new"], ["ECharts", "ENLA 2024", "Datos abiertos"]),
+        ("seguridad", "https://unimauro.github.io/unimaurox-seguridad/", "fa-shield-halved", ["new"], ["Leaflet", "Chart.js", "ENAPRES/PNP/Sinadef"]),
         ("observatorio", "https://unimauro.github.io/observatorio-fonafe/", "fa-building-columns", ["new"], ["React", "ECharts", "Python", "OCDS"]),
         ("defensa", "https://unimauro.github.io/observatorio-defensa-interior/", "fa-shield-halved", ["new"], ["React", "ECharts", "Python", "Gemini AI"]),
         ("poder", "https://unimauro.github.io/observatorio-poder-economico/", "fa-diagram-project", ["new"], ["React", "Cytoscape", "ECharts", "Python", "NetworkX"]),

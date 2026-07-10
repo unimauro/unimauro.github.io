@@ -111,5 +111,15 @@
   "t_turbonotes": "Turbo Notes",
   "d_turbonotes": "App de notas por voz: dicta con IA (Whisper), escúchalas en voz alta y autotitula sin manos diciendo «close my note». Django + Next.js.",
   "t_careeros": "CareerOS",
-  "d_careeros": "Brújula de carrera para ingenieros de software en la era de la IA: roadmaps con señales (importancia/demanda/riesgo de automatización), recursos curados y aprendizaje por proyectos. Trilingüe (EN/ES/ZH)."
+  "d_careeros": "Brújula de carrera para ingenieros de software en la era de la IA: roadmaps con señales (importancia/demanda/riesgo de automatización), recursos curados y aprendizaje por proyectos. Trilingüe (EN/ES/ZH).",
+  "t_sdd": "Spec-Driven Development y Agentes Adversariales 🖥️",
+  "d_sdd": "Charla técnica para la SGTD-PCM (marco ENIA/ENGD 2026-2030): del spec al deploy con IA, agentes adversariales de seguridad y control de costos, con un tablero de transparencia construido en vivo sobre datos abiertos del Estado. Deck navegable + código y spec abiertos.",
+  "t_visitas": "¿Quién visita al Estado? 👁️",
+  "d_visitas": "Tablero de transparencia del Registro de Visitas en Línea (datosabiertos.gob.pe): 57,738 visitas anonimizadas. Piloto sobre 1 entidad (GORE Loreto), la única que publica su registro descargable — legalmente abierto ≠ técnicamente accesible. Construido con Spec-Driven Development y agentes en paralelo; un agente adversarial bloqueó una fuga de PII antes del deploy.",
+  "t_justicia": "Observatorio Nacional de Justicia ⚖️",
+  "d_justicia": "Inteligencia territorial sobre el sistema judicial peruano con datos abiertos reales (PJ, MPFN, TC, MIMP): carga procesal, demoras, fiscales, casos de seguridad y un modelo ML de predicción de demora. Cifras etiquetadas real vs. estimado, anonimizadas y trazables a su fuente.",
+  "t_educacion": "Educación del Perú 📚",
+  "d_educacion": "Radiografía de la educación básica: aprendizajes ENLA 2024, brechas por región y condición socioeconómica, con datos oficiales y procedencia marcada.",
+  "t_seguridad": "Seguridad Ciudadana del Perú 🛡️",
+  "d_seguridad": "Mapa interactivo de seguridad ciudadana por región (ENAPRES, PNP, Sinadef): denuncias, victimización y homicidios, con visualización Leaflet + Chart.js y fuentes citadas."
 }
