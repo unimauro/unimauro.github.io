@@ -125,7 +125,9 @@ BOOKS = [
     ("fa-microchip", "Evaluación de la OLPC con Ingeniería de Usabilidad", "https://leanpub.com/evaluacion_de_la_olpc_con_ingeniera_de_usabilidad"),
 ]
 
-VIDEOS = ["hNKXu6Q8GE4", "mHX1f-W-5as", "8Kf0i_j_yeo", "lcteoKvYcCY", "jBjjqzg6uJM"]
+VIDEOS = ["frEeKwgFm0I", "hNKXu6Q8GE4", "mHX1f-W-5as", "8Kf0i_j_yeo", "lcteoKvYcCY", "jBjjqzg6uJM"]
+
+LASTMOD = "2026-09-01"
 
 SAMEAS = [
     "https://github.com/unimauro",
@@ -181,12 +183,13 @@ def project_card(p, t):
     key, url, icon, badges, tags = p
     meta = "".join(badge_html(b, t) for b in badges)
     meta += "".join('<span class="project-badge">%s</span>' % esc(x) for x in tags)
-    return ('''            <a href="%s" class="project" target="_blank" rel="noopener">
+    search = esc((t["t_" + key] + " " + t["d_" + key] + " " + " ".join(tags)).lower())
+    return ('''            <a href="%s" class="project" data-search="%s" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas %s"></i> %s</div>
                 <div class="project-desc">%s</div>
                 <div class="project-meta">%s</div>
             </a>
-''' % (url, icon, esc(t["t_" + key]), esc(t["d_" + key]), meta))
+''' % (url, search, icon, esc(t["t_" + key]), esc(t["d_" + key]), meta))
 
 
 def section_html(sid, t):
@@ -194,9 +197,11 @@ def section_html(sid, t):
     sub = ""
     if t.get("sec_%s_s" % sid):
         sub = '        <p class="sec-sub">%s</p>\n' % esc(t["sec_%s_s" % sid])
-    return ('''        <h2 id="%s"><i class="fas %s"></i> %s</h2>
+    return ('''        <section class="proj-section">
+        <h2 id="%s"><i class="fas %s"></i> %s</h2>
 %s        <div class="projects">
 %s        </div>
+        </section>
 ''' % (sid, SEC_ICON[sid], esc(t["sec_%s_t" % sid]), sub, cards))
 
 
@@ -333,6 +338,14 @@ STYLE = """    <style>
         .langmenu a[aria-current="true"] { background: linear-gradient(90deg,var(--accent),var(--accent2)); color: #fff; }
         @media (max-width: 600px) { .langpick .lp-name { display: none; } }
 
+        [hidden] { display: none !important; }
+        .searchbar { display: flex; align-items: center; gap: 0.6rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.65rem 0.95rem; margin-bottom: 1.6rem; transition: border-color 0.2s ease, background 0.2s ease; }
+        .searchbar:focus-within { border-color: var(--border-h); background: var(--surface-h); }
+        .searchbar i { color: var(--accent); font-size: 0.95rem; flex-shrink: 0; }
+        .searchbar input { flex: 1; min-width: 0; background: transparent; border: 0; outline: none; color: var(--text); font-size: 0.95rem; font-family: inherit; }
+        .searchbar input::placeholder { color: var(--faint); }
+        .searchbar input::-webkit-search-cancel-button { filter: grayscale(1); opacity: 0.6; cursor: pointer; }
+        .no-results { text-align: center; color: var(--faint); font-size: 0.9rem; margin: 2rem 0; }
         h2 { font-size: 1.3rem; font-weight: 700; margin: 2.5rem 0 1rem; display: flex; align-items: center; gap: 0.6rem; color: var(--heading); }
         h2 i { color: var(--accent); font-size: 1.1rem; }
         h2[id] { scroll-margin-top: 80px; }
@@ -517,11 +530,17 @@ def render(loc, S):
             </div>
         </nav>
 
+        <div class="searchbar">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="search" id="q" placeholder="{search_ph}" aria-label="{search_ph}" autocomplete="off" enterkeyhint="search">
+        </div>
+
         <h2 id="videos"><i class="fas fa-video"></i> {videos_t}</h2>
         <div class="video-marquee"><div class="video-track">
 {videos}        </div></div>
 
-{sections}
+{sections}        <p class="no-results" id="noResults" hidden>{search_none} “<span id="qEcho"></span>”</p>
+
         <h2 id="stack"><i class="fas fa-laptop-code"></i> {stack_t}</h2>
         <div class="stack">{stack}</div>
 
@@ -557,6 +576,20 @@ def render(loc, S):
       var io = new IntersectionObserver(function(es){{ es.forEach(function(e){{ if(e.isIntersecting){{ setActive(e.target.id); }} }}); }},{{rootMargin:'-40% 0px -55% 0px'}});
       secs.forEach(function(s){{io.observe(s);}});
       navLinks.forEach(function(a){{ a.addEventListener('click',function(){{ centerNav(a); }}); }});
+      var q=document.getElementById('q');
+      var searchSecs=Array.from(document.querySelectorAll('.proj-section'));
+      var searchCards=Array.from(document.querySelectorAll('.project[data-search]'));
+      var noRes=document.getElementById('noResults'), qEcho=document.getElementById('qEcho');
+      function norm(s){{ return (s||'').toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,''); }}
+      function doSearch(){{
+        var term=norm(q.value.trim());
+        var any=false;
+        searchCards.forEach(function(c){{ var m=!term||norm(c.getAttribute('data-search')).indexOf(term)>=0; c.hidden=!m; if(m) any=true; }});
+        searchSecs.forEach(function(s){{ var vis=s.querySelectorAll('.project:not([hidden])').length; s.hidden=!!term&&vis===0; }});
+        if(qEcho) qEcho.textContent=q.value.trim();
+        if(noRes) noRes.hidden=!(term&&!any);
+      }}
+      if(q){{ q.addEventListener('input',doSearch); q.addEventListener('search',doSearch); }}
       var vm=document.getElementById('vmodal'), vf=document.getElementById('vmodal-iframe');
       function vmOpen(id){{ vf.src='https://www.youtube.com/embed/'+id+'?autoplay=1'; vm.classList.add('open'); }}
       function vmClose(){{ vm.classList.remove('open'); vf.src=''; }}
@@ -581,6 +614,7 @@ def render(loc, S):
         sections=sections, stack_t=esc(t["sec_stack_t"]), stack=stack,
         libros_t=esc(t["sec_libros_t"]), books=books, videos_t=esc(t["sec_videos_t"]),
         videos=videos, ytchannel=esc(t["ui_yt_channel"]),
+        search_ph=esc(t["ui_search_ph"]), search_none=esc(t["ui_search_none"]),
         footer=esc(t["footer_built"]),
     )
 
@@ -594,10 +628,10 @@ def write_sitemap():
         urls.append('''    <url>
         <loc>%s%s</loc>
 %s
-        <lastmod>2026-06-07</lastmod>
+        <lastmod>%s</lastmod>
         <changefreq>weekly</changefreq>
         <priority>%s</priority>
-    </url>''' % (BASE, url_for(loc), home_alts, "1.0" if loc == "es" else "0.9"))
+    </url>''' % (BASE, url_for(loc), home_alts, LASTMOD, "1.0" if loc == "es" else "0.9"))
     # páginas de proyectos (no traducidas)
     project_pages = [
         "/productividad/", "/educacion-peru/", "/ingreso-costo-vida/", "/portal-visitas-peru/",
@@ -614,10 +648,10 @@ def write_sitemap():
     for p in project_pages:
         urls.append('''    <url>
         <loc>%s%s</loc>
-        <lastmod>2026-06-07</lastmod>
+        <lastmod>%s</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-    </url>''' % (BASE, p))
+    </url>''' % (BASE, p, LASTMOD))
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
            'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'

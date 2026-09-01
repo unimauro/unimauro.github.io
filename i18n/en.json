@@ -135,5 +135,7 @@
   "t_ensad": "ENSAD Transparency Observatory 🎭",
   "d_ensad": "Citizen portal for the National School of Dramatic Art (ENSAD): budget, spending and suppliers with open data.",
   "t_unilatam": "Latin American University Ranking 🎓",
-  "d_unilatam": "Open, reproducible bibliometric ranking of ~1000 universities in Latin America and Spain (OpenAlex CC0 + SCImago)."
+  "d_unilatam": "Open, reproducible bibliometric ranking of ~1000 universities in Latin America and Spain (OpenAlex CC0 + SCImago).",
+  "ui_search_ph": "Search my projects…",
+  "ui_search_none": "No results for"
 }

@@ -101,5 +101,7 @@
   "t_turbonotes": "Turbo Notes",
   "d_turbonotes": "Appli de notes vocales : dictez avec l’IA (Whisper), écoutez-les et générez le titre mains libres. Django + Next.js.",
   "t_careeros": "CareerOS",
-  "d_careeros": "Une boussole de carrière pour ingénieurs logiciel à l'ère de l'IA : roadmaps avec signaux (importance/demande/risque d'automatisation), ressources sélectionnées et apprentissage par projets. Trilingue (EN/ES/ZH)."
+  "d_careeros": "Une boussole de carrière pour ingénieurs logiciel à l'ère de l'IA : roadmaps avec signaux (importance/demande/risque d'automatisation), ressources sélectionnées et apprentissage par projets. Trilingue (EN/ES/ZH).",
+  "ui_search_ph": "Rechercher dans mes projets…",
+  "ui_search_none": "Aucun résultat pour"
 }

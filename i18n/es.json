@@ -185,5 +185,7 @@
   "t_admisionunsa": "Admisión UNSA en cifras 📊",
   "d_admisionunsa": "Estadísticas de admisión de la UNSA (Arequipa): puntajes de cierre, postulantes e ingresantes por carrera, 2023-2025. Datos agregados y anónimos.",
   "t_stellar": "Stellar Mystery Box 🌟",
-  "d_stellar": "Taller práctico donde cada participante crea, personaliza y despliega su propio smart contract en la red de Stellar. Material del taller abierto en GitHub."
+  "d_stellar": "Taller práctico donde cada participante crea, personaliza y despliega su propio smart contract en la red de Stellar. Material del taller abierto en GitHub.",
+  "ui_search_ph": "Buscar en mis proyectos…",
+  "ui_search_none": "Sin resultados para"
 }

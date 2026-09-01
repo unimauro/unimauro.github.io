@@ -101,5 +101,7 @@
   "t_turbonotes": "Turbo Notes",
   "d_turbonotes": "语音笔记应用：用 AI（Whisper）口述、朗读并免手动自动生成标题。Django + Next.js。",
   "t_careeros": "CareerOS",
-  "d_careeros": "AI 时代软件工程师的职业指南针：带信号（重要性/需求/自动化风险）的学习路线、精选资源和实战项目学习。三语（EN/ES/ZH）。"
+  "d_careeros": "AI 时代软件工程师的职业指南针：带信号（重要性/需求/自动化风险）的学习路线、精选资源和实战项目学习。三语（EN/ES/ZH）。",
+  "ui_search_ph": "搜索我的项目…",
+  "ui_search_none": "没有结果"
 }

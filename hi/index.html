@@ -220,6 +220,14 @@
         .langmenu a[aria-current="true"] { background: linear-gradient(90deg,var(--accent),var(--accent2)); color: #fff; }
         @media (max-width: 600px) { .langpick .lp-name { display: none; } }
 
+        [hidden] { display: none !important; }
+        .searchbar { display: flex; align-items: center; gap: 0.6rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.65rem 0.95rem; margin-bottom: 1.6rem; transition: border-color 0.2s ease, background 0.2s ease; }
+        .searchbar:focus-within { border-color: var(--border-h); background: var(--surface-h); }
+        .searchbar i { color: var(--accent); font-size: 0.95rem; flex-shrink: 0; }
+        .searchbar input { flex: 1; min-width: 0; background: transparent; border: 0; outline: none; color: var(--text); font-size: 0.95rem; font-family: inherit; }
+        .searchbar input::placeholder { color: var(--faint); }
+        .searchbar input::-webkit-search-cancel-button { filter: grayscale(1); opacity: 0.6; cursor: pointer; }
+        .no-results { text-align: center; color: var(--faint); font-size: 0.9rem; margin: 2rem 0; }
         h2 { font-size: 1.3rem; font-weight: 700; margin: 2.5rem 0 1rem; display: flex; align-items: center; gap: 0.6rem; color: var(--heading); }
         h2 i { color: var(--accent); font-size: 1.1rem; }
         h2[id] { scroll-margin-top: 80px; }
@@ -315,13 +323,20 @@
             </div>
         </nav>
 
+        <div class="searchbar">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="search" id="q" placeholder="मेरी परियोजनाएँ खोजें…" aria-label="मेरी परियोजनाएँ खोजें…" autocomplete="off" enterkeyhint="search">
+        </div>
+
         <h2 id="videos"><i class="fas fa-video"></i> वीडियो और सोशल मीडिया</h2>
         <div class="video-marquee"><div class="video-track">
+            <button class="vthumb" data-id="frEeKwgFm0I" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/frEeKwgFm0I/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
             <button class="vthumb" data-id="hNKXu6Q8GE4" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/hNKXu6Q8GE4/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
             <button class="vthumb" data-id="mHX1f-W-5as" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/mHX1f-W-5as/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
             <button class="vthumb" data-id="8Kf0i_j_yeo" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/8Kf0i_j_yeo/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
             <button class="vthumb" data-id="lcteoKvYcCY" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/lcteoKvYcCY/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
             <button class="vthumb" data-id="jBjjqzg6uJM" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/jBjjqzg6uJM/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
+            <button class="vthumb" data-id="frEeKwgFm0I" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/frEeKwgFm0I/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
             <button class="vthumb" data-id="hNKXu6Q8GE4" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/hNKXu6Q8GE4/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
             <button class="vthumb" data-id="mHX1f-W-5as" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/mHX1f-W-5as/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
             <button class="vthumb" data-id="8Kf0i_j_yeo" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/8Kf0i_j_yeo/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
@@ -329,354 +344,369 @@
             <button class="vthumb" data-id="jBjjqzg6uJM" aria-label="Reproducir video"><img src="https://img.youtube.com/vi/jBjjqzg6uJM/hqdefault.jpg" loading="lazy" alt="Video — Carlos Mauro Cárdenas"><span class="play">▶</span></button>
         </div></div>
 
+        <section class="proj-section">
         <h2 id="ia"><i class="fas fa-robot"></i> AI और एजेंट</h2>
         <p class="sec-sub">एजेंट, LLMs और व्यावहारिक मशीन लर्निंग।</p>
         <div class="projects">
-            <a href="https://unimauro.github.io/sdd-pcm-deck/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/sdd-pcm-deck/" class="project" data-search="spec-driven development y agentes adversariales 🖥️ charla técnica para la sgtd-pcm (marco enia/engd 2026-2030): del spec al deploy con ia, agentes adversariales de seguridad y control de costos, con un tablero de transparencia construido en vivo sobre datos abiertos del estado. deck navegable + código y spec abiertos. spec-driven dev agentes adversariales echarts datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-terminal"></i> Spec-Driven Development y Agentes Adversariales 🖥️</div>
                 <div class="project-desc">Charla técnica para la SGTD-PCM (marco ENIA/ENGD 2026-2030): del spec al deploy con IA, agentes adversariales de seguridad y control de costos, con un tablero de transparencia construido en vivo sobre datos abiertos del Estado. Deck navegable + código y spec abiertos.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Spec-Driven Dev</span><span class="project-badge">Agentes adversariales</span><span class="project-badge">ECharts</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://github.com/unimauro/yachay-slm" class="project" target="_blank" rel="noopener">
+            <a href="https://github.com/unimauro/yachay-slm" class="project" data-search="yachay · slm propio desde cero 🧠 un modelo de lenguaje pequeño (slm) entrenado desde cero, en español: se entrena en una mac con mlx y corre en cualquier cpu vieja o dispositivo iot gracias a un motor en numpy puro y un binario nativo en rust. aprender cómo funciona un llm construyéndolo, sin cajas negras. mlx numpy puro rust español" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-microchip"></i> Yachay · SLM propio desde cero 🧠</div>
                 <div class="project-desc">Un modelo de lenguaje pequeño (SLM) entrenado desde cero, en español: se entrena en una Mac con MLX y corre en cualquier CPU vieja o dispositivo IoT gracias a un motor en NumPy puro y un binario nativo en Rust. Aprender cómo funciona un LLM construyéndolo, sin cajas negras.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">MLX</span><span class="project-badge">NumPy puro</span><span class="project-badge">Rust</span><span class="project-badge">Español</span></div>
             </a>
-            <a href="https://unimauro.github.io/mi-dia-con-ia/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/mi-dia-con-ia/" class="project" data-search="mi día con ia 🤖 dashboard de productividad de una sola página que muestra, con gráficos svg puros, cómo cambia un día de trabajo apoyado en ia. incluye un toggle ingeniero ↔ contador para ver el mismo día desde dos perfiles. vanilla js, sin dependencias. vanilla js svg productividad" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-gauge-high"></i> Mi día con IA 🤖</div>
                 <div class="project-desc">Dashboard de productividad de una sola página que muestra, con gráficos SVG puros, cómo cambia un día de trabajo apoyado en IA. Incluye un toggle Ingeniero ↔ Contador para ver el mismo día desde dos perfiles. Vanilla JS, sin dependencias.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge new">✨ live</span><span class="project-badge">Vanilla JS</span><span class="project-badge">SVG</span><span class="project-badge">Productividad</span></div>
             </a>
-            <a href="https://unimauro.github.io/panel-ia/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/panel-ia/" class="project" data-search="panel ia · tablero personal 🗂️ tablero personal estático para github pages: reloj, pomodoro, música retro, kanban y un feed de noticias de ia que se actualiza solo con github actions. todo cliente, sin backend. vanilla js github actions kanban" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-table-columns"></i> Panel IA · Tablero personal 🗂️</div>
                 <div class="project-desc">Tablero personal estático para GitHub Pages: reloj, pomodoro, música retro, kanban y un feed de noticias de IA que se actualiza solo con GitHub Actions. Todo cliente, sin backend.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Vanilla JS</span><span class="project-badge">GitHub Actions</span><span class="project-badge">Kanban</span></div>
             </a>
-            <a href="https://notes.cardenas.pe" class="project" target="_blank" rel="noopener">
+            <a href="https://notes.cardenas.pe" class="project" data-search="turbo notes आवाज़ से नोट्स: ai (whisper) से बोलकर लिखें, सुनें और बिना हाथ लगाए शीर्षक बनाएं। django + next.js। django next.js openai whisper tanstack" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-microphone-lines"></i> Turbo Notes</div>
                 <div class="project-desc">आवाज़ से नोट्स: AI (Whisper) से बोलकर लिखें, सुनें और बिना हाथ लगाए शीर्षक बनाएं। Django + Next.js।</div>
                 <div class="project-meta"><span class="project-badge new">✨ live</span><span class="project-badge">Django</span><span class="project-badge">Next.js</span><span class="project-badge">OpenAI Whisper</span><span class="project-badge">TanStack</span></div>
             </a>
-            <a href="https://conteojp.netlify.app" class="project" target="_blank" rel="noopener">
+            <a href="https://conteojp.netlify.app" class="project" data-search="actas abiertas 2026 🗳️ पेरू के 2026 राष्ट्रपति रनऑफ़ का नागरिक मतगणना (pvt): onpe के आधिकारिक टैली शीट की फ़ोटो लें, एक ai (gemini) हस्तलिखित वोट पढ़ता है — अंकगणितीय सत्यापन, मेज़-वार डीडुप, बैच अपलोड, लाइव डैशबोर्ड और संपादन-योग्य onpe तुलना के साथ। next.js supabase gemini ai" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-square-poll-vertical"></i> Actas Abiertas 2026 🗳️</div>
                 <div class="project-desc">पेरू के 2026 राष्ट्रपति रनऑफ़ का नागरिक मतगणना (PVT): ONPE के आधिकारिक टैली शीट की फ़ोटो लें, एक AI (Gemini) हस्तलिखित वोट पढ़ता है — अंकगणितीय सत्यापन, मेज़-वार डीडुप, बैच अपलोड, लाइव डैशबोर्ड और संपादन-योग्य ONPE तुलना के साथ।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Next.js</span><span class="project-badge">Supabase</span><span class="project-badge">Gemini AI</span></div>
             </a>
-            <a href="https://unimauro.github.io/agentflow-ai/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/agentflow-ai/" class="project" data-search="agentflow ai · डेमो 🤖 बिक्री के लिए मल्टी-एजेंट ऑर्केस्ट्रेशन का डेमो प्लेटफॉर्म: डैशबोर्ड, ओमनीचैनल इनबॉक्स, पाइपलाइन, ai एजेंट, ऑटोमेशन और एनालिटिक्स। उदाहरण डेटा के साथ स्टैटिक spa (बिना बैकएंड के)। react tanstack tailwind" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-robot"></i> AgentFlow AI · डेमो 🤖</div>
                 <div class="project-desc">बिक्री के लिए मल्टी-एजेंट ऑर्केस्ट्रेशन का डेमो प्लेटफॉर्म: डैशबोर्ड, ओमनीचैनल इनबॉक्स, पाइपलाइन, AI एजेंट, ऑटोमेशन और एनालिटिक्स। उदाहरण डेटा के साथ स्टैटिक SPA (बिना बैकएंड के)।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span><span class="project-badge">TanStack</span><span class="project-badge">Tailwind</span></div>
             </a>
-            <a href="https://unimauro.github.io/agente-uni-demo/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/agente-uni-demo/" class="project" data-search="suyay · uni-fiis शैक्षणिक कोच 🌱 uni के इंजीनियरिंग छात्रों के लिए whatsapp पर एक कोच एजेंट का इंटरैक्टिव डेमो: ग्रेड देखना, उत्तीर्ण होने के लिए आवश्यक अंक की गणना, मूल्यांकन की याद दिलाना और सहानुभूतिपूर्ण साथ (trica मामले सहित)। ब्राउज़र में नकली प्रतिक्रियाएँ, बिना वास्तविक डेटा के। ai agent llm vanilla js" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-robot"></i> Suyay · UNI-FIIS शैक्षणिक कोच 🌱</div>
                 <div class="project-desc">UNI के इंजीनियरिंग छात्रों के लिए WhatsApp पर एक कोच एजेंट का इंटरैक्टिव डेमो: ग्रेड देखना, उत्तीर्ण होने के लिए आवश्यक अंक की गणना, मूल्यांकन की याद दिलाना और सहानुभूतिपूर्ण साथ (TRICA मामले सहित)। ब्राउज़र में नकली प्रतिक्रियाएँ, बिना वास्तविक डेटा के।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">AI Agent</span><span class="project-badge">LLM</span><span class="project-badge">Vanilla JS</span></div>
             </a>
-            <a href="https://unimauro.github.io/modelo-predictivo-uni/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/modelo-predictivo-uni/" class="project" data-search="ai पूर्वानुमान मॉडल · uni-fiis 🎓 शोध परियोजना की सार्वजनिक प्रस्तुति: इंजीनियरिंग छात्रों के शैक्षणिक प्रदर्शन और ड्रॉपआउट का पूर्वानुमान लगाने के लिए ai मॉडल (ensemble svm + rf + gb)। औचित्य, चर, पाइपलाइन, संवेदनशील डेटा का नैतिक संग्रह, साइकोमेट्रिक सत्यापन और प्रारंभिक चेतावनी। machine learning reveal.js chart.js" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-chart-line"></i> AI पूर्वानुमान मॉडल · UNI-FIIS 🎓</div>
                 <div class="project-desc">शोध परियोजना की सार्वजनिक प्रस्तुति: इंजीनियरिंग छात्रों के शैक्षणिक प्रदर्शन और ड्रॉपआउट का पूर्वानुमान लगाने के लिए AI मॉडल (ensemble SVM + RF + GB)। औचित्य, चर, पाइपलाइन, संवेदनशील डेटा का नैतिक संग्रह, साइकोमेट्रिक सत्यापन और प्रारंभिक चेतावनी।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Machine Learning</span><span class="project-badge">Reveal.js</span><span class="project-badge">Chart.js</span></div>
             </a>
         </div>
+        </section>
+        <section class="proj-section">
         <h2 id="peru"><i class="fas fa-landmark"></i> पेरू · डेटा और पारदर्शिता</h2>
         <p class="sec-sub">आधिकारिक सार्वजनिक डेटा के साथ नागरिक डैशबोर्ड।</p>
         <div class="projects">
-            <a href="https://unimauro.github.io/productividad/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/productividad/" class="project" data-search="observatorio de productividad 📊 horas trabajadas vs productividad (pib por hora) en 42 países, con perú frente a américa latina y ee.uu. suma grandes empresas (fortune global 500), informalidad, traslado y feriados. la tesis: la baja productividad es un problema de ambición y escala empresarial, no de trabajar más horas. vanilla js svg oecd/ilo ia" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-gauge-high"></i> Observatorio de Productividad 📊</div>
                 <div class="project-desc">Horas trabajadas vs productividad (PIB por hora) en 42 países, con Perú frente a América Latina y EE.UU. Suma grandes empresas (Fortune Global 500), informalidad, traslado y feriados. La tesis: la baja productividad es un problema de ambición y escala empresarial, no de trabajar más horas.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge new">✨ live</span><span class="project-badge">Vanilla JS</span><span class="project-badge">SVG</span><span class="project-badge">OECD/ILO</span><span class="project-badge">IA</span></div>
             </a>
-            <a href="https://unimauro.github.io/peru-prevencion-riesgos/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/peru-prevencion-riesgos/" class="project" data-search="perú prevención de riesgos 🌋 dashboard interactivo de riesgos y resiliencia del perú: sismos, tsunamis, el niño, huaicos, friajes y deforestación, con mapas y simuladores. datos de igp, senamhi, indeci y minam. html/css/js vanilla, sin build. anti-overclaiming: fuentes citadas. vanilla js igp/senamhi/indeci simuladores" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-house-flood-water"></i> Perú Prevención de Riesgos 🌋</div>
                 <div class="project-desc">Dashboard interactivo de riesgos y resiliencia del Perú: sismos, tsunamis, El Niño, huaicos, friajes y deforestación, con mapas y simuladores. Datos de IGP, SENAMHI, INDECI y MINAM. HTML/CSS/JS vanilla, sin build. Anti-overclaiming: fuentes citadas.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge new">✨ live</span><span class="project-badge">Vanilla JS</span><span class="project-badge">IGP/SENAMHI/INDECI</span><span class="project-badge">Simuladores</span></div>
             </a>
-            <a href="https://unimauro.github.io/portal-visitas-peru/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/portal-visitas-peru/" class="project" data-search="¿quién visita al estado? 👁️ tablero de transparencia del registro de visitas en línea (datosabiertos.gob.pe): 57,738 visitas anonimizadas. piloto sobre 1 entidad (gore loreto), la única que publica su registro descargable — legalmente abierto ≠ técnicamente accesible. construido con spec-driven development y agentes en paralelo; un agente adversarial bloqueó una fuga de pii antes del deploy. spec-driven dev agentes ia echarts datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-user-check"></i> ¿Quién visita al Estado? 👁️</div>
                 <div class="project-desc">Tablero de transparencia del Registro de Visitas en Línea (datosabiertos.gob.pe): 57,738 visitas anonimizadas. Piloto sobre 1 entidad (GORE Loreto), la única que publica su registro descargable — legalmente abierto ≠ técnicamente accesible. Construido con Spec-Driven Development y agentes en paralelo; un agente adversarial bloqueó una fuga de PII antes del deploy.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Spec-Driven Dev</span><span class="project-badge">Agentes IA</span><span class="project-badge">ECharts</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-justicia-peru/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-justicia-peru/" class="project" data-search="observatorio nacional de justicia ⚖️ inteligencia territorial sobre el sistema judicial peruano con datos abiertos reales (pj, mpfn, tc, mimp): carga procesal, demoras, fiscales, casos de seguridad y un modelo ml de predicción de demora. cifras etiquetadas real vs. estimado, anonimizadas y trazables a su fuente. echarts leaflet ml pj/mpfn/tc datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-scale-balanced"></i> Observatorio Nacional de Justicia ⚖️</div>
                 <div class="project-desc">Inteligencia territorial sobre el sistema judicial peruano con datos abiertos reales (PJ, MPFN, TC, MIMP): carga procesal, demoras, fiscales, casos de seguridad y un modelo ML de predicción de demora. Cifras etiquetadas real vs. estimado, anonimizadas y trazables a su fuente.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">ECharts</span><span class="project-badge">Leaflet</span><span class="project-badge">ML</span><span class="project-badge">PJ/MPFN/TC</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/educacion-peru/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/educacion-peru/" class="project" data-search="educación del perú 📚 radiografía de la educación básica: aprendizajes enla 2024, brechas por región y condición socioeconómica, con datos oficiales y procedencia marcada. echarts enla 2024 datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-book-open-reader"></i> Educación del Perú 📚</div>
                 <div class="project-desc">Radiografía de la educación básica: aprendizajes ENLA 2024, brechas por región y condición socioeconómica, con datos oficiales y procedencia marcada.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">ECharts</span><span class="project-badge">ENLA 2024</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/unimaurox-seguridad/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/unimaurox-seguridad/" class="project" data-search="seguridad ciudadana del perú 🛡️ mapa interactivo de seguridad ciudadana por región (enapres, pnp, sinadef): denuncias, victimización y homicidios, con visualización leaflet + chart.js y fuentes citadas. leaflet chart.js enapres/pnp/sinadef" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-shield-halved"></i> Seguridad Ciudadana del Perú 🛡️</div>
                 <div class="project-desc">Mapa interactivo de seguridad ciudadana por región (ENAPRES, PNP, Sinadef): denuncias, victimización y homicidios, con visualización Leaflet + Chart.js y fuentes citadas.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Leaflet</span><span class="project-badge">Chart.js</span><span class="project-badge">ENAPRES/PNP/Sinadef</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-idoneidad-estado/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-idoneidad-estado/" class="project" data-search="observatorio de idoneidad del estado 🛡️ índice neutral de idoneidad y capacidad del estado peruano (ice) a partir de datos de revisión y desempeño institucional, con metodología trazable y sin sesgo político. índice ice echarts python datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-user-shield"></i> Observatorio de Idoneidad del Estado 🛡️</div>
                 <div class="project-desc">Índice neutral de idoneidad y capacidad del Estado peruano (ICE) a partir de datos de revisión y desempeño institucional, con metodología trazable y sin sesgo político.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Índice ICE</span><span class="project-badge">ECharts</span><span class="project-badge">Python</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/qhaway-dashboard/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/qhaway-dashboard/" class="project" data-search="qhaway · dashboard del presupuesto 🧊 tablero interactivo del presupuesto público del perú a nivel distrital (siaf-mef): explorador olap por año, sector y territorio, con datos oficiales. react siaf-mef echarts olap" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-cubes"></i> Qhaway · Dashboard del Presupuesto 🧊</div>
                 <div class="project-desc">Tablero interactivo del presupuesto público del Perú a nivel distrital (SIAF-MEF): explorador OLAP por año, sector y territorio, con datos oficiales.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span><span class="project-badge">SIAF-MEF</span><span class="project-badge">ECharts</span><span class="project-badge">OLAP</span></div>
             </a>
-            <a href="https://unimauro.github.io/ingreso-costo-vida/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/ingreso-costo-vida/" class="project" data-search="¿alcanza el ingreso para el costo de vida? 🧺 dashboard con datos inei 2025: ingresos, canasta básica, pobreza y mapa distrital. ¿cuánto rinde el sueldo en el perú? inei 2025 chart.js leaflet" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-basket-shopping"></i> ¿Alcanza el ingreso para el costo de vida? 🧺</div>
                 <div class="project-desc">Dashboard con datos INEI 2025: ingresos, canasta básica, pobreza y mapa distrital. ¿Cuánto rinde el sueldo en el Perú?</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">INEI 2025</span><span class="project-badge">Chart.js</span><span class="project-badge">Leaflet</span></div>
             </a>
-            <a href="https://unimauro.github.io/radiografia-startups-peru/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/radiografia-startups-peru/" class="project" data-search="radiografía de las startups del perú 🚀 observatorio del ecosistema emprendedor peruano con fuentes proinnóvate, pecap y wayra: financiamiento, verticales y evolución. proinnóvate pecap chart.js" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-rocket"></i> Radiografía de las Startups del Perú 🚀</div>
                 <div class="project-desc">Observatorio del ecosistema emprendedor peruano con fuentes ProInnóvate, PECAP y Wayra: financiamiento, verticales y evolución.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">ProInnóvate</span><span class="project-badge">PECAP</span><span class="project-badge">Chart.js</span></div>
             </a>
-            <a href="https://unimauro.github.io/AIforPresident/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/AIforPresident/" class="project" data-search="ai for president — elecciones perú 2026 🗳️ panel ciudadano sobre las elecciones presidenciales 2026 del perú: candidatos, propuestas y datos por país/región. elecciones 2026 vanilla js" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-check-to-slot"></i> AI for President — Elecciones Perú 2026 🗳️</div>
                 <div class="project-desc">Panel ciudadano sobre las elecciones presidenciales 2026 del Perú: candidatos, propuestas y datos por país/región.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Elecciones 2026</span><span class="project-badge">Vanilla JS</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-fonafe/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-fonafe/" class="project" data-search="पेरू सार्वजनिक उद्यम वेधशाला 🏛️ पेरू की सरकारी कंपनियों (fonafe + क्षेत्रीय जल कंपनियाँ) की पारदर्शिता: kpi, वित्त, वास्तविक खरीद (ocds/oece), रैंकिंग, निदान और सिफारिशें। स्टैटिक डैशबोर्ड + वर्शन्ड etl। react echarts python ocds" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-building-columns"></i> पेरू सार्वजनिक उद्यम वेधशाला 🏛️</div>
                 <div class="project-desc">पेरू की सरकारी कंपनियों (FONAFE + क्षेत्रीय जल कंपनियाँ) की पारदर्शिता: KPI, वित्त, वास्तविक खरीद (OCDS/OECE), रैंकिंग, निदान और सिफारिशें। स्टैटिक डैशबोर्ड + वर्शन्ड ETL।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span><span class="project-badge">ECharts</span><span class="project-badge">Python</span><span class="project-badge">OCDS</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-defensa-interior/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-defensa-interior/" class="project" data-search="रक्षा एवं गृह क्षेत्र वेधशाला 🛡️ पेरू के रक्षा एवं गृह क्षेत्र की वित्तीय इंटेलिजेंस: सरकारी कंपनियाँ (sima, fame, seman), विभागवार बजट और निवेश परियोजनाएँ, पेंशन (cpmp) तथा रैंक अनुसार वेतन। स्रोत सहित वास्तविक डेटा; अप्रकाशित आँकड़े अनुमान के रूप में चिह्नित। ai सहायक शामिल। react echarts python gemini ai" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-shield-halved"></i> रक्षा एवं गृह क्षेत्र वेधशाला 🛡️</div>
                 <div class="project-desc">पेरू के रक्षा एवं गृह क्षेत्र की वित्तीय इंटेलिजेंस: सरकारी कंपनियाँ (SIMA, FAME, SEMAN), विभागवार बजट और निवेश परियोजनाएँ, पेंशन (CPMP) तथा रैंक अनुसार वेतन। स्रोत सहित वास्तविक डेटा; अप्रकाशित आँकड़े अनुमान के रूप में चिह्नित। AI सहायक शामिल।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span><span class="project-badge">ECharts</span><span class="project-badge">Python</span><span class="project-badge">Gemini AI</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-poder-economico/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-poder-economico/" class="project" data-search="पेरू आर्थिक शक्ति वेधशाला 🕸️ कौन किसे नियंत्रित करता है? सार्वजनिक आंकड़ों (smv · bvl · sbs) से पेरू के आर्थिक समूहों, कंपनियों, शेयरधारकों और निदेशक मंडलों को एक ग्राफ़ के रूप में पुनर्निर्मित किया गया: pagerank, louvain समुदाय, आर्थिक शक्ति सूचकांक (0–100), नेटवर्क समानता और हितों के टकराव की पहचान। स्थैतिक डैशबोर्ड + वर्शन-नियंत्रित etl। react cytoscape echarts python networkx" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-diagram-project"></i> पेरू आर्थिक शक्ति वेधशाला 🕸️</div>
                 <div class="project-desc">कौन किसे नियंत्रित करता है? सार्वजनिक आंकड़ों (SMV · BVL · SBS) से पेरू के आर्थिक समूहों, कंपनियों, शेयरधारकों और निदेशक मंडलों को एक ग्राफ़ के रूप में पुनर्निर्मित किया गया: PageRank, Louvain समुदाय, आर्थिक शक्ति सूचकांक (0–100), नेटवर्क समानता और हितों के टकराव की पहचान। स्थैतिक डैशबोर्ड + वर्शन-नियंत्रित ETL।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span><span class="project-badge">Cytoscape</span><span class="project-badge">ECharts</span><span class="project-badge">Python</span><span class="project-badge">NetworkX</span></div>
             </a>
-            <a href="https://unimauro.github.io/peru-transparente/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/peru-transparente/" class="project" data-search="पारदर्शी पेरू 🇵🇪 लोक सेवकों, सार्वजनिक संस्थाओं, सरकारी कंपनियों और शक्ति नेटवर्क का राष्ट्रीय मानचित्र: एकीकृत डेटाबेस, राष्ट्रीय शक्ति ग्राफ़ और सार्वजनिक आंकड़ों (pte, महालेखा नियंत्रक, fonafe, ocds, servir…) से बने डैशबोर्ड। स्रोत तक पता लगाने योग्य डेटा, अति-दावे-विरोधी सिद्धांत। react python fastapi datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-magnifying-glass-chart"></i> पारदर्शी पेरू 🇵🇪</div>
                 <div class="project-desc">लोक सेवकों, सार्वजनिक संस्थाओं, सरकारी कंपनियों और शक्ति नेटवर्क का राष्ट्रीय मानचित्र: एकीकृत डेटाबेस, राष्ट्रीय शक्ति ग्राफ़ और सार्वजनिक आंकड़ों (PTE, महालेखा नियंत्रक, FONAFE, OCDS, SERVIR…) से बने डैशबोर्ड। स्रोत तक पता लगाने योग्य डेटा, अति-दावे-विरोधी सिद्धांत।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span><span class="project-badge">Python</span><span class="project-badge">FastAPI</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-ambiental-peruano/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-ambiental-peruano/" class="project" data-search="observatorio ambiental peruano 🌳 tablero de derrames de petróleo, deforestación y áreas naturales protegidas del perú, con datos oficiales y procedencia marcada (verificado/estimado/referencial). mapa nacional leaflet y hoja de ruta en 3 fases. react vite leaflet python" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-tree"></i> Observatorio Ambiental Peruano 🌳</div>
                 <div class="project-desc">Tablero de derrames de petróleo, deforestación y áreas naturales protegidas del Perú, con datos oficiales y procedencia marcada (verificado/estimado/referencial). Mapa nacional Leaflet y hoja de ruta en 3 fases.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span><span class="project-badge">Vite</span><span class="project-badge">Leaflet</span><span class="project-badge">Python</span></div>
             </a>
-            <a href="https://unimauro.github.io/universidades-peru/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/universidades-peru/" class="project" data-search="observatorio de universidades del perú 🎓 análisis bibliométrico de 95 universidades peruanas con openalex + mef + indecopi: índice ponderado por impacto, indicador arwu (nature &amp; science), filtros anti-predadoras y reclasificación contra el padrón mef. metodología depurada y trazable. openalex chart.js leaflet python" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-graduation-cap"></i> Observatorio de Universidades del Perú 🎓</div>
                 <div class="project-desc">Análisis bibliométrico de 95 universidades peruanas con OpenAlex + MEF + INDECOPI: índice ponderado por impacto, indicador ARWU (Nature &amp; Science), filtros anti-predadoras y reclasificación contra el padrón MEF. Metodología depurada y trazable.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">OpenAlex</span><span class="project-badge">Chart.js</span><span class="project-badge">Leaflet</span><span class="project-badge">Python</span></div>
             </a>
-            <a href="https://unimauro.github.io/plan-peru-2050/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/plan-peru-2050/" class="project" data-search="plan perú 2050 🇵🇪 tablero navegable de las ~64 comisiones temáticas del cnpp/cip: objetivos, alineamiento y prospectiva del planeamiento estratégico nacional al 2050. javascript github pages" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-diagram-project"></i> Plan Perú 2050 🇵🇪</div>
                 <div class="project-desc">Tablero navegable de las ~64 Comisiones Temáticas del CNPP/CIP: objetivos, alineamiento y prospectiva del planeamiento estratégico nacional al 2050.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">JavaScript</span><span class="project-badge">GitHub Pages</span></div>
             </a>
-            <a href="https://qhaway.org/" class="project" target="_blank" rel="noopener">
+            <a href="https://qhaway.org/" class="project" data-search="qhaway · observatorio de inversión pública 🇵🇪 observatorio fieecs-uni de la inversión pública distrital del perú: datos mef conciliados de 22 años, cubo olap, cortes por departamento/provincia/distrito, función y categoría, y módulo de cambio climático. backend fastapi/postgresql en vps propio. react fastapi postgresql olap" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-cube"></i> QHAWAY · Observatorio de Inversión Pública 🇵🇪</div>
                 <div class="project-desc">Observatorio FIEECS-UNI de la inversión pública distrital del Perú: datos MEF conciliados de 22 años, cubo OLAP, cortes por departamento/provincia/distrito, función y categoría, y módulo de Cambio Climático. Backend FastAPI/PostgreSQL en VPS propio.</div>
                 <div class="project-meta"><span class="project-badge new">✨ live</span><span class="project-badge">React</span><span class="project-badge">FastAPI</span><span class="project-badge">PostgreSQL</span><span class="project-badge">OLAP</span></div>
             </a>
-            <a href="https://unimauro.github.io/proyecto-inti/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/proyecto-inti/" class="project" data-search="proyecto inti — पेरू 2075 का डिजिटल ट्विन 🌞 पेरू के 1,891 जिलों के लिए वास्तविक डेटा (idh 2019, गरीबी और जनगणना 2017 inei जनसंख्या) के साथ क्षेत्रीय बुद्धिमत्ता प्रणाली: 12 सूचकांक, निदान, 2075 का परिप्रेक्ष्य, राष्ट्रीय leaflet मानचित्र, जिलेवार रैंकिंग, शीर्ष 50 परियोजनाएँ, ai इंजन (openrouter) और pdf में नगरपालिका योजनाएँ। vanilla js chart.js leaflet" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-sun"></i> Proyecto INTI — पेरू 2075 का डिजिटल ट्विन 🌞</div>
                 <div class="project-desc">पेरू के 1,891 जिलों के लिए वास्तविक डेटा (IDH 2019, गरीबी और जनगणना 2017 INEI जनसंख्या) के साथ क्षेत्रीय बुद्धिमत्ता प्रणाली: 12 सूचकांक, निदान, 2075 का परिप्रेक्ष्य, राष्ट्रीय Leaflet मानचित्र, जिलेवार रैंकिंग, शीर्ष 50 परियोजनाएँ, AI इंजन (OpenRouter) और PDF में नगरपालिका योजनाएँ।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Vanilla JS</span><span class="project-badge">Chart.js</span><span class="project-badge">Leaflet</span></div>
             </a>
-            <a href="https://unimauro.github.io/petroperu-analytics/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/petroperu-analytics/" class="project" data-search="petroperú analytics 🛢️ petroperú के वित्तीय, परिचालन और कॉर्पोरेट गवर्नेंस विकास (20 वर्ष) का सार्वजनिक डैशबोर्ड: 16 वित्तीय अनुपात, 5 बोर्ड, इंटरैक्टिव गवर्नेंस ग्राफ, कंपनी को फिर से खड़ा करने के लिए एक "निदेशक बनकर खेलें" सिम्युलेटर और bloomberg शैली का दिन/रात मोड। स्टैटिक spa; ऑडिटेड वित्तीय विवरण लोड होने तक बीज डेटा को उदाहरणात्मक के रूप में चिह्नित किया गया है। react typescript echarts python" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-oil-well"></i> Petroperú Analytics 🛢️</div>
                 <div class="project-desc">Petroperú के वित्तीय, परिचालन और कॉर्पोरेट गवर्नेंस विकास (20 वर्ष) का सार्वजनिक डैशबोर्ड: 16 वित्तीय अनुपात, 5 बोर्ड, इंटरैक्टिव गवर्नेंस ग्राफ, कंपनी को फिर से खड़ा करने के लिए एक "निदेशक बनकर खेलें" सिम्युलेटर और Bloomberg शैली का दिन/रात मोड। स्टैटिक SPA; ऑडिटेड वित्तीय विवरण लोड होने तक बीज डेटा को उदाहरणात्मक के रूप में चिह्नित किया गया है।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span><span class="project-badge">TypeScript</span><span class="project-badge">ECharts</span><span class="project-badge">Python</span></div>
             </a>
-            <a href="https://unimauro.github.io/congreso-abierto-peru/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/congreso-abierto-peru/" class="project" data-search="congreso abierto पेरू 🏛️ congreso de la república का ओपन डेटा वेधशाला: 14,704 विधेयक, 3,826 कानून, 59 समितियाँ और mef से स्क्रैप किए गए 11 वर्षों का वास्तविक बजट (s/625m→s/1,769m)। डायनामिक वर्ष फ़िल्टर, हल्का/गहरा मोड और साझा करने के लिए कार्ड। python playwright chart.js" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-landmark"></i> Congreso Abierto पेरू 🏛️</div>
                 <div class="project-desc">Congreso de la República का ओपन डेटा वेधशाला: 14,704 विधेयक, 3,826 कानून, 59 समितियाँ और MEF से स्क्रैप किए गए 11 वर्षों का वास्तविक बजट (S/625M→S/1,769M)। डायनामिक वर्ष फ़िल्टर, हल्का/गहरा मोड और साझा करने के लिए कार्ड।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Python</span><span class="project-badge">Playwright</span><span class="project-badge">Chart.js</span></div>
             </a>
-            <a href="https://unimauro.github.io/unimaurox-peru-riesgos/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/unimaurox-peru-riesgos/" class="project" data-search="पेरू के जोखिम और सहनशीलता 🇵🇪 आपदाओं और तैयारी का नागरिक डैशबोर्ड: भूकंप, सुनामी, el niño, भूस्खलन, शीत लहरें, वनों की कटाई, महामारियाँ और वैश्विक संकट। इसमें 6 इंटरैक्टिव सिम्युलेटर शामिल हैं (भूकंपीय, सुनामी, seir महामारी, ब्लैकआउट, खाद्य संकट, el niño)। डेटा igp/senamhi/indeci/minam/cenepred से। vanilla js leaflet chart.js" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-triangle-exclamation"></i> पेरू के जोखिम और सहनशीलता 🇵🇪</div>
                 <div class="project-desc">आपदाओं और तैयारी का नागरिक डैशबोर्ड: भूकंप, सुनामी, El Niño, भूस्खलन, शीत लहरें, वनों की कटाई, महामारियाँ और वैश्विक संकट। इसमें 6 इंटरैक्टिव सिम्युलेटर शामिल हैं (भूकंपीय, सुनामी, SEIR महामारी, ब्लैकआउट, खाद्य संकट, El Niño)। डेटा IGP/SENAMHI/INDECI/MINAM/CENEPRED से।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Vanilla JS</span><span class="project-badge">Leaflet</span><span class="project-badge">Chart.js</span></div>
             </a>
-            <a href="https://unimauro.github.io/unimaurox-peru-finanzas-publicas/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/unimaurox-peru-finanzas-publicas/" class="project" data-search="पेरू का सार्वजनिक वित्त 🇵🇪 35 वर्षों (1990-2026) के डेटा के साथ इंटरैक्टिव डैशबोर्ड: gdp, सार्वजनिक ऋण, बजट, क्षेत्रवार और मंत्रालयी पोर्टफोलियो निष्पादन, sunat कर संग्रह, खनन और विदेशी व्यापार। आधिकारिक डेटा bcrp/mef/inei से। react d3 recharts" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-landmark"></i> पेरू का सार्वजनिक वित्त 🇵🇪</div>
                 <div class="project-desc">35 वर्षों (1990-2026) के डेटा के साथ इंटरैक्टिव डैशबोर्ड: GDP, सार्वजनिक ऋण, बजट, क्षेत्रवार और मंत्रालयी पोर्टफोलियो निष्पादन, SUNAT कर संग्रह, खनन और विदेशी व्यापार। आधिकारिक डेटा BCRP/MEF/INEI से।</div>
                 <div class="project-meta"><span class="project-badge new">✨ live</span><span class="project-badge">React</span><span class="project-badge">D3</span><span class="project-badge">Recharts</span></div>
             </a>
-            <a href="https://unimauro.github.io/unimaurox-colegios/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/unimaurox-colegios/" class="project" data-search="पेरू की शैक्षिक रेडियोग्राफी 🇵🇪 पेरू के शैक्षिक मूल्यांकन का डैशबोर्ड — enla 2024 परिणाम, क्षेत्र/जिलेवार तुलना, शहरी-ग्रामीण अंतर, पठन बनाम गणित। डेटा minedu/umc से। javascript" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-school"></i> पेरू की शैक्षिक रेडियोग्राफी 🇵🇪</div>
                 <div class="project-desc">पेरू के शैक्षिक मूल्यांकन का डैशबोर्ड — ENLA 2024 परिणाम, क्षेत्र/जिलेवार तुलना, शहरी-ग्रामीण अंतर, पठन बनाम गणित। डेटा MINEDU/UMC से।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">JavaScript</span></div>
             </a>
-            <a href="https://unimauro.github.io/unimaurox-separaciones-denuncias/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/unimaurox-separaciones-denuncias/" class="project" data-search="oaf के कारण अलगाव, शिकायतें और कारावास पारिवारिक सहायता में चूक (oaf) के कारण शिकायतों, अलगावों और कारावास का लैटिन अमेरिकी डैशबोर्ड + तुलनात्मक कानूनी ढाँचा + अधिक सार्वजनिक डेटा प्राप्त करने के लिए ley 27806 टेम्पलेट। html" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-balance-scale"></i> OAF के कारण अलगाव, शिकायतें और कारावास</div>
                 <div class="project-desc">पारिवारिक सहायता में चूक (OAF) के कारण शिकायतों, अलगावों और कारावास का लैटिन अमेरिकी डैशबोर्ड + तुलनात्मक कानूनी ढाँचा + अधिक सार्वजनिक डेटा प्राप्त करने के लिए Ley 27806 टेम्पलेट।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">HTML</span></div>
             </a>
-            <a href="https://unimauro.github.io/salariosperu/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/salariosperu/" class="project" data-search="salariosperú पेरू के वेतन का विश्लेषण करने वाला सार्वजनिक डैशबोर्ड: निजी क्षेत्र (2,068 रिकॉर्ड) + सार्वजनिक cas (दैनिक स्क्रैप किया गया) + nse कैलकुलेटर (apeim) + inei enaho संदर्भ। python plotly" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-chart-line"></i> SalariosPerú</div>
                 <div class="project-desc">पेरू के वेतन का विश्लेषण करने वाला सार्वजनिक डैशबोर्ड: निजी क्षेत्र (2,068 रिकॉर्ड) + सार्वजनिक CAS (दैनिक स्क्रैप किया गया) + NSE कैलकुलेटर (APEIM) + INEI ENAHO संदर्भ।</div>
                 <div class="project-meta"><span class="project-badge new">✨ live</span><span class="project-badge">Python</span><span class="project-badge">Plotly</span></div>
             </a>
-            <a href="https://unimauro.github.io/salariosperu/transparencia.html" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/salariosperu/transparencia.html" class="project" data-search="गाइड: वेतन पारदर्शिता वेतन पारदर्शिता क्यों मायने रखती है: नॉर्डिक बनाम पेरू की तुलना, डैशबोर्ड के उपयोग के मामले, faq। salariosperú परियोजना का साथी। html" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-circle-info"></i> गाइड: वेतन पारदर्शिता</div>
                 <div class="project-desc">वेतन पारदर्शिता क्यों मायने रखती है: नॉर्डिक बनाम पेरू की तुलना, डैशबोर्ड के उपयोग के मामले, FAQ। SalariosPerú परियोजना का साथी।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">HTML</span></div>
             </a>
         </div>
+        </section>
+        <section class="proj-section">
         <h2 id="mundo"><i class="fas fa-globe"></i> विश्व और रीयल-टाइम</h2>
         <p class="sec-sub">लाइव वैश्विक डेटा।</p>
         <div class="projects">
-            <a href="https://unimauro.github.io/unimaurox-vuelos-internacionales/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/unimaurox-vuelos-internacionales/" class="project" data-search="लाइव अंतरराष्ट्रीय उड़ानें 🌍 रीयल-टाइम वैश्विक atc डैशबोर्ड: विश्व मानचित्र पर ~10-15k सक्रिय विमान, शीर्ष 10 देश, ऊँचाई का वितरण और सबसे तेज़ उड़ानों की तालिका। हर 30s में ऑटो-रिफ्रेश। डेटा opensky network से, बिना बैकएंड या api key के। vanilla js leaflet chart.js opensky" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-plane"></i> लाइव अंतरराष्ट्रीय उड़ानें 🌍</div>
                 <div class="project-desc">रीयल-टाइम वैश्विक ATC डैशबोर्ड: विश्व मानचित्र पर ~10-15k सक्रिय विमान, शीर्ष 10 देश, ऊँचाई का वितरण और सबसे तेज़ उड़ानों की तालिका। हर 30s में ऑटो-रिफ्रेश। डेटा OpenSky Network से, बिना बैकएंड या API key के।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Vanilla JS</span><span class="project-badge">Leaflet</span><span class="project-badge">Chart.js</span><span class="project-badge">OpenSky</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-smartphones-adolescentes/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-smartphones-adolescentes/" class="project" data-search="smartphones en la adolescencia · observatorio global 📱 observatorio de evidencia sobre el impacto de los smartphones y las redes sociales en adolescentes a nivel mundial: salud mental, sueño, atención y políticas públicas. 10 módulos con mapas y datos de procedencia marcada (verificado/estimado/referencial). react vite echarts leaflet" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-mobile-screen"></i> Smartphones en la Adolescencia · Observatorio Global 📱</div>
                 <div class="project-desc">Observatorio de evidencia sobre el impacto de los smartphones y las redes sociales en adolescentes a nivel mundial: salud mental, sueño, atención y políticas públicas. 10 módulos con mapas y datos de procedencia marcada (verificado/estimado/referencial).</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span><span class="project-badge">Vite</span><span class="project-badge">ECharts</span><span class="project-badge">Leaflet</span></div>
             </a>
         </div>
+        </section>
+        <section class="proj-section">
         <h2 id="ninos"><i class="fas fa-child"></i> बच्चों और परिवार के लिए</h2>
         <p class="sec-sub">सबसे नन्हे-मुन्नों के लिए प्यार से बनाए गए प्रोजेक्ट। 💞</p>
         <div class="projects">
-            <a href="https://unimauro.github.io/libelula/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/libelula/" class="project" data-search="gael की ड्रैगनफ्लाई 🐉 ड्रैगनफ्लाई पर kawaii स्कूल प्रदर्शनी: 6 रोचक तथ्य, तस्वीरें, ओरिगामी वीडियो, मिनी-गेम, ट्राइप्टिक के लिए qr और एक सामुदायिक गैलरी जहाँ तस्वीरें अपलोड की जा सकती हैं (supabase)। मेरे बेटे gael (3 वर्ष) की प्रदर्शनी के लिए बनाई गई। html/css/js supabase github pages" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-bug"></i> Gael की ड्रैगनफ्लाई 🐉</div>
                 <div class="project-desc">ड्रैगनफ्लाई पर kawaii स्कूल प्रदर्शनी: 6 रोचक तथ्य, तस्वीरें, ओरिगामी वीडियो, मिनी-गेम, ट्राइप्टिक के लिए QR और एक सामुदायिक गैलरी जहाँ तस्वीरें अपलोड की जा सकती हैं (Supabase)। मेरे बेटे Gael (3 वर्ष) की प्रदर्शनी के लिए बनाई गई।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">HTML/CSS/JS</span><span class="project-badge">Supabase</span><span class="project-badge">GitHub Pages</span></div>
             </a>
-            <a href="https://unimauro.github.io/panchita/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/panchita/" class="project" data-search="बिल्ली panchita 🐾 panchita पर स्कूल का काम, pueblo libre (लीमा) के मोहल्ले की बिल्ली: फोटो गैलरी, रोचक तथ्य, स्थान मानचित्र और उसकी मदद कैसे करें। मोहल्ले के नन्हे पंजों के लिए प्यार से बनाई गई इंस्टॉल करने योग्य pwa। html/css/js pwa github pages" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-cat"></i> बिल्ली Panchita 🐾</div>
                 <div class="project-desc">Panchita पर स्कूल का काम, Pueblo Libre (लीमा) के मोहल्ले की बिल्ली: फोटो गैलरी, रोचक तथ्य, स्थान मानचित्र और उसकी मदद कैसे करें। मोहल्ले के नन्हे पंजों के लिए प्यार से बनाई गई इंस्टॉल करने योग्य PWA।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">HTML/CSS/JS</span><span class="project-badge">PWA</span><span class="project-badge">GitHub Pages</span></div>
             </a>
-            <a href="https://unimauro.github.io/el_loro/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/el_loro/" class="project" data-search="el loro · expo de loros 🦜 exposición escolar sobre los loros del perú: datos curiosos, imágenes, sonido real de loro, qr para el tríptico, favicon y og. hecha para una expo de niños, sin datos personales del menor. html/css/js github pages qr/og" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-dove"></i> El Loro · Expo de loros 🦜</div>
                 <div class="project-desc">Exposición escolar sobre los loros del Perú: datos curiosos, imágenes, sonido real de loro, QR para el tríptico, favicon y OG. Hecha para una expo de niños, sin datos personales del menor.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge new">✨ live</span><span class="project-badge">HTML/CSS/JS</span><span class="project-badge">GitHub Pages</span><span class="project-badge">QR/OG</span></div>
             </a>
         </div>
+        </section>
+        <section class="proj-section">
         <h2 id="docencia"><i class="fas fa-chalkboard-user"></i> शिक्षण और अकादमिक</h2>
         <p class="sec-sub">कक्षा सामग्री, विश्वविद्यालय पाठ्यक्रम और मेरी थीसिस। 🎓</p>
         <div class="projects">
-            <a href="https://careergo.tunky.net" class="project" target="_blank" rel="noopener">
+            <a href="https://careergo.tunky.net" class="project" data-search="careeros ai युग में सॉफ़्टवेयर इंजीनियरों के लिए करियर दिशा-सूचक: संकेतों (महत्व/मांग/स्वचालन जोखिम) के साथ रोडमैप, चुनिंदा संसाधन और प्रोजेक्ट-आधारित सीखना। त्रिभाषी (en/es/zh)। astro i18n en/es/zh ai-first roadmaps" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-compass"></i> CareerOS</div>
                 <div class="project-desc">AI युग में सॉफ़्टवेयर इंजीनियरों के लिए करियर दिशा-सूचक: संकेतों (महत्व/मांग/स्वचालन जोखिम) के साथ रोडमैप, चुनिंदा संसाधन और प्रोजेक्ट-आधारित सीखना। त्रिभाषी (EN/ES/ZH)।</div>
                 <div class="project-meta"><span class="project-badge new">✨ live</span><span class="project-badge">Astro</span><span class="project-badge">i18n EN/ES/ZH</span><span class="project-badge">AI-first</span><span class="project-badge">Roadmaps</span></div>
             </a>
-            <a href="https://unimauro.github.io/uni-admision-stats/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/uni-admision-stats/" class="project" data-search="admisión uni en cifras 📊 estadísticas agregadas y anónimas del proceso de admisión de la uni: postulantes, ausentismo, puntajes, carreras y salarios de egreso. sin datos personales. gráficos interactivos sobre datos abiertos. datos abiertos anónimo chart.js" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-square-poll-vertical"></i> Admisión UNI en cifras 📊</div>
                 <div class="project-desc">Estadísticas agregadas y anónimas del proceso de admisión de la UNI: postulantes, ausentismo, puntajes, carreras y salarios de egreso. Sin datos personales. Gráficos interactivos sobre datos abiertos.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Datos abiertos</span><span class="project-badge">Anónimo</span><span class="project-badge">Chart.js</span></div>
             </a>
-            <a href="https://unimauro.github.io/unmsm-admision-stats/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/unmsm-admision-stats/" class="project" data-search="admisión san marcos en cifras 📊 estadísticas de admisión de la unmsm (san marcos): notas de cierre por escuela y modalidad, postulantes e ingresantes del proceso 2026-1. datos agregados y anónimos. datos abiertos notas de cierre 2026-1" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-square-poll-vertical"></i> Admisión San Marcos en cifras 📊</div>
                 <div class="project-desc">Estadísticas de admisión de la UNMSM (San Marcos): notas de cierre por escuela y modalidad, postulantes e ingresantes del proceso 2026-1. Datos agregados y anónimos.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Datos abiertos</span><span class="project-badge">Notas de cierre</span><span class="project-badge">2026-1</span></div>
             </a>
-            <a href="https://unimauro.github.io/unsa-admision-stats/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/unsa-admision-stats/" class="project" data-search="admisión unsa en cifras 📊 estadísticas de admisión de la unsa (arequipa): puntajes de cierre, postulantes e ingresantes por carrera, 2023-2025. datos agregados y anónimos. datos abiertos puntajes 2023-2025" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-square-poll-vertical"></i> Admisión UNSA en cifras 📊</div>
                 <div class="project-desc">Estadísticas de admisión de la UNSA (Arequipa): puntajes de cierre, postulantes e ingresantes por carrera, 2023-2025. Datos agregados y anónimos.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Datos abiertos</span><span class="project-badge">Puntajes</span><span class="project-badge">2023-2025</span></div>
             </a>
-            <a href="https://github.com/unimauro/Stellar-Mystery-Box" class="project" target="_blank" rel="noopener">
+            <a href="https://github.com/unimauro/Stellar-Mystery-Box" class="project" data-search="stellar mystery box 🌟 taller práctico donde cada participante crea, personaliza y despliega su propio smart contract en la red de stellar. material del taller abierto en github. stellar smart contracts taller" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-star"></i> Stellar Mystery Box 🌟</div>
                 <div class="project-desc">Taller práctico donde cada participante crea, personaliza y despliega su propio smart contract en la red de Stellar. Material del taller abierto en GitHub.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Stellar</span><span class="project-badge">Smart contracts</span><span class="project-badge">Taller</span></div>
             </a>
-            <a href="https://unimauro.github.io/universidades-latam/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/universidades-latam/" class="project" data-search="universidades de latinoamérica 🌎 ranking bibliométrico abierto y reproducible de ~1000 universidades de latinoamérica con openalex: índice ponderado por impacto, metodología documentada y trazable. openalex bibliometría python ~1000 universidades" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-globe-americas"></i> Universidades de Latinoamérica 🌎</div>
                 <div class="project-desc">Ranking bibliométrico abierto y reproducible de ~1000 universidades de Latinoamérica con OpenAlex: índice ponderado por impacto, metodología documentada y trazable.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">OpenAlex</span><span class="project-badge">Bibliometría</span><span class="project-badge">Python</span><span class="project-badge">~1000 universidades</span></div>
             </a>
-            <a href="https://unimauro.github.io/gemelo-digital-uni/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/gemelo-digital-uni/" class="project" data-search="gemelo digital de la uni 🎓 ¿qué decisiones suben a la uni en los rankings por cada sol invertido? simulador y tablero de escenarios sobre indicadores de la universidad nacional de ingeniería. datos abiertos rankings chart.js" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-graduation-cap"></i> Gemelo Digital de la UNI 🎓</div>
                 <div class="project-desc">¿Qué decisiones suben a la UNI en los rankings por cada sol invertido? Simulador y tablero de escenarios sobre indicadores de la Universidad Nacional de Ingeniería.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Datos abiertos</span><span class="project-badge">Rankings</span><span class="project-badge">Chart.js</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-uni/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-uni/" class="project" data-search="observatorio uni 🏛️ portal ciudadano de transparencia de la universidad nacional de ingeniería: presupuesto, ejecución y datos abiertos con fuentes citadas. transparencia presupuesto datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-building-columns"></i> Observatorio UNI 🏛️</div>
                 <div class="project-desc">Portal ciudadano de transparencia de la Universidad Nacional de Ingeniería: presupuesto, ejecución y datos abiertos con fuentes citadas.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Transparencia</span><span class="project-badge">Presupuesto</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-sanmarcos/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-sanmarcos/" class="project" data-search="observatorio san marcos 🏛️ portal ciudadano de transparencia de la universidad nacional mayor de san marcos (unmsm): presupuesto, ejecución y datos abiertos con fuentes citadas. transparencia presupuesto datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-building-columns"></i> Observatorio San Marcos 🏛️</div>
                 <div class="project-desc">Portal ciudadano de transparencia de la Universidad Nacional Mayor de San Marcos (UNMSM): presupuesto, ejecución y datos abiertos con fuentes citadas.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Transparencia</span><span class="project-badge">Presupuesto</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-unsa/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-unsa/" class="project" data-search="observatorio unsa 🏛️ portal ciudadano de transparencia de la universidad nacional de san agustín de arequipa (unsa): presupuesto, ejecución y datos abiertos. transparencia presupuesto datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-building-columns"></i> Observatorio UNSA 🏛️</div>
                 <div class="project-desc">Portal ciudadano de transparencia de la Universidad Nacional de San Agustín de Arequipa (UNSA): presupuesto, ejecución y datos abiertos.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Transparencia</span><span class="project-badge">Presupuesto</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-villarreal/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-villarreal/" class="project" data-search="observatorio villarreal 🏛️ portal ciudadano de transparencia de la universidad nacional federico villarreal (unfv): presupuesto, ejecución y datos abiertos. transparencia presupuesto datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-building-columns"></i> Observatorio Villarreal 🏛️</div>
                 <div class="project-desc">Portal ciudadano de transparencia de la Universidad Nacional Federico Villarreal (UNFV): presupuesto, ejecución y datos abiertos.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Transparencia</span><span class="project-badge">Presupuesto</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-cantuta/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-cantuta/" class="project" data-search="observatorio la cantuta 🏛️ portal ciudadano de transparencia de la universidad nacional de educación enrique guzmán y valle (la cantuta): presupuesto y datos abiertos. transparencia presupuesto datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-building-columns"></i> Observatorio La Cantuta 🏛️</div>
                 <div class="project-desc">Portal ciudadano de transparencia de la Universidad Nacional de Educación Enrique Guzmán y Valle (La Cantuta): presupuesto y datos abiertos.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Transparencia</span><span class="project-badge">Presupuesto</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-unsaac/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-unsaac/" class="project" data-search="observatorio unsaac 🏛️ portal ciudadano de transparencia de la universidad nacional de san antonio abad del cusco (unsaac): presupuesto, ejecución y datos abiertos. transparencia presupuesto datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-building-columns"></i> Observatorio UNSAAC 🏛️</div>
                 <div class="project-desc">Portal ciudadano de transparencia de la Universidad Nacional de San Antonio Abad del Cusco (UNSAAC): presupuesto, ejecución y datos abiertos.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Transparencia</span><span class="project-badge">Presupuesto</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://unimauro.github.io/observatorio-ensad/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.github.io/observatorio-ensad/" class="project" data-search="observatorio ensad 🎭 portal ciudadano de transparencia de la escuela nacional superior de arte dramático (ensad): presupuesto, ejecución y datos abiertos. transparencia presupuesto datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-masks-theater"></i> Observatorio ENSAD 🎭</div>
                 <div class="project-desc">Portal ciudadano de transparencia de la Escuela Nacional Superior de Arte Dramático (ENSAD): presupuesto, ejecución y datos abiertos.</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">Transparencia</span><span class="project-badge">Presupuesto</span><span class="project-badge">Datos abiertos</span></div>
             </a>
-            <a href="https://github.com/unimauro/ThesisUNIFIISTemplate" class="project" target="_blank" rel="noopener">
+            <a href="https://github.com/unimauro/ThesisUNIFIISTemplate" class="project" data-search="uni-fiis थीसिस · latex टेम्पलेट 📄 औद्योगिक और प्रणाली इंजीनियरिंग संकाय (uni) की थीसिस के लिए latex टेम्पलेट, जो 2009 में मेरे थीसिस-बचाव के लिए बनाया गया था। पूरी संरचना: कवर पेज, सूचियाँ, अध्याय, ग्रंथ-सूची। अन्य थीसिस लेखकों द्वारा पुनः उपयोग योग्य। latex uni-fiis 2009" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-graduation-cap"></i> UNI-FIIS थीसिस · LaTeX टेम्पलेट 📄</div>
                 <div class="project-desc">औद्योगिक और प्रणाली इंजीनियरिंग संकाय (UNI) की थीसिस के लिए LaTeX टेम्पलेट, जो 2009 में मेरे थीसिस-बचाव के लिए बनाया गया था। पूरी संरचना: कवर पेज, सूचियाँ, अध्याय, ग्रंथ-सूची। अन्य थीसिस लेखकों द्वारा पुनः उपयोग योग्य।</div>
                 <div class="project-meta"><span class="project-badge">LaTeX</span><span class="project-badge">UNI-FIIS</span><span class="project-badge">2009</span></div>
             </a>
-            <a href="https://github.com/unimauro/analisis-datos-biotecnologia-python" class="project" target="_blank" rel="noopener">
+            <a href="https://github.com/unimauro/analisis-datos-biotecnologia-python" class="project" data-search="python के साथ जैव प्रौद्योगिकी में डेटा विश्लेषण 🧬 कक्षा सामग्री (escuela global): dna, rna और प्रोटीन। python के साथ जैविक डेटा विश्लेषण के लिए स्लाइड्स + google colab नोटबुक। python colab bioinformatics" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-dna"></i> Python के साथ जैव प्रौद्योगिकी में डेटा विश्लेषण 🧬</div>
                 <div class="project-desc">कक्षा सामग्री (Escuela Global): DNA, RNA और प्रोटीन। Python के साथ जैविक डेटा विश्लेषण के लिए स्लाइड्स + Google Colab नोटबुक।</div>
                 <div class="project-meta"><span class="project-badge">Python</span><span class="project-badge">Colab</span><span class="project-badge">Bioinformatics</span></div>
             </a>
-            <a href="https://github.com/unimauro/SistemasOperativos" class="project" target="_blank" rel="noopener">
+            <a href="https://github.com/unimauro/SistemasOperativos" class="project" data-search="ऑपरेटिंग सिस्टम कोर्स 💻 ऑपरेटिंग सिस्टम कोर्स (uni-fiis) की स्लाइड्स: प्रक्रिया प्रबंधन, समवर्तीता, डेडलॉक, वर्चुअल मेमोरी, i/o डिवाइस, वर्चुअलाइज़ेशन और सुरक्षा। java uni-fiis slides" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-microchip"></i> ऑपरेटिंग सिस्टम कोर्स 💻</div>
                 <div class="project-desc">ऑपरेटिंग सिस्टम कोर्स (UNI-FIIS) की स्लाइड्स: प्रक्रिया प्रबंधन, समवर्तीता, डेडलॉक, वर्चुअल मेमोरी, I/O डिवाइस, वर्चुअलाइज़ेशन और सुरक्षा।</div>
                 <div class="project-meta"><span class="project-badge">Java</span><span class="project-badge">UNI-FIIS</span><span class="project-badge">Slides</span></div>
             </a>
-            <a href="https://github.com/unimauro/Curso-PostGrado-Mecatronica-2021" class="project" target="_blank" rel="noopener">
+            <a href="https://github.com/unimauro/Curso-PostGrado-Mecatronica-2021" class="project" data-search="मेकाट्रॉनिक्स में स्नातकोत्तर 🤖 मेकाट्रॉनिक्स में स्नातकोत्तर पाठ्यक्रम की सामग्री (2021): व्यावहारिक शिक्षण के लिए python में नोटबुक और कोड। python postgrade" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-robot"></i> मेकाट्रॉनिक्स में स्नातकोत्तर 🤖</div>
                 <div class="project-desc">मेकाट्रॉनिक्स में स्नातकोत्तर पाठ्यक्रम की सामग्री (2021): व्यावहारिक शिक्षण के लिए Python में नोटबुक और कोड।</div>
                 <div class="project-meta"><span class="project-badge">Python</span><span class="project-badge">Postgrade</span></div>
             </a>
         </div>
+        </section>
+        <section class="proj-section">
         <h2 id="oss"><i class="fas fa-code-branch"></i> ओपन सोर्स और ज्ञान</h2>
         <p class="sec-sub">ओपन रिपॉज़िटरी और संसाधन।</p>
         <div class="projects">
-            <a href="https://github.com/unimauro/QuantumResources" class="project" target="_blank" rel="noopener">
+            <a href="https://github.com/unimauro/QuantumResources" class="project" data-search="quantumresources क्वांटम कंप्यूटिंग के क्यूरेटेड संसाधन: किताबें, पेपर और वीडियो। jupyter" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-atom"></i> QuantumResources</div>
                 <div class="project-desc">क्वांटम कंप्यूटिंग के क्यूरेटेड संसाधन: किताबें, पेपर और वीडियो।</div>
                 <div class="project-meta"><span class="project-badge star">⭐ 30</span><span class="project-badge">Jupyter</span></div>
             </a>
-            <a href="https://github.com/unimauro/life-compass" class="project" target="_blank" rel="noopener">
+            <a href="https://github.com/unimauro/life-compass" class="project" data-search="life compass आत्महत्या रोकथाम का डैशबोर्ड: वैश्विक आँकड़े, हेल्पलाइन, बहुभाषी (en/es/zh/ko/ru)। react" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-heart"></i> Life Compass</div>
                 <div class="project-desc">आत्महत्या रोकथाम का डैशबोर्ड: वैश्विक आँकड़े, हेल्पलाइन, बहुभाषी (EN/ES/ZH/KO/RU)।</div>
                 <div class="project-meta"><span class="project-badge new">✨ नया</span><span class="project-badge">React</span></div>
             </a>
-            <a href="https://github.com/unimauro/Springer202004Books" class="project" target="_blank" rel="noopener">
+            <a href="https://github.com/unimauro/Springer202004Books" class="project" data-search="springer202004books covid-19 के दौरान springer की मुफ्त किताबों का स्क्रैपर। python" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-book"></i> Springer202004Books</div>
                 <div class="project-desc">COVID-19 के दौरान Springer की मुफ्त किताबों का स्क्रैपर।</div>
                 <div class="project-meta"><span class="project-badge star">⭐ 4</span><span class="project-badge">Python</span></div>
             </a>
         </div>
+        </section>
+        <section class="proj-section">
         <h2 id="blog"><i class="fas fa-feather-pointed"></i> ब्लॉग और लेख</h2>
         <p class="sec-sub">विचार, नोट्स और चिंतन। ✍️</p>
         <div class="projects">
-            <a href="https://unimauro.blogspot.com/" class="project" target="_blank" rel="noopener">
+            <a href="https://unimauro.blogspot.com/" class="project" data-search="unimauro.blogspot.com मेरा निजी ब्लॉग: तकनीक, ai, डेटा, समाज और एक दिल वाले हैकर के नोट्स। लंबे लेख जो एक ट्वीट में नहीं समाते। blog" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-blog"></i> unimauro.blogspot.com</div>
                 <div class="project-desc">मेरा निजी ब्लॉग: तकनीक, AI, डेटा, समाज और एक दिल वाले हैकर के नोट्स। लंबे लेख जो एक ट्वीट में नहीं समाते।</div>
                 <div class="project-meta"><span class="project-badge">Blog</span></div>
             </a>
         </div>
+        </section>
+        <p class="no-results" id="noResults" hidden>इसके लिए कोई परिणाम नहीं “<span id="qEcho"></span>”</p>
 
         <h2 id="stack"><i class="fas fa-laptop-code"></i> स्टैक</h2>
         <div class="stack"><span>Python</span><span>Go</span><span>TypeScript</span><span>Ruby</span><span>Rust</span><span>C++</span><span>Java</span><span>React</span><span>Node.js</span><span>Docker</span><span>PostgreSQL</span><span>MongoDB</span><span>GenAI</span><span>LLMs</span><span>ML/AI</span><span>DevOps</span><span>Cloud</span></div>
@@ -715,6 +745,20 @@
       var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ setActive(e.target.id); } }); },{rootMargin:'-40% 0px -55% 0px'});
       secs.forEach(function(s){io.observe(s);});
       navLinks.forEach(function(a){ a.addEventListener('click',function(){ centerNav(a); }); });
+      var q=document.getElementById('q');
+      var searchSecs=Array.from(document.querySelectorAll('.proj-section'));
+      var searchCards=Array.from(document.querySelectorAll('.project[data-search]'));
+      var noRes=document.getElementById('noResults'), qEcho=document.getElementById('qEcho');
+      function norm(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+      function doSearch(){
+        var term=norm(q.value.trim());
+        var any=false;
+        searchCards.forEach(function(c){ var m=!term||norm(c.getAttribute('data-search')).indexOf(term)>=0; c.hidden=!m; if(m) any=true; });
+        searchSecs.forEach(function(s){ var vis=s.querySelectorAll('.project:not([hidden])').length; s.hidden=!!term&&vis===0; });
+        if(qEcho) qEcho.textContent=q.value.trim();
+        if(noRes) noRes.hidden=!(term&&!any);
+      }
+      if(q){ q.addEventListener('input',doSearch); q.addEventListener('search',doSearch); }
       var vm=document.getElementById('vmodal'), vf=document.getElementById('vmodal-iframe');
       function vmOpen(id){ vf.src='https://www.youtube.com/embed/'+id+'?autoplay=1'; vm.classList.add('open'); }
       function vmClose(){ vm.classList.remove('open'); vf.src=''; }
