@@ -38,6 +38,9 @@ SEC_ICON = {"ia": "fa-robot", "peru": "fa-landmark", "mundo": "fa-globe",
 PROJECTS = {
     "ia": [
         ("sdd", "https://unimauro.github.io/sdd-pcm-deck/", "fa-terminal", ["new"], ["Spec-Driven Dev", "Agentes adversariales", "ECharts", "Datos abiertos"]),
+        ("yachaySlm", "https://github.com/unimauro/yachay-slm", "fa-microchip", ["new"], ["MLX", "NumPy puro", "Rust", "Español"]),
+        ("midiaia", "https://unimauro.github.io/mi-dia-con-ia/", "fa-gauge-high", ["new", "live"], ["Vanilla JS", "SVG", "Productividad"]),
+        ("panelia", "https://unimauro.github.io/panel-ia/", "fa-table-columns", ["new"], ["Vanilla JS", "GitHub Actions", "Kanban"]),
         ("turbonotes", "https://notes.cardenas.pe", "fa-microphone-lines", ["live"], ["Django", "Next.js", "OpenAI Whisper", "TanStack"]),
         ("actas", "https://conteojp.netlify.app", "fa-square-poll-vertical", ["new"], ["Next.js", "Supabase", "Gemini AI"]),
         ("agentflow", "https://unimauro.github.io/agentflow-ai/", "fa-robot", ["new"], ["React", "TanStack", "Tailwind"]),
@@ -46,6 +49,7 @@ PROJECTS = {
     ],
     "peru": [
         ("productividad", "https://unimauro.github.io/productividad/", "fa-gauge-high", ["new", "live"], ["Vanilla JS", "SVG", "OECD/ILO", "IA"]),
+        ("prevencion", "https://unimauro.github.io/peru-prevencion-riesgos/", "fa-house-flood-water", ["new", "live"], ["Vanilla JS", "IGP/SENAMHI/INDECI", "Simuladores"]),
         ("visitas", "https://unimauro.github.io/portal-visitas-peru/", "fa-user-check", ["new"], ["Spec-Driven Dev", "Agentes IA", "ECharts", "Datos abiertos"]),
         ("justicia", "https://unimauro.github.io/observatorio-justicia-peru/", "fa-scale-balanced", ["new"], ["ECharts", "Leaflet", "ML", "PJ/MPFN/TC", "Datos abiertos"]),
         ("educacion", "https://unimauro.github.io/educacion-peru/", "fa-book-open-reader", ["new"], ["ECharts", "ENLA 2024", "Datos abiertos"]),
@@ -80,9 +84,14 @@ PROJECTS = {
     "ninos": [
         ("libelula", "https://unimauro.github.io/libelula/", "fa-bug", ["new"], ["HTML/CSS/JS", "Supabase", "GitHub Pages"]),
         ("panchita", "https://unimauro.github.io/panchita/", "fa-cat", ["new"], ["HTML/CSS/JS", "PWA", "GitHub Pages"]),
+        ("elloro", "https://unimauro.github.io/el_loro/", "fa-dove", ["new", "live"], ["HTML/CSS/JS", "GitHub Pages", "QR/OG"]),
     ],
     "docencia": [
         ("careeros", "https://careergo.tunky.net", "fa-compass", ["live"], ["Astro", "i18n EN/ES/ZH", "AI-first", "Roadmaps"]),
+        ("admisionuni", "https://unimauro.github.io/uni-admision-stats/", "fa-square-poll-vertical", ["new"], ["Datos abiertos", "Anónimo", "Chart.js"]),
+        ("admisionunmsm", "https://unimauro.github.io/unmsm-admision-stats/", "fa-square-poll-vertical", ["new"], ["Datos abiertos", "Notas de cierre", "2026-1"]),
+        ("admisionunsa", "https://unimauro.github.io/unsa-admision-stats/", "fa-square-poll-vertical", ["new"], ["Datos abiertos", "Puntajes", "2023-2025"]),
+        ("stellar", "https://github.com/unimauro/Stellar-Mystery-Box", "fa-star", ["new"], ["Stellar", "Smart contracts", "Taller"]),
         ("unilatam", "https://unimauro.github.io/universidades-latam/", "fa-globe-americas", ["new"], ["OpenAlex", "Bibliometría", "Python", "~1000 universidades"]),
         ("gemelouni", "https://unimauro.github.io/gemelo-digital-uni/", "fa-graduation-cap", ["new"], ["Datos abiertos", "Rankings", "Chart.js"]),
         ("obsuni", "https://unimauro.github.io/observatorio-uni/", "fa-building-columns", ["new"], ["Transparencia", "Presupuesto", "Datos abiertos"]),
