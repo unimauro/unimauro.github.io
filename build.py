@@ -37,6 +37,7 @@ SEC_ICON = {"ia": "fa-robot", "peru": "fa-landmark", "mundo": "fa-globe",
 # key: (url, fa-icon, [badges], [tags])
 PROJECTS = {
     "ia": [
+        ("expo2050", "https://unimauro.github.io/plan-ia-peru-2050-expo/", "fa-person-chalkboard", ["new", "live"], ["Presentación", "23 láminas", "HTML/CSS/JS", "GitHub Pages"]),
         ("sdd", "https://unimauro.github.io/sdd-pcm-deck/", "fa-terminal", ["new"], ["Spec-Driven Dev", "Agentes adversariales", "ECharts", "Datos abiertos"]),
         ("yachaySlm", "https://github.com/unimauro/yachay-slm", "fa-microchip", ["new"], ["MLX", "NumPy puro", "Rust", "Español"]),
         ("midiaia", "https://unimauro.github.io/mi-dia-con-ia/", "fa-gauge-high", ["new", "live"], ["Vanilla JS", "SVG", "Productividad"]),

@@ -112,6 +112,8 @@
   "d_turbonotes": "App de notas por voz: dicta con IA (Whisper), escúchalas en voz alta y autotitula sin manos diciendo «close my note». Django + Next.js.",
   "t_careeros": "CareerOS",
   "d_careeros": "Brújula de carrera para ingenieros de software en la era de la IA: roadmaps con señales (importancia/demanda/riesgo de automatización), recursos curados y aprendizaje por proyectos. Trilingüe (EN/ES/ZH).",
+  "t_expo2050": "Plan IA Perú 2050 · Expo 🤖🇵🇪",
+  "d_expo2050": "Presentación web (23 láminas) de la Comisión de Inteligencia Artificial (CIP · CNPP): el Perú entre las potencias mundiales de la IA. Navegación con teclado/gestos, índice en grilla (G), pantalla completa (F) y deep-links por lámina. Estática, sin dependencias. Borrador en validación.",
   "t_sdd": "Spec-Driven Development y Agentes Adversariales 🖥️",
   "d_sdd": "Charla técnica para la SGTD-PCM (marco ENIA/ENGD 2026-2030): del spec al deploy con IA, agentes adversariales de seguridad y control de costos, con un tablero de transparencia construido en vivo sobre datos abiertos del Estado. Deck navegable + código y spec abiertos.",
   "t_visitas": "¿Quién visita al Estado? 👁️",
