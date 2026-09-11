@@ -49,6 +49,7 @@ PROJECTS = {
         ("modelo", "https://unimauro.github.io/modelo-predictivo-uni/", "fa-chart-line", ["new"], ["Machine Learning", "Reveal.js", "Chart.js"]),
     ],
     "peru": [
+        ("limamov", "https://vamos.tunky.net/", "fa-train-subway", ["new", "live"], ["Leaflet", "OpenStreetMap", "Chart.js", "IA", "Datos abiertos"]),
         ("productividad", "https://unimauro.github.io/productividad/", "fa-gauge-high", ["new", "live"], ["Vanilla JS", "SVG", "OECD/ILO", "IA"]),
         ("prevencion", "https://unimauro.github.io/peru-prevencion-riesgos/", "fa-house-flood-water", ["new", "live"], ["Vanilla JS", "IGP/SENAMHI/INDECI", "Simuladores"]),
         ("visitas", "https://unimauro.github.io/portal-visitas-peru/", "fa-user-check", ["new"], ["Spec-Driven Dev", "Agentes IA", "ECharts", "Datos abiertos"]),

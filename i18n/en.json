@@ -102,6 +102,8 @@
   "d_turbonotes": "Voice-first notes app: dictate with AI (Whisper), read them aloud, and auto-title hands-free by saying “close my note.” Django + Next.js.",
   "t_careeros": "CareerOS",
   "d_careeros": "A career compass for software engineers in the AI era: roadmaps with importance/demand/automation-risk signals, curated resources and project-first learning. Trilingual (EN/ES/ZH).",
+  "t_limamov": "Lima en Movimiento 🚈🇵🇪",
+  "d_limamov": "Digital twin of Lima's urban transport on a real street map: Metro, Metropolitano BRT and the Corredores running on a simulated clock with station dwell and hourly occupancy; 59 real arterial roads colored by congestion and 432 km of bike lanes. A home → work trip simulator compares 9 modes (car, taxi app, colectivo, combi, mototaxi, mass transit, bike, walking) by time, cost, CO₂ and hours lost per year. OpenStreetMap geometry and public data, always sourced.",
   "t_productividad": "Productivity Observatory 📊",
   "d_productividad": "Hours worked vs productivity (GDP per hour) across 42 countries, with Peru against Latin America and the US. Adds large firms (Fortune Global 500), informality, commuting and public holidays. The thesis: low productivity is a problem of business ambition and scale, not of working more hours.",
   "t_educacion": "X-ray of Peru's Basic Education 📚",
