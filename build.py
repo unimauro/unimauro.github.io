@@ -50,6 +50,8 @@ PROJECTS = {
     ],
     "peru": [
         ("limamov", "https://vamos.tunky.net/", "fa-train-subway", ["new", "live"], ["Leaflet", "OpenStreetMap", "Chart.js", "IA", "Datos abiertos"]),
+        ("comolima", "https://unimauro.github.io/como-esta-lima/", "fa-city", ["new", "live"], ["Vanilla JS", "MEF/INEI/ATU", "~230 datos", "Datos abiertos"]),
+        ("bullying", "https://unimauro.github.io/bullying-peru/", "fa-shield-heart", ["new", "live"], ["Leaflet", "ECharts", "SíseVe/INEI", "Datos abiertos"]),
         ("productividad", "https://unimauro.github.io/productividad/", "fa-gauge-high", ["new", "live"], ["Vanilla JS", "SVG", "OECD/ILO", "IA"]),
         ("prevencion", "https://unimauro.github.io/peru-prevencion-riesgos/", "fa-house-flood-water", ["new", "live"], ["Vanilla JS", "IGP/SENAMHI/INDECI", "Simuladores"]),
         ("visitas", "https://unimauro.github.io/portal-visitas-peru/", "fa-user-check", ["new"], ["Spec-Driven Dev", "Agentes IA", "ECharts", "Datos abiertos"]),
@@ -80,6 +82,7 @@ PROJECTS = {
         ("transparencia", "https://unimauro.github.io/salariosperu/transparencia.html", "fa-circle-info", ["new"], ["HTML"]),
     ],
     "mundo": [
+        ("latamviv", "https://unimauro.github.io/latam-vivienda/", "fa-city", ["new", "live"], ["USD", "14 ciudades LATAM", "Chart.js", "Datos abiertos"]),
         ("vuelos", "https://unimauro.github.io/unimaurox-vuelos-internacionales/", "fa-plane", ["new"], ["Vanilla JS", "Leaflet", "Chart.js", "OpenSky"]),
         ("smartphones", "https://unimauro.github.io/observatorio-smartphones-adolescentes/", "fa-mobile-screen", ["new"], ["React", "Vite", "ECharts", "Leaflet"]),
     ],
