@@ -53,6 +53,7 @@ PROJECTS = {
         ("comolima", "https://unimauro.github.io/como-esta-lima/", "fa-city", ["new", "live"], ["Vanilla JS", "MEF/INEI/ATU", "~230 datos", "Datos abiertos"]),
         ("bullying", "https://unimauro.github.io/bullying-peru/", "fa-shield-heart", ["new", "live"], ["Leaflet", "ECharts", "SíseVe/INEI", "Datos abiertos"]),
         ("mimp", "https://unimauro.github.io/evaluacion-mimp/", "fa-hands-holding-child", ["new", "live"], ["MEF/INEI", "Pliego 039", "Datos abiertos"]),
+        ("mortalidad", "https://unimauro.github.io/mortalidad-peru/", "fa-heart-pulse", ["new", "live"], ["SINADEF", "1.58M certificados", "ECharts", "Datos abiertos"]),
         ("productividad", "https://unimauro.github.io/productividad/", "fa-gauge-high", ["new", "live"], ["Vanilla JS", "SVG", "OECD/ILO", "IA"]),
         ("prevencion", "https://unimauro.github.io/peru-prevencion-riesgos/", "fa-house-flood-water", ["new", "live"], ["Vanilla JS", "IGP/SENAMHI/INDECI", "Simuladores"]),
         ("visitas", "https://unimauro.github.io/portal-visitas-peru/", "fa-user-check", ["new"], ["Spec-Driven Dev", "Agentes IA", "ECharts", "Datos abiertos"]),
