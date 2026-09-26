@@ -265,6 +265,15 @@
         .vmodal-box { position: relative; width: min(900px, 100%); aspect-ratio: 16/9; }
         .vmodal-box iframe { width: 100%; height: 100%; border: 0; border-radius: 12px; }
         .vmodal-close { position: absolute; top: -2.5rem; right: 0; background: none; border: 0; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+        .apoyo { margin-top: 3rem; padding: 1.4rem 1.2rem; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); text-align: center; }
+        .apoyo h2 { margin: 0 0 0.4rem; font-size: 1.25rem; }
+        .apoyo p { margin: 0.3rem auto; max-width: 640px; color: var(--muted, inherit); font-size: 0.95rem; }
+        .apoyo-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 0.9rem 0 0.5rem; }
+        .apoyo-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1rem; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: inherit; font: inherit; font-size: 0.92rem; text-decoration: none; cursor: pointer; transition: all 0.2s ease; }
+        .apoyo-btn:hover { transform: translateY(-1px); border-color: var(--accent2); }
+        .apoyo-btn.yape { border-color: #742284; } .apoyo-btn.paypal { border-color: #003087; } .apoyo-btn.cafe { border-color: #b8860b; }
+        .apoyo-btn .copy-hint { font-size: 0.75rem; color: var(--faint); }
+        .apoyo-nota { font-size: 0.8rem; color: var(--faint); }
         footer { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--faint); font-size: 0.82rem; }
         footer a { color: var(--link); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
@@ -404,6 +413,11 @@
         <h2 id="peru"><i class="fas fa-landmark"></i> Peru · Data &amp; Transparency</h2>
         <p class="sec-sub">Citizen dashboards built on official public data.</p>
         <div class="projects">
+            <a href="https://unimauro.github.io/impacto-pisa/" class="project" data-search="impacto que pisa 🦶 peru in pisa 2000–2025 versus 91 countries, and what lies behind it district by district: learning outcomes (enla), poverty, water, mining and pollution with official data (ingemmet, oefa, minem, sinadef, umc). evidence graded a/b/c/d, pilot cases and information gaps. react leaflet echarts ingemmet/oefa/sinadef/enla pisa 2000–2025 ia" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-shoe-prints"></i> Impacto que PISA 🦶</div>
+                <div class="project-desc">Peru in PISA 2000–2025 versus 91 countries, and what lies behind it district by district: learning outcomes (ENLA), poverty, water, mining and pollution with official data (INGEMMET, OEFA, MINEM, SINADEF, UMC). Evidence graded A/B/C/D, pilot cases and information gaps.</div>
+                <div class="project-meta"><span class="project-badge new">✨ new</span><span class="project-badge new">✨ live</span><span class="project-badge">React</span><span class="project-badge">Leaflet</span><span class="project-badge">ECharts</span><span class="project-badge">INGEMMET/OEFA/SINADEF/ENLA</span><span class="project-badge">PISA 2000–2025</span><span class="project-badge">IA</span></div>
+            </a>
             <a href="https://vamos.tunky.net/" class="project" data-search="lima en movimiento 🚈🇵🇪 digital twin of lima's urban transport on a real street map: metro, metropolitano brt and the corredores running on a simulated clock with station dwell and hourly occupancy; 59 real arterial roads colored by congestion and 432 km of bike lanes. a home → work trip simulator compares 9 modes (car, taxi app, colectivo, combi, mototaxi, mass transit, bike, walking) by time, cost, co₂ and hours lost per year. openstreetmap geometry and public data, always sourced. leaflet openstreetmap chart.js ia datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-train-subway"></i> Lima en Movimiento 🚈🇵🇪</div>
                 <div class="project-desc">Digital twin of Lima's urban transport on a real street map: Metro, Metropolitano BRT and the Corredores running on a simulated clock with station dwell and hourly occupancy; 59 real arterial roads colored by congestion and 432 km of bike lanes. A home → work trip simulator compares 9 modes (car, taxi app, colectivo, combi, mototaxi, mass transit, bike, walking) by time, cost, CO₂ and hours lost per year. OpenStreetMap geometry and public data, always sourced.</div>
@@ -761,9 +775,21 @@
             <a href="https://scholar.google.com/citations?hl=es&user=-bBexuUAAAAJ" class="social-btn scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>
         </div>
 
+        <section class="apoyo" id="apoyo">
+            <h2><i class="fas fa-mug-hot"></i> Buy me a coffee ☕</h2>
+            <p>The observatories and tools on this page are open and non-profit. Your support covers hosting, data, lab tests for the pilot cases and the time to keep them alive.</p>
+            <div class="apoyo-btns">
+                <button class="apoyo-btn yape" type="button" data-copy="940584307" aria-label="Copiar número de Yape y Plin"><i class="fas fa-mobile-screen"></i> Yape / Plin <strong>940 584 307</strong> <span class="copy-hint">tap to copy</span></button>
+                <a href="https://www.paypal.com/paypalme/unimauro" class="apoyo-btn paypal" target="_blank" rel="noopener"><i class="fab fa-paypal"></i> PayPal <strong>paypal.me/unimauro</strong></a>
+                <a href="https://www.paypal.com/paypalme/unimauro/5" class="apoyo-btn cafe" target="_blank" rel="noopener"><i class="fas fa-mug-hot"></i> Buy a coffee (US$ 5)</a>
+            </div>
+            <p class="apoyo-nota">No contribution conditions the results: data, code and tests of every project are public.</p>
+        </section>
+
         <footer><p>Built with HTML and CSS · No frameworks · Code on <a href="https://github.com/unimauro/unimauro.github.io">GitHub</a></p></footer>
     </div>
     <script>
+      document.querySelectorAll('.apoyo-btn[data-copy]').forEach(function(b){ b.addEventListener('click', function(){ var v=b.getAttribute('data-copy'); var h=b.querySelector('.copy-hint'); var t=h.textContent; try{ navigator.clipboard.writeText(v).then(function(){ h.textContent='✓'; setTimeout(function(){ h.textContent=t; },1500); }); }catch(e){} }); });
       var tb=document.querySelector('.theme-toggle');
       function themeIcon(){var th=document.documentElement.getAttribute('data-theme'); if(tb){tb.textContent= th==='light'?'🌙':'☀️'; tb.setAttribute('aria-pressed', th==='light');}}
       themeIcon();

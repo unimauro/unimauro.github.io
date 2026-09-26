@@ -265,6 +265,15 @@
         .vmodal-box { position: relative; width: min(900px, 100%); aspect-ratio: 16/9; }
         .vmodal-box iframe { width: 100%; height: 100%; border: 0; border-radius: 12px; }
         .vmodal-close { position: absolute; top: -2.5rem; right: 0; background: none; border: 0; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+        .apoyo { margin-top: 3rem; padding: 1.4rem 1.2rem; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); text-align: center; }
+        .apoyo h2 { margin: 0 0 0.4rem; font-size: 1.25rem; }
+        .apoyo p { margin: 0.3rem auto; max-width: 640px; color: var(--muted, inherit); font-size: 0.95rem; }
+        .apoyo-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 0.9rem 0 0.5rem; }
+        .apoyo-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1rem; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: inherit; font: inherit; font-size: 0.92rem; text-decoration: none; cursor: pointer; transition: all 0.2s ease; }
+        .apoyo-btn:hover { transform: translateY(-1px); border-color: var(--accent2); }
+        .apoyo-btn.yape { border-color: #742284; } .apoyo-btn.paypal { border-color: #003087; } .apoyo-btn.cafe { border-color: #b8860b; }
+        .apoyo-btn .copy-hint { font-size: 0.75rem; color: var(--faint); }
+        .apoyo-nota { font-size: 0.8rem; color: var(--faint); }
         footer { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--faint); font-size: 0.82rem; }
         footer a { color: var(--link); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
@@ -404,6 +413,11 @@
         <h2 id="peru"><i class="fas fa-landmark"></i> Peru · Daten &amp; Transparenz</h2>
         <p class="sec-sub">Bürger-Dashboards mit offiziellen öffentlichen Daten.</p>
         <div class="projects">
+            <a href="https://unimauro.github.io/impacto-pisa/" class="project" data-search="impacto que pisa 🦶 el perú en pisa 2000–2025 frente a 91 países, y qué hay detrás distrito por distrito: aprendizajes (enla), pobreza, agua, minería y contaminación con datos oficiales (ingemmet, oefa, minem, sinadef, umc). evidencia clasificada a/b/c/d, casos piloto y brechas de información. react leaflet echarts ingemmet/oefa/sinadef/enla pisa 2000–2025 ia" target="_blank" rel="noopener">
+                <div class="project-title"><i class="fas fa-shoe-prints"></i> Impacto que PISA 🦶</div>
+                <div class="project-desc">El Perú en PISA 2000–2025 frente a 91 países, y qué hay detrás distrito por distrito: aprendizajes (ENLA), pobreza, agua, minería y contaminación con datos oficiales (INGEMMET, OEFA, MINEM, SINADEF, UMC). Evidencia clasificada A/B/C/D, casos piloto y brechas de información.</div>
+                <div class="project-meta"><span class="project-badge new">✨ neu</span><span class="project-badge new">✨ live</span><span class="project-badge">React</span><span class="project-badge">Leaflet</span><span class="project-badge">ECharts</span><span class="project-badge">INGEMMET/OEFA/SINADEF/ENLA</span><span class="project-badge">PISA 2000–2025</span><span class="project-badge">IA</span></div>
+            </a>
             <a href="https://vamos.tunky.net/" class="project" data-search="lima en movimiento 🚈🇵🇪 gemelo digital del transporte urbano de lima y callao sobre el mapa real: metro, metropolitano y corredores circulando en tiempo simulado con paradas y ocupación por hora; 59 arterias reales coloreadas por congestión y 432 km de ciclovías. simulador de viaje casa → trabajo que compara 9 modos (auto, taxi, colectivo, combi, mototaxi, masivo, bici, a pie) por tiempo, costo, co₂ y horas perdidas al año. datos de openstreetmap y fuentes públicas, siempre citadas. leaflet openstreetmap chart.js ia datos abiertos" target="_blank" rel="noopener">
                 <div class="project-title"><i class="fas fa-train-subway"></i> Lima en Movimiento 🚈🇵🇪</div>
                 <div class="project-desc">Gemelo digital del transporte urbano de Lima y Callao sobre el mapa real: Metro, Metropolitano y corredores circulando en tiempo simulado con paradas y ocupación por hora; 59 arterias reales coloreadas por congestión y 432 km de ciclovías. Simulador de viaje casa → trabajo que compara 9 modos (auto, taxi, colectivo, combi, mototaxi, masivo, bici, a pie) por tiempo, costo, CO₂ y horas perdidas al año. Datos de OpenStreetMap y fuentes públicas, siempre citadas.</div>
@@ -761,9 +775,21 @@
             <a href="https://scholar.google.com/citations?hl=es&user=-bBexuUAAAAJ" class="social-btn scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>
         </div>
 
+        <section class="apoyo" id="apoyo">
+            <h2><i class="fas fa-mug-hot"></i> Invítame un café ☕</h2>
+            <p>Los observatorios y herramientas de esta página son abiertos y sin fines de lucro. Tu apoyo cubre hosting, datos, laboratorio para los casos piloto y el tiempo de mantenerlos vivos.</p>
+            <div class="apoyo-btns">
+                <button class="apoyo-btn yape" type="button" data-copy="940584307" aria-label="Copiar número de Yape y Plin"><i class="fas fa-mobile-screen"></i> Yape / Plin <strong>940 584 307</strong> <span class="copy-hint">toca para copiar</span></button>
+                <a href="https://www.paypal.com/paypalme/unimauro" class="apoyo-btn paypal" target="_blank" rel="noopener"><i class="fab fa-paypal"></i> PayPal <strong>paypal.me/unimauro</strong></a>
+                <a href="https://www.paypal.com/paypalme/unimauro/5" class="apoyo-btn cafe" target="_blank" rel="noopener"><i class="fas fa-mug-hot"></i> Invitar un café (US$ 5)</a>
+            </div>
+            <p class="apoyo-nota">Ningún aporte condiciona los resultados: los datos, el código y las pruebas de cada proyecto son públicos.</p>
+        </section>
+
         <footer><p>Erstellt mit HTML und CSS · Ohne Frameworks · Code auf <a href="https://github.com/unimauro/unimauro.github.io">GitHub</a></p></footer>
     </div>
     <script>
+      document.querySelectorAll('.apoyo-btn[data-copy]').forEach(function(b){ b.addEventListener('click', function(){ var v=b.getAttribute('data-copy'); var h=b.querySelector('.copy-hint'); var t=h.textContent; try{ navigator.clipboard.writeText(v).then(function(){ h.textContent='✓'; setTimeout(function(){ h.textContent=t; },1500); }); }catch(e){} }); });
       var tb=document.querySelector('.theme-toggle');
       function themeIcon(){var th=document.documentElement.getAttribute('data-theme'); if(tb){tb.textContent= th==='light'?'🌙':'☀️'; tb.setAttribute('aria-pressed', th==='light');}}
       themeIcon();

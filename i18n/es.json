@@ -201,5 +201,12 @@
   "t_stellar": "Stellar Mystery Box 🌟",
   "d_stellar": "Taller práctico donde cada participante crea, personaliza y despliega su propio smart contract en la red de Stellar. Material del taller abierto en GitHub.",
   "ui_search_ph": "Buscar en mis proyectos…",
-  "ui_search_none": "Sin resultados para"
+  "ui_search_none": "Sin resultados para",
+  "sec_apoyo_t": "Invítame un café ☕",
+  "sec_apoyo_s": "Los observatorios y herramientas de esta página son abiertos y sin fines de lucro. Tu apoyo cubre hosting, datos, laboratorio para los casos piloto y el tiempo de mantenerlos vivos.",
+  "ui_apoyo_copy": "toca para copiar",
+  "ui_apoyo_cafe": "Invitar un café (US$ 5)",
+  "sec_apoyo_nota": "Ningún aporte condiciona los resultados: los datos, el código y las pruebas de cada proyecto son públicos.",
+  "t_pisa": "Impacto que PISA 🦶",
+  "d_pisa": "El Perú en PISA 2000–2025 frente a 91 países, y qué hay detrás distrito por distrito: aprendizajes (ENLA), pobreza, agua, minería y contaminación con datos oficiales (INGEMMET, OEFA, MINEM, SINADEF, UMC). Evidencia clasificada A/B/C/D, casos piloto y brechas de información."
 }

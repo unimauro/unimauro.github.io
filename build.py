@@ -49,6 +49,7 @@ PROJECTS = {
         ("modelo", "https://unimauro.github.io/modelo-predictivo-uni/", "fa-chart-line", ["new"], ["Machine Learning", "Reveal.js", "Chart.js"]),
     ],
     "peru": [
+        ("pisa", "https://unimauro.github.io/impacto-pisa/", "fa-shoe-prints", ["new", "live"], ["React", "Leaflet", "ECharts", "INGEMMET/OEFA/SINADEF/ENLA", "PISA 2000–2025", "IA"]),
         ("limamov", "https://vamos.tunky.net/", "fa-train-subway", ["new", "live"], ["Leaflet", "OpenStreetMap", "Chart.js", "IA", "Datos abiertos"]),
         ("comolima", "https://unimauro.github.io/como-esta-lima/", "fa-city", ["new", "live"], ["Vanilla JS", "MEF/INEI/ATU", "~230 datos", "Datos abiertos"]),
         ("bullying", "https://unimauro.github.io/bullying-peru/", "fa-shield-heart", ["new", "live"], ["Leaflet", "ECharts", "SíseVe/INEI", "Datos abiertos"]),
@@ -390,6 +391,15 @@ STYLE = """    <style>
         .vmodal-box { position: relative; width: min(900px, 100%); aspect-ratio: 16/9; }
         .vmodal-box iframe { width: 100%; height: 100%; border: 0; border-radius: 12px; }
         .vmodal-close { position: absolute; top: -2.5rem; right: 0; background: none; border: 0; color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; }
+        .apoyo { margin-top: 3rem; padding: 1.4rem 1.2rem; border-radius: 12px; background: var(--surface); border: 1px solid var(--border); text-align: center; }
+        .apoyo h2 { margin: 0 0 0.4rem; font-size: 1.25rem; }
+        .apoyo p { margin: 0.3rem auto; max-width: 640px; color: var(--muted, inherit); font-size: 0.95rem; }
+        .apoyo-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 0.9rem 0 0.5rem; }
+        .apoyo-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1rem; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: inherit; font: inherit; font-size: 0.92rem; text-decoration: none; cursor: pointer; transition: all 0.2s ease; }
+        .apoyo-btn:hover { transform: translateY(-1px); border-color: var(--accent2); }
+        .apoyo-btn.yape { border-color: #742284; } .apoyo-btn.paypal { border-color: #003087; } .apoyo-btn.cafe { border-color: #b8860b; }
+        .apoyo-btn .copy-hint { font-size: 0.75rem; color: var(--faint); }
+        .apoyo-nota { font-size: 0.8rem; color: var(--faint); }
         footer { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); color: var(--faint); font-size: 0.82rem; }
         footer a { color: var(--link); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
@@ -564,9 +574,21 @@ def render(loc, S):
             <a href="https://scholar.google.com/citations?hl=es&user=-bBexuUAAAAJ" class="social-btn scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Scholar</a>
         </div>
 
+        <section class="apoyo" id="apoyo">
+            <h2><i class="fas fa-mug-hot"></i> {apoyo_t}</h2>
+            <p>{apoyo_s}</p>
+            <div class="apoyo-btns">
+                <button class="apoyo-btn yape" type="button" data-copy="940584307" aria-label="Copiar número de Yape y Plin"><i class="fas fa-mobile-screen"></i> Yape / Plin <strong>940 584 307</strong> <span class="copy-hint">{apoyo_copy}</span></button>
+                <a href="https://www.paypal.com/paypalme/unimauro" class="apoyo-btn paypal" target="_blank" rel="noopener"><i class="fab fa-paypal"></i> PayPal <strong>paypal.me/unimauro</strong></a>
+                <a href="https://www.paypal.com/paypalme/unimauro/5" class="apoyo-btn cafe" target="_blank" rel="noopener"><i class="fas fa-mug-hot"></i> {apoyo_cafe}</a>
+            </div>
+            <p class="apoyo-nota">{apoyo_nota}</p>
+        </section>
+
         <footer><p>{footer} <a href="https://github.com/unimauro/unimauro.github.io">GitHub</a></p></footer>
     </div>
     <script>
+      document.querySelectorAll('.apoyo-btn[data-copy]').forEach(function(b){{ b.addEventListener('click', function(){{ var v=b.getAttribute('data-copy'); var h=b.querySelector('.copy-hint'); var t=h.textContent; try{{ navigator.clipboard.writeText(v).then(function(){{ h.textContent='✓'; setTimeout(function(){{ h.textContent=t; }},1500); }}); }}catch(e){{}} }}); }});
       var tb=document.querySelector('.theme-toggle');
       function themeIcon(){{var th=document.documentElement.getAttribute('data-theme'); if(tb){{tb.textContent= th==='light'?'🌙':'☀️'; tb.setAttribute('aria-pressed', th==='light');}}}}
       themeIcon();
@@ -623,6 +645,7 @@ def render(loc, S):
         videos=videos, ytchannel=esc(t["ui_yt_channel"]),
         search_ph=esc(t["ui_search_ph"]), search_none=esc(t["ui_search_none"]),
         footer=esc(t["footer_built"]),
+        apoyo_t=esc(t["sec_apoyo_t"]), apoyo_s=esc(t["sec_apoyo_s"]), apoyo_copy=esc(t["ui_apoyo_copy"]), apoyo_cafe=esc(t["ui_apoyo_cafe"]), apoyo_nota=esc(t["sec_apoyo_nota"]),
     )
 
 

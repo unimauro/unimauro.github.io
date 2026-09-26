@@ -139,5 +139,12 @@
   "t_unilatam": "Latin American University Ranking 🎓",
   "d_unilatam": "Open, reproducible bibliometric ranking of ~1000 universities in Latin America and Spain (OpenAlex CC0 + SCImago).",
   "ui_search_ph": "Search my projects…",
-  "ui_search_none": "No results for"
+  "ui_search_none": "No results for",
+  "sec_apoyo_t": "Buy me a coffee ☕",
+  "sec_apoyo_s": "The observatories and tools on this page are open and non-profit. Your support covers hosting, data, lab tests for the pilot cases and the time to keep them alive.",
+  "ui_apoyo_copy": "tap to copy",
+  "ui_apoyo_cafe": "Buy a coffee (US$ 5)",
+  "sec_apoyo_nota": "No contribution conditions the results: data, code and tests of every project are public.",
+  "t_pisa": "Impacto que PISA 🦶",
+  "d_pisa": "Peru in PISA 2000–2025 versus 91 countries, and what lies behind it district by district: learning outcomes (ENLA), poverty, water, mining and pollution with official data (INGEMMET, OEFA, MINEM, SINADEF, UMC). Evidence graded A/B/C/D, pilot cases and information gaps."
 }
