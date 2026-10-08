@@ -49,6 +49,8 @@ PROJECTS = {
         ("modelo", "https://unimauro.github.io/modelo-predictivo-uni/", "fa-chart-line", ["new"], ["Machine Learning", "Reveal.js", "Chart.js"]),
     ],
     "peru": [
+        ("lecturas", "https://unimauro.github.io/lecturas-peru/", "fa-book", ["new", "live"], ["ENL 2022 INEI", "PISA", "Datos abiertos"]),
+        ("tiempo", "https://unimauro.github.io/tiempo-peru/", "fa-clock", ["new", "live"], ["ENUT 2024 INEI", "Simulador", "Género"]),
         ("pisa", "https://unimauro.github.io/impacto-pisa/", "fa-shoe-prints", ["new", "live"], ["React", "Leaflet", "ECharts", "INGEMMET/OEFA/SINADEF/ENLA", "PISA 2000–2025", "IA"]),
         ("limamov", "https://vamos.tunky.net/", "fa-train-subway", ["new", "live"], ["Leaflet", "OpenStreetMap", "Chart.js", "IA", "Datos abiertos"]),
         ("comolima", "https://unimauro.github.io/como-esta-lima/", "fa-city", ["new", "live"], ["Vanilla JS", "MEF/INEI/ATU", "~230 datos", "Datos abiertos"]),
@@ -670,7 +672,7 @@ def write_sitemap():
         "/observatorio-ensad/", "/universidades-latam/",
         "/salariosperu/", "/proyecto-inti/", "/petroperu-analytics/", "/congreso-abierto-peru/",
         "/observatorio-defensa-interior/", "/observatorio-poder-economico/", "/peru-transparente/",
-        "/peru-prevencion-riesgos/", "/unimaurox-peru-finanzas-publicas/", "/unimaurox-colegios/",
+        "/peru-prevencion-riesgos/", "/lecturas-peru/", "/tiempo-peru/", "/unimaurox-peru-finanzas-publicas/", "/unimaurox-colegios/",
         "/unimaurox-separaciones-denuncias/", "/unimaurox-vuelos-internacionales/",
         "/agentflow-ai/", "/agente-uni-demo/", "/modelo-predictivo-uni/", "/libelula/", "/panchita/",
     ]

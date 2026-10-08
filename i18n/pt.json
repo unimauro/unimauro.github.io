@@ -103,5 +103,9 @@
   "t_careeros": "CareerOS",
   "d_careeros": "Bússola de carreira para engenheiros de software na era da IA: roadmaps com sinais (importância/demanda/risco de automação), recursos selecionados e aprendizado por projetos. Trilíngue (EN/ES/ZH).",
   "ui_search_ph": "Pesquisar nos meus projetos…",
-  "ui_search_none": "Sem resultados para"
+  "ui_search_none": "Sem resultados para",
+  "t_lecturas": "Leitura no Peru 📚",
+  "d_lecturas": "Quanto e o que se lê no Peru? Leitores, mercado editorial, escola, PISA, telas e desigualdades regionais. Dados da ENL 2022 (INEI/Mincul) com margens de erro.",
+  "t_tiempo": "O tempo invisível ⏳",
+  "d_tiempo": "Observatório do trabalho doméstico e de cuidado não remunerado com a ENUT 2024 (INEI): a divisão do dia, a desigualdade de gênero no campo e um simulador que dá preço às suas horas."
 }

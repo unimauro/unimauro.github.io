@@ -208,5 +208,9 @@
   "ui_apoyo_cafe": "Invitar un café (US$ 5)",
   "sec_apoyo_nota": "Ningún aporte condiciona los resultados: los datos, el código y las pruebas de cada proyecto son públicos.",
   "t_pisa": "Impacto que PISA 🦶",
-  "d_pisa": "El Perú en PISA 2000–2025 frente a 91 países, y qué hay detrás distrito por distrito: aprendizajes (ENLA), pobreza, agua, minería y contaminación con datos oficiales (INGEMMET, OEFA, MINEM, SINADEF, UMC). Evidencia clasificada A/B/C/D, casos piloto y brechas de información."
+  "d_pisa": "El Perú en PISA 2000–2025 frente a 91 países, y qué hay detrás distrito por distrito: aprendizajes (ENLA), pobreza, agua, minería y contaminación con datos oficiales (INGEMMET, OEFA, MINEM, SINADEF, UMC). Evidencia clasificada A/B/C/D, casos piloto y brechas de información.",
+  "t_lecturas": "Lecturas en el Perú 📚",
+  "d_lecturas": "¿Cuánto y qué se lee en el Perú? Lectores, mercado editorial, escuela, PISA, pantallas y brechas regionales, con implicancias por actor (Estado, editoriales, librerías, colegios). Datos ENL 2022 (INEI/Mincul) con márgenes de error.",
+  "t_tiempo": "El tiempo invisible ⏳",
+  "d_tiempo": "Observatorio del trabajo doméstico y de cuidados no remunerado con la ENUT 2024 (INEI): cómo se reparte el día, la brecha de género en el campo y un simulador que le pone precio a tus horas."
 }

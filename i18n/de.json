@@ -103,5 +103,9 @@
   "t_careeros": "CareerOS",
   "d_careeros": "Ein Karriere-Kompass für Software-Ingenieure im KI-Zeitalter: Roadmaps mit Signalen (Wichtigkeit/Nachfrage/Automatisierungsrisiko), kuratierte Ressourcen und projektbasiertes Lernen. Dreisprachig (EN/ES/ZH).",
   "ui_search_ph": "Meine Projekte durchsuchen…",
-  "ui_search_none": "Keine Ergebnisse für"
+  "ui_search_none": "Keine Ergebnisse für",
+  "t_lecturas": "Lesen in Peru 📚",
+  "d_lecturas": "Wie viel und was wird in Peru gelesen? Leser, Buchmarkt, Schule, PISA, Bildschirme und regionale Unterschiede. Daten der ENL 2022 (INEI/Mincul) mit Fehlermargen.",
+  "t_tiempo": "Die unsichtbare Zeit ⏳",
+  "d_tiempo": "Observatorium für unbezahlte Haus- und Sorgearbeit auf Basis der ENUT 2024 (INEI): Tagesaufteilung, Geschlechterkluft auf dem Land und ein Simulator, der Ihre Stunden bepreist."
 }

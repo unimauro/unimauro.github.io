@@ -146,5 +146,9 @@
   "ui_apoyo_cafe": "Buy a coffee (US$ 5)",
   "sec_apoyo_nota": "No contribution conditions the results: data, code and tests of every project are public.",
   "t_pisa": "Impacto que PISA 🦶",
-  "d_pisa": "Peru in PISA 2000–2025 versus 91 countries, and what lies behind it district by district: learning outcomes (ENLA), poverty, water, mining and pollution with official data (INGEMMET, OEFA, MINEM, SINADEF, UMC). Evidence graded A/B/C/D, pilot cases and information gaps."
+  "d_pisa": "Peru in PISA 2000–2025 versus 91 countries, and what lies behind it district by district: learning outcomes (ENLA), poverty, water, mining and pollution with official data (INGEMMET, OEFA, MINEM, SINADEF, UMC). Evidence graded A/B/C/D, pilot cases and information gaps.",
+  "t_lecturas": "Reading in Peru 📚",
+  "d_lecturas": "How much and what do Peruvians read? Readers, publishing market, schools, PISA, screens and regional gaps, with implications per stakeholder. Data from ENL 2022 (INEI/Mincul) with margins of error.",
+  "t_tiempo": "The invisible time ⏳",
+  "d_tiempo": "Observatory of unpaid domestic and care work based on ENUT 2024 (INEI): how the day is split, the rural gender gap, and a simulator that puts a price on your hours."
 }

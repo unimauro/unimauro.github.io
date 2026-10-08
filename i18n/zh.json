@@ -103,5 +103,9 @@
   "t_careeros": "CareerOS",
   "d_careeros": "AI 时代软件工程师的职业指南针：带信号（重要性/需求/自动化风险）的学习路线、精选资源和实战项目学习。三语（EN/ES/ZH）。",
   "ui_search_ph": "搜索我的项目…",
-  "ui_search_none": "没有结果"
+  "ui_search_none": "没有结果",
+  "t_lecturas": "秘鲁阅读状况 📚",
+  "d_lecturas": "秘鲁人读多少、读什么？读者、出版市场、学校、PISA、屏幕与地区差距。数据来自 ENL 2022（INEI/Mincul），附误差范围。",
+  "t_tiempo": "看不见的时间 ⏳",
+  "d_tiempo": "基于 ENUT 2024（INEI）的无偿家务与照护劳动观察站：一天的时间分配、农村性别差距，以及为你的劳动时间定价的模拟器。"
 }

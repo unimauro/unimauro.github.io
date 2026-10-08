@@ -103,5 +103,9 @@
   "t_careeros": "CareerOS",
   "d_careeros": "Une boussole de carrière pour ingénieurs logiciel à l'ère de l'IA : roadmaps avec signaux (importance/demande/risque d'automatisation), ressources sélectionnées et apprentissage par projets. Trilingue (EN/ES/ZH).",
   "ui_search_ph": "Rechercher dans mes projets…",
-  "ui_search_none": "Aucun résultat pour"
+  "ui_search_none": "Aucun résultat pour",
+  "t_lecturas": "La lecture au Pérou 📚",
+  "d_lecturas": "Combien et que lit-on au Pérou ? Lecteurs, marché de l'édition, école, PISA, écrans et écarts régionaux. Données ENL 2022 (INEI/Mincul) avec marges d'erreur.",
+  "t_tiempo": "Le temps invisible ⏳",
+  "d_tiempo": "Observatoire du travail domestique et de soins non rémunéré à partir de l'ENUT 2024 (INEI) : répartition de la journée, écart de genre en milieu rural et simulateur qui chiffre vos heures."
 }
