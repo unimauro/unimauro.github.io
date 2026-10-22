@@ -247,6 +247,12 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://unimauro.github.io/agenda-legislativa-tech/</loc>
+        <lastmod>2026-09-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://unimauro.github.io/observatorio-defensa-interior/</loc>
         <lastmod>2026-09-01</lastmod>
         <changefreq>monthly</changefreq>
